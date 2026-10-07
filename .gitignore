@@ -1,0 +1,56 @@
+# Local secrets and credentials
+.env
+.env.*
+secrets/
+.secrets/
+credentials/
+.credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+*.credential
+*.credentials
+.netrc
+
+# Python tooling and environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Editors and local reports
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+local-reports/
+local-artifacts/
+reports/local/
+*.log
+
+# Local databases, backups and archives; review any future fixture exceptions
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+*.dump
+*.bak
+*.backup
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.gz

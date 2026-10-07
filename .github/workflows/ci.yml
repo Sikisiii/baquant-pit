@@ -1,0 +1,29 @@
+name: Bootstrap CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install package and development tools
+        run: python -m pip install -e ".[dev]"
+      - name: Ruff
+        run: |
+          python -m ruff check .
+          python -m ruff format --check .
+      - name: Bootstrap import test
+        run: python -m pytest
