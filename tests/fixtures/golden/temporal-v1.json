@@ -1,0 +1,301 @@
+{
+  "format_id": "baquant-pit-temporal-v1",
+  "contract_id": "baquant-pit-minimal-primitives",
+  "contract_version": 1,
+  "status": "PRIVATE_REVIEW_CANDIDATE",
+  "synthetic": true,
+  "input_descriptors_executable": false,
+  "vectors": [
+    {
+      "vector_id": "T001",
+      "valid": true,
+      "input_description": "UTC instant",
+      "semantic_input": {
+        "kind": "instant",
+        "text": "2032-04-05T06:07:08+00:00"
+      },
+      "expected": {
+        "utc_text": "2032-04-05T06:07:08.000000Z"
+      }
+    },
+    {
+      "vector_id": "T002",
+      "valid": true,
+      "input_description": "+08 equivalent",
+      "semantic_input": {
+        "kind": "instant",
+        "text": "2032-04-05T14:07:08+08:00"
+      },
+      "expected": {
+        "utc_text": "2032-04-05T06:07:08.000000Z"
+      }
+    },
+    {
+      "vector_id": "T003",
+      "valid": true,
+      "input_description": "negative offset equivalent",
+      "semantic_input": {
+        "kind": "instant",
+        "text": "2032-04-05T01:07:08-05:00"
+      },
+      "expected": {
+        "utc_text": "2032-04-05T06:07:08.000000Z"
+      }
+    },
+    {
+      "vector_id": "T004",
+      "valid": true,
+      "input_description": "fractional precision retains zeros",
+      "semantic_input": {
+        "kind": "instant",
+        "text": "2032-04-05T14:07:08.123400+08:00"
+      },
+      "expected": {
+        "utc_text": "2032-04-05T06:07:08.123400Z"
+      }
+    },
+    {
+      "vector_id": "T005",
+      "valid": true,
+      "input_description": "zero fraction explicitly six zeros",
+      "semantic_input": {
+        "kind": "instant",
+        "text": "2032-04-05T06:07:08.000000+00:00"
+      },
+      "expected": {
+        "utc_text": "2032-04-05T06:07:08.000000Z"
+      }
+    },
+    {
+      "vector_id": "T006",
+      "valid": true,
+      "input_description": "date remains separate",
+      "semantic_input": {
+        "kind": "date",
+        "text": "2032-04-05"
+      },
+      "expected": {
+        "date_text": "2032-04-05",
+        "instant_conversion": false
+      }
+    },
+    {
+      "vector_id": "T007",
+      "valid": true,
+      "input_description": "inclusive ordered date window",
+      "semantic_input": {
+        "kind": "window",
+        "start": "2032-04-04",
+        "end": "2032-04-06",
+        "cutoff": "2032-04-05T14:07:08+08:00"
+      },
+      "expected": {
+        "start": "2032-04-04",
+        "end": "2032-04-06",
+        "cutoff_utc": "2032-04-05T06:07:08.000000Z",
+        "inclusive": true,
+        "immutable": true,
+        "calendar_authority": false
+      }
+    },
+    {
+      "vector_id": "T008",
+      "valid": true,
+      "input_description": "single-date window valid",
+      "semantic_input": {
+        "kind": "window",
+        "start": "2032-04-05",
+        "end": "2032-04-05",
+        "cutoff": "2032-04-05T06:07:08+00:00"
+      },
+      "expected": {
+        "start": "2032-04-05",
+        "end": "2032-04-05",
+        "cutoff_utc": "2032-04-05T06:07:08.000000Z",
+        "inclusive": true,
+        "immutable": true,
+        "calendar_authority": false
+      }
+    },
+    {
+      "vector_id": "T009",
+      "valid": true,
+      "input_description": "cutoff equality included",
+      "semantic_input": {
+        "kind": "cutoff_relation",
+        "instant_utc": "2032-04-05T06:07:08.000000Z",
+        "cutoff_utc": "2032-04-05T06:07:08.000000Z"
+      },
+      "expected": {
+        "relation": "instant <= cutoff",
+        "result": true
+      }
+    },
+    {
+      "vector_id": "T010",
+      "valid": true,
+      "input_description": "one microsecond before cutoff included",
+      "semantic_input": {
+        "kind": "cutoff_relation",
+        "instant_utc": "2032-04-05T06:07:07.999999Z",
+        "cutoff_utc": "2032-04-05T06:07:08.000000Z"
+      },
+      "expected": {
+        "relation": "instant <= cutoff",
+        "result": true
+      }
+    },
+    {
+      "vector_id": "T011",
+      "valid": true,
+      "input_description": "one microsecond after cutoff excluded",
+      "semantic_input": {
+        "kind": "cutoff_relation",
+        "instant_utc": "2032-04-05T06:07:08.000001Z",
+        "cutoff_utc": "2032-04-05T06:07:08.000000Z"
+      },
+      "expected": {
+        "relation": "instant <= cutoff",
+        "result": false
+      }
+    },
+    {
+      "vector_id": "T012",
+      "valid": true,
+      "input_description": "year one explicitly padded",
+      "semantic_input": {
+        "kind": "instant",
+        "text": "0001-01-01T00:00:00+00:00"
+      },
+      "expected": {
+        "utc_text": "0001-01-01T00:00:00.000000Z"
+      }
+    },
+    {
+      "vector_id": "T101",
+      "valid": false,
+      "input_description": "naive datetime",
+      "semantic_input": {
+        "kind": "instant",
+        "text": "2032-04-05T06:07:08"
+      },
+      "invalid_condition": "naive datetime",
+      "expected_error_id": "TEMPORAL_NAIVE_DATETIME"
+    },
+    {
+      "vector_id": "T102",
+      "valid": false,
+      "input_description": "present tzinfo returns None",
+      "semantic_input": {
+        "kind": "instant",
+        "tzinfo": "present",
+        "utcoffset_result": null
+      },
+      "invalid_condition": "present tzinfo returns None",
+      "expected_error_id": "TEMPORAL_NULL_OFFSET"
+    },
+    {
+      "vector_id": "T103",
+      "valid": false,
+      "input_description": "window reversed",
+      "semantic_input": {
+        "kind": "window",
+        "start": "2032-04-06",
+        "end": "2032-04-04",
+        "cutoff": "2032-04-05T06:07:08+00:00"
+      },
+      "invalid_condition": "window reversed",
+      "expected_error_id": "TEMPORAL_WINDOW_REVERSED"
+    },
+    {
+      "vector_id": "T104",
+      "valid": false,
+      "input_description": "cutoff omitted, no implicit now",
+      "semantic_input": {
+        "kind": "window",
+        "start": "2032-04-05",
+        "end": "2032-04-05"
+      },
+      "invalid_condition": "cutoff omitted, no implicit now",
+      "expected_error_id": "TEMPORAL_CUTOFF_REQUIRED"
+    },
+    {
+      "vector_id": "T105",
+      "valid": false,
+      "input_description": "cutoff None, no implicit now",
+      "semantic_input": {
+        "kind": "window",
+        "start": "2032-04-05",
+        "end": "2032-04-05",
+        "cutoff": null
+      },
+      "invalid_condition": "cutoff None, no implicit now",
+      "expected_error_id": "TEMPORAL_CUTOFF_REQUIRED"
+    },
+    {
+      "vector_id": "T106",
+      "valid": false,
+      "input_description": "date-only cutoff no midnight/EOD",
+      "semantic_input": {
+        "kind": "cutoff",
+        "value_type": "date",
+        "value": "2032-04-05"
+      },
+      "invalid_condition": "date-only cutoff no midnight/EOD",
+      "expected_error_id": "TEMPORAL_INVALID_TYPE"
+    },
+    {
+      "vector_id": "T107",
+      "valid": false,
+      "input_description": "datetime cannot be date endpoint",
+      "semantic_input": {
+        "kind": "window_endpoint",
+        "value_type": "datetime"
+      },
+      "invalid_condition": "datetime cannot be date endpoint",
+      "expected_error_id": "TEMPORAL_INVALID_DATE"
+    },
+    {
+      "vector_id": "T108",
+      "valid": false,
+      "input_description": "UTC conversion underflows supported year",
+      "semantic_input": {
+        "kind": "instant",
+        "text": "0001-01-01T00:00:00+01:00"
+      },
+      "invalid_condition": "UTC conversion underflows supported year",
+      "expected_error_id": "TEMPORAL_INSTANT_OUT_OF_RANGE"
+    },
+    {
+      "vector_id": "T109",
+      "valid": false,
+      "input_description": "second sixty not supported",
+      "semantic_input": {
+        "kind": "conceptual_instant",
+        "second": 60
+      },
+      "invalid_condition": "second sixty not supported",
+      "expected_error_id": "TEMPORAL_LEAP_SECOND_UNSUPPORTED"
+    },
+    {
+      "vector_id": "T110",
+      "valid": false,
+      "input_description": "throwing or invalid offset",
+      "semantic_input": {
+        "kind": "instant",
+        "utcoffset_behavior": "raises"
+      },
+      "invalid_condition": "throwing or invalid offset",
+      "expected_error_id": "TEMPORAL_INVALID_OFFSET"
+    }
+  ],
+  "coverage": [
+    "UTC_plus08_negative_offset",
+    "fractions_and_zero",
+    "naive_null_offset",
+    "date_separation",
+    "ordered_equal_reversed_window",
+    "cutoff_equality",
+    "no_implicit_now"
+  ]
+}
