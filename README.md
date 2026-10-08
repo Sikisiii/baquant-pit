@@ -51,12 +51,6 @@ define a PRIVATE_REVIEW_CANDIDATE using newly authored synthetic vectors.
 No runtime primitive is implemented, BAquant hash compatibility is NOT_CLAIMED,
 and public API compatibility is NOT_ESTABLISHED.
 
-The [minimal primitive semantics contract](contracts/minimal-primitives-v1.json)
-and [versioning specification](docs/specs/compatibility-and-versioning-v1.md)
-define a PRIVATE_REVIEW_CANDIDATE using newly authored synthetic vectors.
-No runtime primitive is implemented, BAquant hash compatibility is NOT_CLAIMED,
-and public API compatibility is NOT_ESTABLISHED.
-
 No public redistribution or open-source license is granted at this stage.
 The repository must remain private. Extraction, public visibility, a release and
 package publication each require a separately scoped explicit Owner authorization.
