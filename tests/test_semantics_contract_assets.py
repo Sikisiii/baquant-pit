@@ -71,7 +71,7 @@ def test_contract_identity_scope_and_required_fields():
     assert CONTRACT["baquant_compatibility"] == "NOT_CLAIMED"
     assert CONTRACT["public_api_compatibility"] == "NOT_ESTABLISHED"
     assert CONTRACT["public_release_authorized"] is False
-    assert CONTRACT["runtime_implementation_present"] is False
+    assert CONTRACT["runtime_implementation_present"] is True
     assert len(CONTRACT["capabilities"]) == len(set(CONTRACT["capabilities"])) == 7
     assert len(CONTRACT["error_ids"]) == len(set(CONTRACT["error_ids"]))
 

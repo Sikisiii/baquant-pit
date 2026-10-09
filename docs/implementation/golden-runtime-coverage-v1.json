@@ -1,0 +1,935 @@
+{
+  "status": "PRIVATE_IMPLEMENTATION_CANDIDATE",
+  "fixture_expectations_modified": false,
+  "total_vectors": 116,
+  "vectors": [
+    {
+      "vector_id": "T001",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T002",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T003",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T004",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T005",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T006",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Real canonical date tag and actual instant type rejection; date is not coerced to an instant.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T007",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T008",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T009",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Real UTC normalizer on both instants, then normative inclusive comparison; no reader API claimed.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T010",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Real UTC normalizer on both instants, then normative inclusive comparison; no reader API claimed.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T011",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Real UTC normalizer on both instants, then normative inclusive comparison; no reader API claimed.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T012",
+      "domain": "temporal",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T101",
+      "domain": "temporal",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T102",
+      "domain": "temporal",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T103",
+      "domain": "temporal",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T104",
+      "domain": "temporal",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T105",
+      "domain": "temporal",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T106",
+      "domain": "temporal",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T107",
+      "domain": "temporal",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T108",
+      "domain": "temporal",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T109",
+      "domain": "temporal",
+      "valid": false,
+      "classification": "CONCEPTUAL_NONEXECUTABLE",
+      "reason": "Exact Python datetime cannot represent second 60; no runtime string parser exists.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "T110",
+      "domain": "temporal",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C001",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C002",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C003",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C004",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C005",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C006",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C007",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C008",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C009",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C010",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C011",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C012",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C013",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C014",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C015",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C016",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C017",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C018",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C019",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C020",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C021",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C022",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C023",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C024",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C025",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C026",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C027",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C028",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C029",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C030",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C031",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C032",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C033",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C034",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C035",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C036",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C037",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C038",
+      "domain": "canonical",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C101",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C102",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C103",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C104",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C105",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C106",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C107",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C108",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C109",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C110",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C111",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C112",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C113",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C114",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C115",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C116",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C117",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "CONCEPTUAL_NONEXECUTABLE",
+      "reason": "Exact dict has already discarded duplicate keys; abstract pre-construction entries are outside the Python input API.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C118",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C119",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C120",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C121",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C122",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C123",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Descriptor materialized into actual bounded Python values exceeding exactly the recorded resource bound.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C124",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Descriptor materialized into actual bounded Python values exceeding exactly the recorded resource bound.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C125",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Descriptor materialized into actual bounded Python values exceeding exactly the recorded resource bound.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C126",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Descriptor materialized into actual bounded Python values exceeding exactly the recorded resource bound.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C127",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Descriptor materialized into actual bounded Python values exceeding exactly the recorded resource bound.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C128",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Descriptor materialized into actual bounded Python values exceeding exactly the recorded resource bound.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C129",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C130",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C131",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "C132",
+      "domain": "canonical",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "R001",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "R002",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "R003",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "R004",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "R005",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "R006",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "R007",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "R008",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F001",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F002",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F003",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F004",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F005",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F006",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F007",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F008",
+      "domain": "raw-integrity",
+      "valid": true,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "R101",
+      "domain": "raw-integrity",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "R102",
+      "domain": "raw-integrity",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F101",
+      "domain": "raw-integrity",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F102",
+      "domain": "raw-integrity",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F103",
+      "domain": "raw-integrity",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Real file API with controlled permission/open or partial-read failure injection; host ACL behavior not claimed.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F104",
+      "domain": "raw-integrity",
+      "valid": false,
+      "classification": "PLATFORM_CONDITIONAL",
+      "reason": "Actual FIFO target constructed only when native os.mkfifo is available; no fabricated special file.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F105",
+      "domain": "raw-integrity",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Real file API with controlled permission/open or partial-read failure injection; host ACL behavior not claimed.",
+      "test": "test_golden_runtime_conformance"
+    },
+    {
+      "vector_id": "F106",
+      "domain": "raw-integrity",
+      "valid": false,
+      "classification": "RUNTIME_EXECUTABLE",
+      "reason": "Materialized synthetic Python input; real API compared with merged expectations.",
+      "test": "test_golden_runtime_conformance"
+    }
+  ]
+}
