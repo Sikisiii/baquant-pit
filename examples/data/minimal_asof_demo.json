@@ -1,0 +1,21 @@
+{
+  "demo_id": "minimal-asof-v1",
+  "observations": [
+    {
+      "observation_id": "obs-001",
+      "value": "synthetic-a",
+      "available_at": "2032-04-05T09:00:00+00:00"
+    },
+    {
+      "observation_id": "obs-002",
+      "value": "synthetic-b",
+      "available_at": "2032-04-05T12:00:00+00:00"
+    },
+    {
+      "observation_id": "obs-003",
+      "value": "synthetic-c",
+      "available_at": "2032-04-06T09:00:00+00:00"
+    }
+  ],
+  "demonstration_as_of": "2032-04-05T10:30:00+00:00"
+}

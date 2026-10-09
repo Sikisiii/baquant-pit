@@ -1,0 +1,112 @@
+{
+  "artifact_kind": "NON_NORMATIVE_DEMO_REPRODUCIBILITY_RECEIPT",
+  "demo_id": "minimal-asof-v1",
+  "synthetic": true,
+  "runtime_api_changed": false,
+  "package_version": "0.0.0.dev0",
+  "data_fixture": "examples/data/minimal_asof_demo.json",
+  "demo_script": "examples/minimal_asof_demo.py",
+  "deterministic": true,
+  "platform_matrix": [
+    "windows",
+    "ubuntu"
+  ],
+  "tested_cutoffs": [
+    {
+      "cutoff_id": "A",
+      "as_of": "2032-04-05T08:59:59.999999+00:00",
+      "pit_as_of": null,
+      "visible": [],
+      "future_excluded": [
+        "obs-001",
+        "obs-002",
+        "obs-003"
+      ]
+    },
+    {
+      "cutoff_id": "B",
+      "as_of": "2032-04-05T09:00:00+00:00",
+      "pit_as_of": "obs-001",
+      "visible": [
+        "obs-001"
+      ],
+      "future_excluded": [
+        "obs-002",
+        "obs-003"
+      ]
+    },
+    {
+      "cutoff_id": "C",
+      "as_of": "2032-04-05T10:30:00+00:00",
+      "pit_as_of": "obs-001",
+      "visible": [
+        "obs-001"
+      ],
+      "future_excluded": [
+        "obs-002",
+        "obs-003"
+      ]
+    },
+    {
+      "cutoff_id": "D",
+      "as_of": "2032-04-05T12:00:00+00:00",
+      "pit_as_of": "obs-002",
+      "visible": [
+        "obs-001",
+        "obs-002"
+      ],
+      "future_excluded": [
+        "obs-003"
+      ]
+    },
+    {
+      "cutoff_id": "E",
+      "as_of": "2032-04-06T09:00:00.000001+00:00",
+      "pit_as_of": "obs-003",
+      "visible": [
+        "obs-001",
+        "obs-002",
+        "obs-003"
+      ],
+      "future_excluded": []
+    }
+  ],
+  "primary_result": {
+    "demo_id": "minimal-asof-v1",
+    "as_of": "2032-04-05T10:30:00.000000Z",
+    "naive_latest": "obs-003",
+    "pit_as_of": "obs-001",
+    "visible": [
+      "obs-001"
+    ],
+    "future_excluded": [
+      "obs-002",
+      "obs-003"
+    ],
+    "result": "LOOK_AHEAD_PREVENTED",
+    "input_digest": "8b09f590f49b975f53a1ca630657664269553bcc8a44f8265cf4c140862ac926",
+    "result_digest": "06c1a9e28c235f375ad7f78f76a6fa769655ad9f06c10abdd9d1684dbd9438b2"
+  },
+  "expected_json_utf8": "{\"as_of\":\"2032-04-05T10:30:00.000000Z\",\"demo_id\":\"minimal-asof-v1\",\"future_excluded\":[\"obs-002\",\"obs-003\"],\"input_digest\":\"8b09f590f49b975f53a1ca630657664269553bcc8a44f8265cf4c140862ac926\",\"naive_latest\":\"obs-003\",\"pit_as_of\":\"obs-001\",\"result\":\"LOOK_AHEAD_PREVENTED\",\"result_digest\":\"06c1a9e28c235f375ad7f78f76a6fa769655ad9f06c10abdd9d1684dbd9438b2\",\"visible\":[\"obs-001\"]}\n",
+  "digest_scope": {
+    "input": "demo_id, explicit UTC as_of and availability/ID-sorted normalized observations",
+    "result": "all displayed result fields before adding either digest"
+  },
+  "expectation_basis": "New synthetic values and explicit one-case canonical logical forms; no runtime output used to author expectations",
+  "explicit_exclusions": [
+    "production PIT reader",
+    "source truth",
+    "provenance qualification",
+    "native-vs-reconstructed vintage classification",
+    "acceptance authority",
+    "revision causality",
+    "consumer-specific version policy",
+    "full PIT database access",
+    "backtest correctness",
+    "authenticity",
+    "historical capture",
+    "vintage acceptance",
+    "provider adapters",
+    "trading"
+  ]
+}

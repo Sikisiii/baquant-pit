@@ -36,6 +36,21 @@ no implicit conversions or string/repr fallbacks. `BaquantPITError` exposes a
 stable `.error_id` with fixed safe text; small temporal, canonical and raw
 integrity subclasses share that binding.
 
+## Minimal as-of demo
+
+Suppose an observation is revised tomorrow. A historical decision made today
+must not see tomorrow's observation. With an explicit synthetic cutoff, this
+example shows naive latest choosing obs-003 while as-of sees obs-001 and excludes
+the future obs-002/obs-003.
+
+```sh
+python examples/minimal_asof_demo.py
+python examples/minimal_asof_demo.py --json
+```
+
+See the [synthetic timeline, inclusive cutoff and demo boundaries](docs/demos/minimal-asof-demo-v1.md).
+The selection rule lives in the example; it adds no package reader API.
+
 Run local validation in a virtual environment:
 
 ```sh
