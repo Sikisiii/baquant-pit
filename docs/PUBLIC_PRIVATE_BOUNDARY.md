@@ -1,56 +1,41 @@
-# Public/private boundary
+# Current content boundary
 
-Status: planning only, private pre-extraction staging. A candidate classification
-does not grant extraction or redistribution permission. No source implementation,
-production fixture or BAquant contract has been imported into this repository.
+This non-normative guide describes the content prepared for a future release.
+The repository remains PRIVATE during release candidate preparation; inclusion
+here does not itself grant redistribution rights. See
+[release state and pending decisions](release/RELEASE_STATE.md).
 
-## Safe candidates for future extraction
+## Included in the release candidate source
 
-Subject to provenance, rights, semantic and dependency review:
+- Independently implemented generic temporal, canonicalization and raw/file
+  integrity primitives with the existing twelve-name package API.
+- Frozen v1 contract/specifications and newly authored synthetic golden vectors.
+- Standalone tests, synthetic input helpers and explicit cross-platform accounting.
+- The example-local synthetic as-of demo and its deterministic receipt.
+- Current product documentation and clearly labelled historical development/audit
+  material.
 
-- Generic temporal types and clock semantics.
-- Canonical hashing helpers and generic raw artifact integrity primitives.
-- Generic as-of rules and vintage models.
-- Generic look-ahead validators and temporal validation.
-- Provider-neutral interfaces and storage-neutral interfaces.
-- Newly authored synthetic fixtures, standalone tests and generic machine contracts.
+The wheel is a compact runtime distribution. The complete source distribution
+includes test helpers, fixtures, contracts, examples and documentation required
+for the source workflow; these are not runtime dependencies.
 
-Hash integrity alone does not establish truth, original knowledge time, native
-vintage qualification, completeness or redistribution rights.
+## Excluded content and capabilities
 
-## Private / do not extract
+- Private BAquant implementation, coupled database models, migrations, writers,
+  operational configuration and private source adapters.
+- Credentials, environment secrets, private provider outputs and private logs.
+- Licensed/private market datasets, paid research and copied financial statements.
+- Proprietary strategies, portfolio data, prompts and competition assets.
+- Production PIT readers, vintage engines, PIT grades, TrustSnapshot, consumer
+  qualification, database/provider services, brokerage and trading.
 
-- Secrets, API tokens, webhooks, DSNs, credentials and local environment files.
-- Real provider credentials and BAquant-specific operational configuration.
-- Real database dumps, backup images and production snapshots.
-- Licensed market data, paid research and copyrighted reports.
-- Real evidence payloads unless independently proven redistributable and explicitly
-  admitted by a separate review and authorization.
-- Competition submission material and Golden Case.
-- Proprietary alpha, strategy members, factor/strategy research and outputs.
-- Private portfolio data, private run artifacts and private snapshot identifiers.
-- User/personal data and proprietary model prompts.
-- BAquant DB models, Alembic/migrations, ACL/writers, deployment paths and private
-  source adapters. Their general concepts require a clean independent design.
+Generic market-neutral primitives confer no exchange, market, asset-class or
+provider support. Hash identity establishes neither source truth, historical
+knowledge, native vintage, completeness nor redistribution rights. File integrity
+provides no safe-root policy, locking or immutable snapshot guarantee.
 
-## Requires case-by-case review
-
-- BAquant contracts and PIT policies; no wholesale copying or automatic adoption.
-- Source adapters and provider-specific semantics.
-- Evidence manifests and DB-independent validation logic.
-- Reconstructed availability rules and consumer-specific vintage qualification.
-
-## Readiness and evolving areas
-
-| Design input class | Planning disposition |
-| --- | --- |
-| Stable current concepts | Typed clocks, canonical/deterministic hashing and raw artifact integrity are candidates for independent review, not extracted features. |
-| Current but evolving | PIT grade policy, provider capture evidence and market observation/vintage readers need semantic and coupling review. |
-| Stage63 under redefinition | Identity/classification, applicability and consumer-specific vintage qualification must not be frozen as generic public API. |
-| Private coupled | DB models, Alembic, ACL/writers, repository paths, BAquant consumer rules and source adapters remain outside extraction. |
-| Public package not yet implemented | Standalone useful PIT functionality, exported operations, public compatibility acceptance and public release remain future work. |
-
-Only the empty package scaffold can presently be installed. Future extraction
-must select the smallest justified component, remove coupling from the start and
-use synthetic evidence. No historical acceptance, current provider snapshot or
-passing bootstrap test upgrades these classifications.
+The [frozen semantic authorities](specs/compatibility-and-versioning-v1.md) define
+the existing implementation scope. The [origin guide](ORIGIN_AND_AUTHORITY.md)
+explains independent authority. New inputs or functionality require separate
+scope, provenance and semantic review; no automatic origin-project inheritance
+or bulk implementation transfer is permitted by this document.

@@ -1,0 +1,72 @@
+{
+  "task_id": "BAQUANT-PIT-RELEASE-PREPARATION-V1",
+  "base_main_sha": "afb5d7f5eaa57f45e45c7714106eebafdee3829a",
+  "record_type": "NON_NORMATIVE_RELEASE_PREPARATION",
+  "repository_private": true,
+  "public_release_performed": false,
+  "license_selection": "OWNER_DECISION_PENDING",
+  "version_selection": "OWNER_DECISION_PENDING",
+  "identity_acceptance": "OWNER_DECISION_PENDING",
+  "package_version": "0.0.0.dev0",
+  "api_stability": "NOT_ESTABLISHED",
+  "baquant_compatibility": "NOT_CLAIMED",
+  "frozen_semantics_changed": false,
+  "runtime_api_changed": false,
+  "demo_output_changed": false,
+  "sdist_policy": "COHERENT_SOURCE_DISTRIBUTION_WITH_COMPLETE_TEST_SUPPORT_AND_DOCUMENTATION",
+  "sdist_acceptance": {
+    "result": "PASS",
+    "member_count": 51,
+    "python": "3.12.10",
+    "isolated_noneditable_dev_install": "PASS",
+    "test_collection": "PASS",
+    "ruff_check": "PASS",
+    "ruff_format": "PASS",
+    "pytest": {
+      "total": 392,
+      "passed": 385,
+      "skipped": 7,
+      "failed": 0,
+      "errors": 0
+    },
+    "skip_accounting": "PASS_EXISTING_CONCEPTUAL_AND_HOST_CAPABILITY_SKIPS_ONLY",
+    "demo_human": "PASS",
+    "demo_json": "EXACT_UNCHANGED_RECEIPT_BYTE_MATCH",
+    "demo_json_byte_count": 374,
+    "source_repository_fallback": false,
+    "source_bundle_assets": "Complete shipped tests/support/goldens/contracts/specs/demo/receipts and linked Markdown documentation"
+  },
+  "wheel_acceptance": {
+    "result": "PASS",
+    "member_count": 9,
+    "isolated_install": "PASS",
+    "outside_source_import": "PASS",
+    "public_export_count": 12,
+    "version": "0.0.0.dev0",
+    "metadata_version": "0.0.0.dev0",
+    "contents": "Five runtime modules and four package metadata files; no tests/docs/examples/contracts"
+  },
+  "readme_status": {
+    "english": "PRIVATE RELEASE CANDIDATE PREPARATION / PRE-RELEASE",
+    "chinese": "SEMANTICALLY_EQUIVALENT",
+    "package_index_rendering": "PYPI_DOCUMENT_RENDERING_NOT_YET_ACCEPTED"
+  },
+  "docs_cleanup_summary": [
+    "Current status and frozen design-time wording distinguished in RELEASE_STATE.md.",
+    "Architecture, origin and public/private boundary describe implemented primitives.",
+    "Historical process documents moved under docs/history and removed from primary README navigation.",
+    "Implementation validation counts labelled historical; synthetic demo semantics and machine receipts retained."
+  ],
+  "remaining_owner_decisions": [
+    "OWNER_LICENSE_DECISION",
+    "OWNER_IDENTITY_ACCEPTANCE",
+    "OWNER_VERSION_DECISION"
+  ],
+  "remaining_final_actions": [
+    "FINAL_RELEASE_AUTHORIZATION",
+    "PUBLIC_VISIBILITY_ACTION"
+  ],
+  "final_commit_validation": "Exact committed candidate clean-clone and final Windows/Ubuntu CI results are recorded in PR/task evidence after this receipt is committed.",
+  "publication_scope": "PUBLIC_REPOSITORY_PREPARATION_ONLY; TAG_RELEASE_AND_PYPI_NOT_AUTHORIZED",
+  "validation_record_scope": "Observed source-candidate acceptance; finalized receipt is included in a fresh artifact rebuild. Final archive digests and exact-commit clone/CI evidence remain outside this non-normative receipt to avoid self-referential artifact identity."
+}

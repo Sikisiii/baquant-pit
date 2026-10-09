@@ -1,4 +1,15 @@
-# Public release audit checklist
+# HISTORICAL RELEASE-AUDIT CHECKLIST
+
+This is the original bootstrap-era checklist, retained as historical/reusable
+engineering context. Its unchecked boxes and future-tense language record that
+earlier state; they are not a current assertion that no audit has occurred.
+The completed [readiness audit](../release/public-release-audit-v1.md) and its
+[machine record](../release/public-release-audit-v1.json) document the later
+assessment. [RELEASE_STATE](../release/RELEASE_STATE.md) describes current
+implementation status and pending Owner decisions. This checklist does not
+define runtime behavior or authorize publication.
+
+## Original checklist (historical)
 
 Future gate only. This checklist is unexecuted for public release and grants no
 rights. The bootstrap privacy scan has a smaller scope and does not constitute
@@ -18,7 +29,7 @@ exceptions and disposition outside distributable material where appropriate.
 - [ ] Check licensed data and provider response payloads, even when stripped of
       credentials; establish independently redistributable rights.
 - [ ] Check copyrighted research, paid reports and third-party text/code rights.
-- [ ] Check competition content and Golden Case.
+- [ ] Check competition content and restricted submissions.
 - [ ] Check alpha/factor/strategy details, strategy members and portfolio details.
 - [ ] Check private snapshot IDs, run/evidence identifiers and private run artifacts.
 - [ ] Check proprietary prompts and BAquant operational configuration.

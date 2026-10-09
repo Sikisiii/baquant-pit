@@ -5,16 +5,20 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "baquant-pit"
 version = "0.0.0.dev0"
-description = "Point-in-Time and Temporal Grounding Infrastructure for AI Financial Research."
+description = "Temporal, canonicalization and raw-integrity primitives for point-in-time research."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
 classifiers = [
-    "Development Status :: 1 - Planning",
-    "Private :: Do Not Upload",
+    "Development Status :: 3 - Alpha",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
 ]
+
+[project.urls]
+Homepage = "https://github.com/Sikisiii/baquant-pit"
+Repository = "https://github.com/Sikisiii/baquant-pit"
+Documentation = "https://github.com/Sikisiii/baquant-pit#readme"
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10", "ruff>=0.15,<1"]

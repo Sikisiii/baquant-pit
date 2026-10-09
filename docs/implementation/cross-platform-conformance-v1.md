@@ -1,8 +1,10 @@
 # Cross-platform conformance v1
 
-This private pre-release validation covers Windows and Ubuntu/Linux on Python
-3.12 against the same frozen baquant-pit minimal-primitives contract/version 1.
-It adds no runtime capability, public API, semantic rule or version change.
+This conformance design covers Windows and Ubuntu/Linux on Python 3.12
+against the same frozen baquant-pit minimal-primitives contract/version 1.
+The runtime is implemented; the repository is in private release candidate
+preparation. See [current release state](../release/RELEASE_STATE.md).
+Conformance adds no runtime capability, public API, semantic rule or version change.
 The [machine-readable coverage design](cross-platform-conformance-v1.json)
 describes scope; actual success is demonstrated by the final GitHub Actions
 matrix, not asserted by this document or an ephemeral run ID.
@@ -76,4 +78,6 @@ bytes, file digest identity or repository artifacts.
 No safe-root, locking, TOCTOU, snapshot or authenticity guarantee is made. The
 market-neutral core implies no exchange, asset-class or provider support.
 Historical origin scope is retained in [origin and authority](../ORIGIN_AND_AUTHORITY.md).
-The repository remains PRIVATE with no license grant, release or publication.
+The repository remains PRIVATE during release candidate preparation.
+License selection and publication remain pending; current scope and decisions
+are recorded in [release state](../release/RELEASE_STATE.md).

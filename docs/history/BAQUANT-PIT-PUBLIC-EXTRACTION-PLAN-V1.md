@@ -1,4 +1,15 @@
-# baquant-pit public extraction plan V1
+# HISTORICAL DEVELOPMENT PLAN
+
+This document records the original private extraction/bootstrap sequence and is
+retained for provenance and development history. It is not current product
+documentation and defines neither current authority nor runtime behavior.
+The plan below preserves the original planning state; origin-specific process
+labels have been generalized without adding implementation or private evidence.
+See [current release state](../release/RELEASE_STATE.md) for the implemented scope
+and [completed readiness audit](../release/public-release-audit-v1.md) for the
+subsequent assessment. No history is erased by this move.
+
+## Original plan (historical)
 
 Status: PRIVATE STAGING / PRE-EXTRACTION. This document is a future plan, not an
 authorization or claim of implemented temporal behavior. The bootstrap task stops
@@ -13,7 +24,7 @@ Future sequence:
 1. Inventory authoritative BAquant PIT implementation and record its exact source
    commit/ref in private planning evidence.
 2. Confirm current semantics, authority and superseded paths. Separate stable
-   primitives, evolving PIT policies and Stage63-sensitive qualification.
+   primitives, evolving PIT policies and consumer-specific qualification.
 3. Establish the public/private boundary with rights and dependency review.
 4. Run a public release audit of the selected inputs and staging contents.
 5. Select the minimum reusable components justified by the reviewed inventory.
