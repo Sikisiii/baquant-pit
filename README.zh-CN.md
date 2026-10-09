@@ -6,7 +6,7 @@
 
 **当前状态：PRIVATE IMPLEMENTATION CANDIDATE / PRE-RELEASE（私有实现候选 / 预发布）。**
 
-最小原语运行时已经实现 private v1 语义，包括：显式 aware datetime 的 UTC 规范化与固定 UTC 文本格式、带强制 cutoff 的不可变双端包含日期窗口、受限类型的 canonical bytes/text 与 SHA-256、原始 bytes 的精确 SHA-256，以及常规文件内容的流式 SHA-256。运行时代码仅依赖 Python 标准库。要求 Python 3.12 或更高版本；当前版本仍为 `0.0.0.dev0`。
+最小原语运行时已经实现 private v1 语义，包括：显式 aware datetime 的 UTC 规范化与固定 UTC 文本格式、带强制 cutoff、起止日期均包含的不可变日期窗口、带边界限制的类型化 canonical bytes/text 与 SHA-256、原始 bytes 的精确 SHA-256，以及常规文件内容的流式 SHA-256。运行时代码仅依赖 Python 标准库。要求 Python 3.12 或更高版本；当前版本仍为 `0.0.0.dev0`。
 
 该实现依据已经合并到 baquant-pit 的合同、规范文档与 synthetic golden vectors 独立编写，没有查阅或复制私有 BAquant 的实现源码。当前不声明 BAquant 兼容性（`NOT_CLAIMED`），公共 API 兼容性也尚未建立（`NOT_ESTABLISHED`）。
 
@@ -23,7 +23,7 @@ encoded = canonical_bytes(payload)
 digest = canonical_sha256(payload)
 ```
 
-`DateWindow` 保存双端包含的日期范围，以及已经规范化为 UTC 的 cutoff。它本身不是 canonical input。仅凭这些字段不能推导出交易日历、交易时段或覆盖范围等权威语义。Canonical 输入只接受规范明确支持的 Python 精确类型，不进行隐式类型转换，也不会使用 `str()` / `repr()` 回退。`BaquantPITError` 暴露稳定的 `.error_id` 与固定安全文本；temporal、canonical 和 raw integrity 分别有轻量子异常类。
+`DateWindow` 保存起止日期均包含的日期范围，以及已经规范化为 UTC 的 cutoff。它本身不是 canonical input。这些字段不赋予日历、交易所交易时段或数据覆盖范围的权威语义。Canonical 输入只接受规范明确支持的 Python 精确类型，不进行隐式类型转换，也不会使用 `str()` / `repr()` 回退。`BaquantPITError` 暴露稳定的 `.error_id` 与固定安全文本；temporal、canonical 和 raw integrity 分别有轻量子异常类。
 
 ## 最小 as-of 演示
 
