@@ -4,7 +4,7 @@
 
 面向 AI 金融研究的 Point-in-Time（PIT，时点可见性）与时间语义基础设施
 
-**当前状态：0.1.0 RELEASE READY / PRIVATE UNTIL OWNER-APPROVED PUBLICATION（0.1.0 发布已就绪 / 仍为私有，等待 Owner 最终公开授权）**
+**当前状态：PUBLIC / OPEN SOURCE / 0.1.0**
 
 最小原语 v1 运行时已经实现，提供以下能力：
 
@@ -17,7 +17,7 @@
 
 当前验证覆盖 Windows 与 Ubuntu/Linux 的 Python 3.12，当前版本为 `0.1.0`（Alpha）
 
-[当前发布状态](docs/release/RELEASE_STATE.md) 说明已实现范围、冻结的设计期规范及最终发布门禁
+[当前发布状态](docs/release/RELEASE_STATE.md) 说明已实现范围、冻结的设计期规范及当前公开状态
 
 公共 API 兼容性尚未建立（`NOT_ESTABLISHED`），也不声明 BAquant 兼容性（`NOT_CLAIMED`）
 
@@ -104,10 +104,6 @@ baquant-pit 是 market-neutral 的基础设施，其原语不会授权或暗示�
 
 从 [发布状态](docs/release/RELEASE_STATE.md) 开始，再查看 [架构](docs/ARCHITECTURE.md)、[最小合同](contracts/minimal-primitives-v1.json)、[规范](docs/specs/compatibility-and-versioning-v1.md)、[实现说明](docs/implementation/minimal-primitives-v1.md)、[内容边界](docs/PUBLIC_PRIVATE_BOUNDARY.md) 与 [来源及权威范围](docs/ORIGIN_AND_AUTHORITY.md)
 
-本项目采用 [Apache License 2.0](LICENSE)，Owner 已选定 Apache-2.0 和版本 `0.1.0`，并接受历史提交身份公开，保留原有 Git 历史
+本项目采用 [Apache License 2.0](LICENSE)，`0.1.0` 是首个公开开源版本，Owner 已接受历史提交身份公开并保留原有 Git 历史
 
-这三项决定已经完成，仓库仍保持 PRIVATE，等待单独授权的最终公开操作；许可证不会自动改变仓库可见性
-
-未来执行该公开操作时，两个 README 的当前状态行必须在可见性变更之前或同时改为 `PUBLIC / OPEN SOURCE / 0.1.0`
-
-该状态切换尚未执行，中文 README 届时仍须保持无中文句号和半角中文句号
+项目仍处于早期 Alpha 阶段，不代表 public API stability、production readiness 或 BAquant compatibility
