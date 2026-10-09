@@ -9,7 +9,7 @@
   "baquant_compatibility": "NOT_CLAIMED",
   "public_api_compatibility": "NOT_ESTABLISHED",
   "public_release_authorized": false,
-  "runtime_implementation_present": false,
+  "runtime_implementation_present": true,
   "document_kind": "Machine-readable normative policy; not a JSON Schema",
   "capabilities": [
     "aware_instant_to_UTC",

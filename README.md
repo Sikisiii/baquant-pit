@@ -2,29 +2,41 @@
 
 Point-in-Time and Temporal Grounding Infrastructure for AI Financial Research.
 
-**Current status: PRIVATE STAGING / PRE-EXTRACTION.**
+**Current status: PRIVATE IMPLEMENTATION CANDIDATE / PRE-RELEASE.**
 
-This project originates from lessons and reusable infrastructure developed inside
-the private BAquant research system. It is being designed as an independent,
-provider-neutral and storage-neutral library.
+The minimal primitive runtime implements the private v1 semantics: explicit aware
+datetime normalization and fixed UTC text, immutable inclusive date windows with
+mandatory cutoffs, bounded typed canonical bytes/text and SHA-256, exact bytes
+SHA-256, and streamed regular-file content SHA-256. Runtime code uses Python's
+standard library only. Python 3.12 or newer is required; version remains
+`0.0.0.dev0`.
 
-This repository currently contains repository scaffolding and extraction/release
-planning only. It does not yet contain the authoritative BAquant PIT implementation.
-The importable package defines a development version; no PIT operations are
-implemented, and no public API compatibility or scientific acceptance is claimed.
+The implementation is independently written from the merged baquant-pit contract,
+normative specifications and synthetic golden vectors. The private BAquant source
+implementation was neither consulted nor copied. BAquant compatibility is
+NOT_CLAIMED, and public API compatibility is NOT_ESTABLISHED.
 
-Future goals include typed temporal semantics, as-of queries, native versus
-reconstructed vintages, revision awareness, look-ahead detection, temporal
-validation, deterministic grounding, fail-closed unknown handling, synthetic
-fixtures and reproducible tests. These are planning goals, not current features.
+```python
+from datetime import UTC, date, datetime
 
-Out of scope are trading, brokerage, stock recommendations, proprietary BAquant
-strategies, the BAquant production database, private market data and competition
-assets. The originating research scope remains Shanghai/Shenzhen A shares
-(`.SH` / `.SZ`), permanently excluding `.BJ`; this bootstrap adds no market support
-and does not authorize expansion into other markets or asset classes.
+from baquant_pit import DateWindow, canonical_bytes, canonical_sha256
 
-Python 3.12 or newer is required. Local bootstrap validation:
+window = DateWindow(
+    date(2032, 4, 4), date(2032, 4, 6), datetime(2032, 4, 5, tzinfo=UTC)
+)
+payload = {"cutoff": window.cutoff, "label": "synthetic"}
+encoded = canonical_bytes(payload)
+digest = canonical_sha256(payload)
+```
+
+`DateWindow` stores inclusive dates and a normalized UTC cutoff. It is not itself
+a canonical input. No calendar, exchange-session or coverage authority follows
+from these fields. Canonical inputs are exact supported Python types; there are
+no implicit conversions or string/repr fallbacks. `BaquantPITError` exposes a
+stable `.error_id` with fixed safe text; small temporal, canonical and raw
+integrity subclasses share that binding.
+
+Run local validation in a virtual environment:
 
 ```sh
 python -m venv .venv
@@ -35,9 +47,31 @@ python -m ruff format --check .
 python -m pytest
 ```
 
-These checks validate packaging, import and specification asset consistency.
-They do not execute PIT primitives. They use no market data,
-providers, database, BAquant dependency or product LLM calls.
+Tests distinguish declarative asset consistency from execution of real APIs
+against unchanged golden expectations. Every golden vector is accounted for in
+the [runtime coverage table](docs/implementation/golden-runtime-coverage-v1.json).
+Conceptual leap seconds and pre-construction duplicate keys are not fabricated
+as Python inputs. Native FIFO and symlink tests run only where supported; controlled
+permission and read failures exercise the actual file API. Only synthetic values
+and temporary files are used. See the [implementation status](docs/implementation/minimal-primitives-v1.md).
+
+The [minimal contract](contracts/minimal-primitives-v1.json) records runtime
+implementation presence after successful conformance. The frozen [specifications](docs/specs/compatibility-and-versioning-v1.md)
+and golden assets retain their design-time status wording and input descriptors;
+their semantics and expected outputs are unchanged. The original design-scope
+exclusion of runtime implementation describes the specification task, while the
+implementation-presence flag and current status document describe this task.
+
+There is no PIT reader, vintage engine, PIT grade, TrustSnapshot, applicability
+classification, database, provider adapter, manifest registry, safe-root policy,
+atomic publication, brokerage or trading functionality. File hashing follows
+links to regular files and hashes only content; it provides no locking, immutable
+snapshot, TOCTOU protection or authenticity guarantee. This candidate establishes
+no production readiness, scientific acceptance or public API stability.
+
+The originating research scope remains Shanghai/Shenzhen A shares (`.SH` / `.SZ`),
+permanently excluding `.BJ`. These generic primitives add no market support.
+Private market data, proprietary strategies and competition assets are excluded.
 
 See the [extraction plan](docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md),
 [boundary](docs/PUBLIC_PRIVATE_BOUNDARY.md),
@@ -45,12 +79,6 @@ See the [extraction plan](docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md),
 [origin and authority](docs/ORIGIN_AND_AUTHORITY.md) and
 [future release checklist](docs/PUBLIC_RELEASE_AUDIT_CHECKLIST.md).
 
-The [minimal primitive semantics contract](contracts/minimal-primitives-v1.json)
-and [versioning specification](docs/specs/compatibility-and-versioning-v1.md)
-define a PRIVATE_REVIEW_CANDIDATE using newly authored synthetic vectors.
-No runtime primitive is implemented, BAquant hash compatibility is NOT_CLAIMED,
-and public API compatibility is NOT_ESTABLISHED.
-
-No public redistribution or open-source license is granted at this stage.
-The repository must remain private. Extraction, public visibility, a release and
-package publication each require a separately scoped explicit Owner authorization.
+No redistribution or open-source license is granted. The repository remains
+private, the license is unchanged, and no release or package publication is
+authorized. Merge and any future publication need separate Owner authorization.
