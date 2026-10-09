@@ -1,7 +1,8 @@
-# Minimal primitives v1 implementation candidate
+# Minimal primitives v1 implementation
 
-Status: PRIVATE IMPLEMENTATION CANDIDATE / PRE-RELEASE. Version: `0.0.0.dev0`.
-Authority: merged baquant-pit v1 contract, specifications and synthetic goldens.
+Status: PRIVATE RELEASE CANDIDATE PREPARATION / PRE-RELEASE.
+Version: `0.0.0.dev0`. See [current release state](../release/RELEASE_STATE.md).
+Semantic authority: frozen baquant-pit v1 contract, specifications and synthetic goldens.
 This is an independent implementation; private BAquant implementation source was
 not consulted or copied. Compatibility is not claimed and no license is added.
 
@@ -56,13 +57,20 @@ relation without adding a reader API. F103 uses controlled permission failure;
 F105 reads a partial chunk then fails before EOF through the actual file API.
 Those injections validate error mapping, not host permissions or durability.
 
-Local validation collects 336 tests: 55 unchanged asset/import test items and
-281 new runtime/conformance test items. On Windows, 329 pass and 7 skip: the two
+### HISTORICAL VALIDATION RESULT
+
+The original runtime implementation validation collected 336 tests: 55 asset/import test items and
+281 runtime/conformance test items. On that Windows host, 329 passed and 7 skipped: the two
 conceptual golden IDs, the conditional FIFO and four native symlink scenarios
 when link creation is unavailable. Runtime golden results are 113 passed / 3
 accounted skips; generic runtime tests are distinct from asset consistency.
 POSIX CI also executes the conditional FIFO and native symlink tests when
-supported. Ruff check, Ruff format check, pytest and diff check are required.
+supported. These totals describe the original implementation milestone, not
+the current expanded suite. Current preparation results are recorded in the
+[preparation receipt](../release/release-preparation-v1.json). Ruff check, Ruff
+format check, full pytest and diff check remain required.
+
+### Resource and semantic boundaries
 
 Boundary tests prove inclusive depth 16, node count 1024, UTF-8 scalar/key 4096
 bytes, integer/Decimal coefficient 1024 digits, Decimal exponent [-1024,1024]
@@ -70,13 +78,14 @@ and complete canonical bytes 65536. Tests also prove over-bound rejection,
 validation/traversal precedence, alias occurrence counting and final byte-limit
 ordering. There are no lower implementation caps.
 
-The implementation-presence flag is set true only after runtime conformance
-succeeds. The matching asset status assertion is updated from false to true;
-all other old asset assertions are preserved. No golden expected values,
+The original implementation set its presence flag to true after runtime
+conformance succeeded and updated the matching asset-status assertion.
+All other pre-existing asset assertions were preserved. No golden expected values,
 normative specification text, format ID, semantic rule or resource limit changes.
 Design-time wording in frozen artifacts remains historical context.
 
 Excluded: PIT grade, vintage selection, applicability/classification, TrustSnapshot,
 DB, providers, product LLM calls, manifests, safe-root/atomic publication and
 trading. No release, PyPI publication, public visibility or API stability is
-established. Review this candidate before any separately authorized merge.
+established. License, first public version and historical identity acceptance
+remain Owner decisions; see [release state](../release/RELEASE_STATE.md).

@@ -1,0 +1,8 @@
+# Ship a complete testable source bundle; wheels use src package discovery.
+include README.md README.zh-CN.md
+recursive-include tests *.py *.json
+recursive-include contracts *.json
+recursive-include examples *.py *.json
+recursive-include docs *.md *.json
+include tools/summarize_cross_platform.py
+global-exclude *.py[cod]

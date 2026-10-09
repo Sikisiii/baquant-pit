@@ -4,7 +4,8 @@ Suppose an observation is revised tomorrow. A historical decision made today
 must not see tomorrow's observation. This fully synthetic example prevents one
 form of look-ahead bias by enforcing explicit knowledge-time visibility.
 
-After editable installation, run from the repository root:
+After installing from the complete repository or source distribution, run
+from that source root:
 
 ```sh
 python examples/minimal_asof_demo.py
@@ -91,4 +92,6 @@ consumer-specific version policy, full PIT database access or backtest correctne
 It is not a production PIT reader, vintage acceptance engine, source authority
 framework, database, adapter or trading system. There are no automatic decisions,
 new runtime modules/public exports/dependencies, semantic changes or version bump.
-The repository remains PRIVATE with no license grant, release or publication.
+The repository remains PRIVATE during release candidate preparation.
+License selection and final publication remain pending; see
+[current release state](../release/RELEASE_STATE.md).
