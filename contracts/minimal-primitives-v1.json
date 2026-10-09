@@ -1,0 +1,354 @@
+{
+  "contract_id": "baquant-pit-minimal-primitives",
+  "version": 1,
+  "contract_version": 1,
+  "status": "PRIVATE_REVIEW_CANDIDATE",
+  "canonical_format_id": "baquant-pit-canonical-v1",
+  "temporal_format_id": "baquant-pit-temporal-v1",
+  "raw_integrity_format_id": "baquant-pit-raw-integrity-v1",
+  "baquant_compatibility": "NOT_CLAIMED",
+  "public_api_compatibility": "NOT_ESTABLISHED",
+  "public_release_authorized": false,
+  "runtime_implementation_present": false,
+  "document_kind": "Machine-readable normative policy; not a JSON Schema",
+  "capabilities": [
+    "aware_instant_to_UTC",
+    "immutable_inclusive_date_window_with_explicit_cutoff",
+    "bounded_typed_value_normalization",
+    "canonical_UTF8_bytes_and_text",
+    "canonical_bytes_SHA256",
+    "exact_raw_bytes_SHA256",
+    "exact_file_content_SHA256"
+  ],
+  "supported_types": [
+    "null",
+    "bool",
+    "integer",
+    "Unicode_scalar_string",
+    "finite_Decimal",
+    "date",
+    "aware_datetime",
+    "list",
+    "string_key_mapping"
+  ],
+  "rejected_types": [
+    "float",
+    "nonfinite_Decimal",
+    "naive_datetime",
+    "null_offset_datetime",
+    "tuple",
+    "Enum_including_IntEnum_and_StrEnum",
+    "bytes_in_canonical_domain",
+    "bytearray",
+    "memoryview",
+    "set",
+    "frozenset",
+    "non_string_mapping_key",
+    "unsupported_object",
+    "surrogate_codepoint",
+    "cyclic_container",
+    "custom_subclass_or_protocol_only_object"
+  ],
+  "python_binding": {
+    "exact_types": [
+      "NoneType",
+      "bool",
+      "int",
+      "str",
+      "decimal.Decimal",
+      "datetime.date",
+      "datetime.datetime",
+      "list",
+      "dict"
+    ],
+    "subclasses": "REJECT; including scalar-like Enum and custom containers",
+    "mapping": "exact dict; other Mapping protocols are not implicitly accepted",
+    "datetime_tzinfo": "tzinfo objects allowed, resolved offset required; no internal zone-name lookup"
+  },
+  "datetime_policy": {
+    "input": "explicit aware datetime; no string/date coercion",
+    "tzinfo_required": true,
+    "non_null_utcoffset_required": true,
+    "normalization": "UTC represented instant",
+    "text": "YYYY-MM-DDTHH:MM:SS.ffffffZ",
+    "UTC_suffix": "Z",
+    "seconds": "always two digits",
+    "fraction_digits": 6,
+    "trailing_zeros": "ALWAYS_RETAIN",
+    "years": [
+      1,
+      9999
+    ],
+    "precision": "exact integer microseconds; no rounding",
+    "leap_seconds": "REJECT",
+    "offset_equivalent_values": "IDENTICAL",
+    "offset": "explicit resolved offset, strictly between -24h and +24h; integer microseconds",
+    "business_timezone": null,
+    "now_defaults": false,
+    "date_only_EOD_conversion": false
+  },
+  "date_policy": {
+    "input": "exact date, datetime is not a date input",
+    "text": "YYYY-MM-DD",
+    "calendar": "proleptic Gregorian, years 0001 through 9999",
+    "conversion_to_instant": "NEVER"
+  },
+  "date_window_policy": {
+    "start": "exact date",
+    "end": "exact date",
+    "ordered": "start <= end",
+    "endpoints": "INCLUSIVE",
+    "equal_endpoints": "VALID_SINGLE_DATE",
+    "immutable": true,
+    "cutoff": "required aware datetime normalized to UTC",
+    "cutoff_relation": "instant <= cutoff includes equality; conceptual relation, not a reader API",
+    "date_cutoff_cross_constraint": "NONE; dates are not knowledge instants",
+    "calendar_authority": "NONE",
+    "window_in_canonical_domain": false
+  },
+  "canonical_representation": {
+    "envelope": [
+      "baquant-pit-canonical-v1",
+      "NODE"
+    ],
+    "tag_grammar": "Closed positional JSON arrays; no arbitrary tags or object-repr",
+    "node_forms": {
+      "null": [
+        "null"
+      ],
+      "bool": [
+        "bool",
+        "JSON_BOOLEAN"
+      ],
+      "integer": [
+        "int",
+        "BASE10_STRING"
+      ],
+      "string": [
+        "str",
+        "SCALAR_STRING"
+      ],
+      "Decimal": [
+        "decimal",
+        "SIGN_0_OR_1_STRING",
+        "COEFFICIENT_STRING",
+        "EXPONENT_STRING"
+      ],
+      "date": [
+        "date",
+        "DATE_TEXT"
+      ],
+      "datetime": [
+        "datetime",
+        "UTC_TEXT"
+      ],
+      "list": [
+        "list",
+        "ORDERED_NODE_ARRAY"
+      ],
+      "mapping": [
+        "map",
+        "SORTED_KEY_NODE_PAIR_ARRAY"
+      ]
+    },
+    "all_tags": [
+      "null",
+      "bool",
+      "int",
+      "str",
+      "decimal",
+      "date",
+      "datetime",
+      "list",
+      "map"
+    ],
+    "integer_text": "0 or -?[1-9][0-9]*; no +, leading zeros or negative integer zero",
+    "user_mapping_tags": "keys are data in key/node pairs, never grammar; tag-shaped user content remains tagged data"
+  },
+  "decimal_policy": {
+    "finite_only": true,
+    "representation": "sign/coefficient/exponent strings from exact decimal tuple",
+    "numeric_value": "(-1)^sign * coefficient * 10^exponent",
+    "preserve_scale": true,
+    "one_point_zero_vs_one_point_zero_zero": "DISTINCT",
+    "negative_zero": "sign and exponent retained; distinct from positive zero",
+    "scientific_notation": "No scientific text in bytes; stored integer exponent retains source quantum",
+    "coefficient": "0 or [1-9][0-9]*; retain trailing coefficient zeros",
+    "context_rounding": "NEVER; equivalent quantum tuples are identical"
+  },
+  "unicode_policy": {
+    "normalization": "NONE",
+    "NFC": false,
+    "NFKC": false,
+    "composed_decomposed": "DISTINCT",
+    "surrogate_codepoints": "REJECT",
+    "encoding": "strict UTF-8; no BOM; no locale dependence"
+  },
+  "mapping_policy": {
+    "key_type": "exact Unicode scalar string",
+    "coercion": "NONE",
+    "ordering": "lexicographic Unicode scalar numeric values; shorter prefix first",
+    "duplicate_keys": "REJECT before information is lost by dict construction",
+    "coercion_collisions": "non-string keys fail, never str(key)",
+    "case_folding": "NONE",
+    "normalization": "NONE",
+    "representation": "ordered array of [key, NODE] pairs"
+  },
+  "sequence_policy": {
+    "list": "SUPPORTED, order retained",
+    "tuple": "REJECT",
+    "arbitrary_Sequence_protocol": "REJECT"
+  },
+  "cycle_policy": {
+    "cycles": "REJECT",
+    "detection": "active ancestor identity, not global visited-set",
+    "shared_acyclic_alias": "allowed; each occurrence emits and counts as a separate node"
+  },
+  "resource_policy": {
+    "status": "NORMATIVE_V1",
+    "max_node_depth": 16,
+    "root_node_depth": 0,
+    "max_emitted_nodes": 1024,
+    "max_scalar_or_key_UTF8_bytes": 4096,
+    "max_integer_magnitude_digits": 1024,
+    "max_decimal_coefficient_digits": 1024,
+    "decimal_exponent_range": [
+      -1024,
+      1024
+    ],
+    "max_canonical_bytes_including_envelope": 65536,
+    "limit_error": "CANONICAL_RESOURCE_LIMIT",
+    "implementation_policy": "no silent lower caps on conforming inputs; chunk size/internal allocation not semantic"
+  },
+  "byte_format": {
+    "UTF8": "strict",
+    "BOM": false,
+    "whitespace": "NONE_OUTSIDE_STRINGS",
+    "separators": [
+      ",",
+      ":"
+    ],
+    "terminal_newline": false,
+    "ensure_ascii": false,
+    "escaping": "quote/backslash; named b/f/n/r/t; other controls u00xx lowercase; slash and other scalars literal",
+    "JSON_objects_in_normalized_form": false,
+    "envelope_in_hash": true
+  },
+  "hashing_policy": {
+    "algorithm": "SHA-256",
+    "output": "exactly 64 lowercase hex ASCII characters",
+    "salt": null,
+    "secret_key": null,
+    "canonical": "hash exact canonical UTF8 envelope bytes",
+    "raw": "hash exact supplied bytes; no namespace",
+    "file": "hash exact content bytes; no namespace, path or metadata",
+    "claims_not_proven": [
+      "truth",
+      "authenticity",
+      "historical_availability",
+      "native_vintage",
+      "authority",
+      "completeness"
+    ]
+  },
+  "raw_bytes_policy": {
+    "python_input": "exact bytes",
+    "empty": "VALID",
+    "decoding": false,
+    "newline_conversion": false,
+    "JSON_wrapping": false,
+    "NUL": "ordinary byte",
+    "arbitrary_binary": "VALID",
+    "bytearray_memoryview": "REJECT"
+  },
+  "file_policy": {
+    "input": "native path text or standard pathlib.Path, no coercion from arbitrary objects",
+    "regular_files_only": true,
+    "empty": "VALID",
+    "symlinks": "FOLLOW_TO_REGULAR_FILE",
+    "metadata_included": false,
+    "path_included": false,
+    "filename_included": false,
+    "streaming": "RECOMMENDED; chunk size does not alter digest",
+    "missing": "RAW_FILE_NOT_FOUND",
+    "directory_or_special_file": "RAW_FILE_NOT_REGULAR_FILE",
+    "unreadable": "RAW_FILE_UNREADABLE",
+    "other_IO_failure": "RAW_FILE_IO_ERROR",
+    "guarantees_not_provided": [
+      "immutable_snapshot",
+      "no_TOCTOU",
+      "safe_path",
+      "trusted_root",
+      "locking",
+      "authenticity"
+    ],
+    "partial_result_on_failure": "FORBIDDEN"
+  },
+  "error_ids": [
+    "TEMPORAL_INVALID_TYPE",
+    "TEMPORAL_NAIVE_DATETIME",
+    "TEMPORAL_NULL_OFFSET",
+    "TEMPORAL_INVALID_OFFSET",
+    "TEMPORAL_INSTANT_OUT_OF_RANGE",
+    "TEMPORAL_INVALID_DATE",
+    "TEMPORAL_WINDOW_REVERSED",
+    "TEMPORAL_CUTOFF_REQUIRED",
+    "TEMPORAL_LEAP_SECOND_UNSUPPORTED",
+    "CANONICAL_UNSUPPORTED_TYPE",
+    "CANONICAL_FLOAT_FORBIDDEN",
+    "CANONICAL_NONFINITE_DECIMAL",
+    "CANONICAL_INVALID_MAPPING_KEY",
+    "CANONICAL_DUPLICATE_MAPPING_KEY",
+    "CANONICAL_INVALID_UNICODE",
+    "CANONICAL_CYCLE_DETECTED",
+    "CANONICAL_RESOURCE_LIMIT",
+    "RAW_INVALID_BYTES_TYPE",
+    "RAW_INVALID_PATH_TYPE",
+    "RAW_FILE_NOT_FOUND",
+    "RAW_FILE_NOT_REGULAR_FILE",
+    "RAW_FILE_UNREADABLE",
+    "RAW_FILE_IO_ERROR"
+  ],
+  "error_model": {
+    "identity": "stable semantic ID; Python exception class undecided",
+    "safe_details": "no secrets, raw values or private paths by default",
+    "precedence": "normative traversal and gates specified in canonicalization and temporal docs"
+  },
+  "compatibility": {
+    "BAquant_historical_hashes": "IMMUTABLE; never retroactively converted",
+    "canonical_byte_change": "NEW_CANONICAL_FORMAT_REQUIRED",
+    "input_domain_or_limits_change": "NEW_FORMAT_VERSION_REQUIRED",
+    "error_or_temporal_raw_rule_change": "NEW_AFFECTED_FORMAT_AND_CONTRACT_VERSION_REQUIRED",
+    "internal_streaming_change": "NO_VERSION_CHANGE_IF_IDENTICAL_SEMANTICS",
+    "golden_vectors": "NORMATIVE; necessary but not sufficient for conformance"
+  },
+  "golden_fixtures": [
+    "tests/fixtures/golden/temporal-v1.json",
+    "tests/fixtures/golden/canonical-v1.json",
+    "tests/fixtures/golden/raw-integrity-v1.json"
+  ],
+  "specifications": [
+    "docs/specs/temporal-semantics-v1.md",
+    "docs/specs/canonicalization-v1.md",
+    "docs/specs/raw-integrity-v1.md",
+    "docs/specs/compatibility-and-versioning-v1.md"
+  ],
+  "explicit_exclusions": [
+    "PIT_grade",
+    "vintage_acceptance",
+    "TrustSnapshot",
+    "provider_adapters",
+    "database_readers",
+    "security_universe_rules",
+    "exchange_calendars",
+    "wall_clock_defaults",
+    "Stage_applicability_classification",
+    "consumer_qualification",
+    "artifact_registry",
+    "manifest_publishing",
+    "DB_Alembic_write_authority",
+    "production_orchestration",
+    "runtime_implementation",
+    "public_stability_release_license_or_publication"
+  ]
+}

@@ -35,7 +35,8 @@ python -m ruff format --check .
 python -m pytest
 ```
 
-These checks validate packaging and import only. They use no market data,
+These checks validate packaging, import and specification asset consistency.
+They do not execute PIT primitives. They use no market data,
 providers, database, BAquant dependency or product LLM calls.
 
 See the [extraction plan](docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md),
@@ -43,6 +44,12 @@ See the [extraction plan](docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md),
 [architecture](docs/ARCHITECTURE.md),
 [origin and authority](docs/ORIGIN_AND_AUTHORITY.md) and
 [future release checklist](docs/PUBLIC_RELEASE_AUDIT_CHECKLIST.md).
+
+The [minimal primitive semantics contract](contracts/minimal-primitives-v1.json)
+and [versioning specification](docs/specs/compatibility-and-versioning-v1.md)
+define a PRIVATE_REVIEW_CANDIDATE using newly authored synthetic vectors.
+No runtime primitive is implemented, BAquant hash compatibility is NOT_CLAIMED,
+and public API compatibility is NOT_ESTABLISHED.
 
 No public redistribution or open-source license is granted at this stage.
 The repository must remain private. Extraction, public visibility, a release and

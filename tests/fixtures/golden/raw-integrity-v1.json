@@ -1,0 +1,182 @@
+{
+  "format_id": "baquant-pit-raw-integrity-v1",
+  "contract_id": "baquant-pit-minimal-primitives",
+  "contract_version": 1,
+  "status": "PRIVATE_REVIEW_CANDIDATE",
+  "synthetic": true,
+  "input_descriptors_executable": false,
+  "raw_vectors": [
+    {
+      "vector_id": "R001",
+      "input_description": "empty bytes",
+      "bytes_hex": "",
+      "byte_length": 0,
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "vector_id": "R002",
+      "input_description": "one ASCII byte a",
+      "bytes_hex": "61",
+      "byte_length": 1,
+      "expected_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
+    },
+    {
+      "vector_id": "R003",
+      "input_description": "UTF8 snow scalar",
+      "bytes_hex": "e99baa",
+      "byte_length": 3,
+      "expected_sha256": "53058fe2e03c00d93c4ba9361889dd7569d7d7b9674ed172266ee66265208cc6"
+    },
+    {
+      "vector_id": "R004",
+      "input_description": "LF",
+      "bytes_hex": "0a",
+      "byte_length": 1,
+      "expected_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "vector_id": "R005",
+      "input_description": "CRLF",
+      "bytes_hex": "0d0a",
+      "byte_length": 2,
+      "expected_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "vector_id": "R006",
+      "input_description": "NUL-containing bytes",
+      "bytes_hex": "610062",
+      "byte_length": 3,
+      "expected_sha256": "59b271ae1bbcb1d31d41929817f4b16fb439eb4f31520b5ad1d5ce98920a7138"
+    },
+    {
+      "vector_id": "R007",
+      "input_description": "same-length byte b",
+      "bytes_hex": "62",
+      "byte_length": 1,
+      "expected_sha256": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d"
+    },
+    {
+      "vector_id": "R008",
+      "input_description": "arbitrary non-UTF8 binary",
+      "bytes_hex": "ff8000",
+      "byte_length": 3,
+      "expected_sha256": "e9d359479a5afbc51ee48f63fd7c4c27b4067c80c39bb1c9604917d3a6a6c8d7"
+    }
+  ],
+  "file_equivalence_vectors": [
+    {
+      "vector_id": "F001",
+      "raw_vector_id": "R001",
+      "content_hex": "",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "concept": "a regular file containing exactly these bytes has the same content digest"
+    },
+    {
+      "vector_id": "F002",
+      "raw_vector_id": "R002",
+      "content_hex": "61",
+      "expected_sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+      "concept": "a regular file containing exactly these bytes has the same content digest"
+    },
+    {
+      "vector_id": "F003",
+      "raw_vector_id": "R003",
+      "content_hex": "e99baa",
+      "expected_sha256": "53058fe2e03c00d93c4ba9361889dd7569d7d7b9674ed172266ee66265208cc6",
+      "concept": "a regular file containing exactly these bytes has the same content digest"
+    },
+    {
+      "vector_id": "F004",
+      "raw_vector_id": "R004",
+      "content_hex": "0a",
+      "expected_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "concept": "a regular file containing exactly these bytes has the same content digest"
+    },
+    {
+      "vector_id": "F005",
+      "raw_vector_id": "R005",
+      "content_hex": "0d0a",
+      "expected_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "concept": "a regular file containing exactly these bytes has the same content digest"
+    },
+    {
+      "vector_id": "F006",
+      "raw_vector_id": "R006",
+      "content_hex": "610062",
+      "expected_sha256": "59b271ae1bbcb1d31d41929817f4b16fb439eb4f31520b5ad1d5ce98920a7138",
+      "concept": "a regular file containing exactly these bytes has the same content digest"
+    },
+    {
+      "vector_id": "F007",
+      "raw_vector_id": "R007",
+      "content_hex": "62",
+      "expected_sha256": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d",
+      "concept": "a regular file containing exactly these bytes has the same content digest"
+    },
+    {
+      "vector_id": "F008",
+      "raw_vector_id": "R008",
+      "content_hex": "ff8000",
+      "expected_sha256": "e9d359479a5afbc51ee48f63fd7c4c27b4067c80c39bb1c9604917d3a6a6c8d7",
+      "concept": "a regular file containing exactly these bytes has the same content digest"
+    }
+  ],
+  "invalid_vectors": [
+    {
+      "vector_id": "R101",
+      "invalid_condition": "text supplied instead of bytes",
+      "expected_error_id": "RAW_INVALID_BYTES_TYPE"
+    },
+    {
+      "vector_id": "R102",
+      "invalid_condition": "bytearray supplied instead of exact bytes",
+      "expected_error_id": "RAW_INVALID_BYTES_TYPE"
+    },
+    {
+      "vector_id": "F101",
+      "invalid_condition": "missing regular file or broken symlink",
+      "expected_error_id": "RAW_FILE_NOT_FOUND"
+    },
+    {
+      "vector_id": "F102",
+      "invalid_condition": "directory or link to directory",
+      "expected_error_id": "RAW_FILE_NOT_REGULAR_FILE"
+    },
+    {
+      "vector_id": "F103",
+      "invalid_condition": "permission-denied regular file",
+      "expected_error_id": "RAW_FILE_UNREADABLE"
+    },
+    {
+      "vector_id": "F104",
+      "invalid_condition": "device or FIFO target",
+      "expected_error_id": "RAW_FILE_NOT_REGULAR_FILE"
+    },
+    {
+      "vector_id": "F105",
+      "invalid_condition": "read fails before EOF",
+      "expected_error_id": "RAW_FILE_IO_ERROR"
+    },
+    {
+      "vector_id": "F106",
+      "invalid_condition": "path has embedded NUL",
+      "expected_error_id": "RAW_INVALID_PATH_TYPE"
+    }
+  ],
+  "distinct_pairs": [
+    [
+      "R004",
+      "R005"
+    ],
+    [
+      "R002",
+      "R007"
+    ]
+  ],
+  "coverage": [
+    "empty_onebyte_UTF8_LF_CRLF_NUL_arbitrary_binary",
+    "same_size_different_content",
+    "file_content_equivalence_without_runtime_API",
+    "conceptual_file_errors"
+  ]
+}
