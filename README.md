@@ -69,9 +69,16 @@ links to regular files and hashes only content; it provides no locking, immutabl
 snapshot, TOCTOU protection or authenticity guarantee. This candidate establishes
 no production readiness, scientific acceptance or public API stability.
 
-The originating research scope remains Shanghai/Shenzhen A shares (`.SH` / `.SZ`),
-permanently excluding `.BJ`. These generic primitives add no market support.
+baquant-pit is market-neutral infrastructure. Its primitives do not authorize or
+imply support for any specific exchange, security market, asset class or provider.
+Market-specific rules belong in downstream consumers, outside this core library.
 Private market data, proprietary strategies and competition assets are excluded.
+Historical origin scope is recorded in [origin and authority](docs/ORIGIN_AND_AUTHORITY.md).
+
+The same frozen v1 tests run on Windows and Ubuntu/Linux with Python 3.12. See the
+[portability coverage and host boundaries](docs/implementation/cross-platform-conformance-v1.md).
+Native symlinks and FIFO creation are conditional on host capability; core
+canonical, temporal and hash semantics must pass on both platforms.
 
 See the [extraction plan](docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md),
 [boundary](docs/PUBLIC_PRIVATE_BOUNDARY.md),

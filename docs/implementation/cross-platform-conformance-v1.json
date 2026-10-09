@@ -1,0 +1,141 @@
+{
+  "artifact_kind": "NON_NORMATIVE_CONFORMANCE_DESIGN",
+  "contract_id": "baquant-pit-minimal-primitives",
+  "contract_version": 1,
+  "format_ids": [
+    "baquant-pit-temporal-v1",
+    "baquant-pit-canonical-v1",
+    "baquant-pit-raw-integrity-v1"
+  ],
+  "platforms_expected": [
+    "windows-latest",
+    "ubuntu-latest"
+  ],
+  "python": "3.12",
+  "frozen_assets_modified": false,
+  "runtime_modified": false,
+  "public_exports_count": 12,
+  "package_version": "0.0.0.dev0",
+  "validation": [
+    "editable install with dev dependencies",
+    "all exports importable",
+    "Ruff",
+    "format",
+    "full pytest with frozen golden runtime tests"
+  ],
+  "semantic_areas": [
+    "canonical exact bytes/text/SHA256",
+    "temporal explicit offset/UTC precision/window immutability/errors",
+    "Decimal quantum/sign/coefficient/exponent and context independence",
+    "Unicode identity/escaping/scalar ordering",
+    "exact raw binary/NUL/newline hashes",
+    "binary regular-file content/rename/mtime/error mapping",
+    "existing normative resource boundaries"
+  ],
+  "representative_canonical_golden_ids": [
+    "C001",
+    "C002",
+    "C003",
+    "C006",
+    "C008",
+    "C009",
+    "C010",
+    "C011",
+    "C012",
+    "C014",
+    "C016",
+    "C019",
+    "C020",
+    "C021",
+    "C022",
+    "C025",
+    "C026",
+    "C027",
+    "C032",
+    "C033",
+    "C034",
+    "C035",
+    "C036",
+    "C038"
+  ],
+  "environment_variation": {
+    "locale": [
+      "C",
+      "host default"
+    ],
+    "Decimal_context": [
+      {
+        "precision": 1,
+        "rounding": "ROUND_UP"
+      },
+      {
+        "precision": 28,
+        "rounding": "ROUND_DOWN"
+      }
+    ],
+    "process_TZ": [
+      "UTC0",
+      "EST5EDT",
+      "JST-9"
+    ],
+    "restoration": "locale, Decimal context and process TZ restored; tzset used only where available"
+  },
+  "existing_golden_accounting": {
+    "total": 116,
+    "runtime_executable": 113,
+    "conceptual_nonexecutable": [
+      "T109",
+      "C117"
+    ],
+    "platform_conditional": [
+      "F104"
+    ],
+    "unchanged_coverage_table": "docs/implementation/golden-runtime-coverage-v1.json"
+  },
+  "platform_conditional_features": [
+    {
+      "feature": "native symlink",
+      "tests": "test_symlink_policy_when_host_supports_it",
+      "cases": [
+        "file",
+        "broken",
+        "directory",
+        "parent"
+      ],
+      "policy": "Follow native links to regular files; creation failure gets explicit capability skip, never simulated success"
+    },
+    {
+      "feature": "FIFO/special file",
+      "golden_id": "F104",
+      "Linux": "Create real FIFO with os.mkfifo and reject as nonregular when available",
+      "Windows": "PLATFORM_NOT_APPLICABLE when native FIFO construction is unavailable; explicit existing conditional skip"
+    }
+  ],
+  "controlled_injection_scope": [
+    "permission/open and partial-read semantic error mapping",
+    "ENAMETOOLONG / Win32 206 at stat, open and read; RAW_FILE_IO_ERROR unless a more specific existing mapping applies"
+  ],
+  "windows_path_boundary": {
+    "ordinary_short_native_paths": "tested",
+    "all_legacy_long_path_environments_supported": false,
+    "automatic_extended_path_prefix": false,
+    "registry_policy_changes": false,
+    "admin_required": false
+  },
+  "actual_result_evidence": "GitHub Actions final matrix jobs and PITX_RESULT_JSON summaries; no ephemeral run IDs in this design artifact",
+  "claims_not_made": [
+    "arbitrary locale installation coverage",
+    "timezone database resolution",
+    "native ACL security validation",
+    "universal long-path support",
+    "immutable snapshots",
+    "TOCTOU protection",
+    "safe-root filesystem policy",
+    "locking",
+    "authenticity",
+    "market/provider/asset support",
+    "public API stability",
+    "BAquant compatibility",
+    "license/redistribution/release/publication"
+  ]
+}

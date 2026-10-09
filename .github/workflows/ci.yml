@@ -1,4 +1,4 @@
-name: Bootstrap CI
+name: Cross-platform conformance
 
 on:
   push:
@@ -10,8 +10,13 @@ permissions:
   contents: read
 
 jobs:
-  bootstrap:
-    runs-on: ubuntu-latest
+  conformance:
+    name: conformance (${{ matrix.os }}, Python 3.12)
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -25,5 +30,8 @@ jobs:
         run: |
           python -m ruff check .
           python -m ruff format --check .
-      - name: Bootstrap import test
-        run: python -m pytest
+      - name: Runtime and frozen golden conformance
+        run: python -m pytest -ra --basetemp="${{ runner.temp }}/pitx" --junitxml="${{ runner.temp }}/pitx-results.xml"
+      - name: Record platform outcomes and explicit skips
+        if: always()
+        run: python tools/summarize_cross_platform.py "${{ runner.temp }}/pitx-results.xml"
