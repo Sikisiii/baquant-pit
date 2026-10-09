@@ -1,0 +1,2680 @@
+{
+  "audit_id": "BAQUANT-PIT-PUBLIC-RELEASE-AUDIT-V1",
+  "audited_main_sha": "203d9795e2b442ac8af90652eb95de58d3e6bdb5",
+  "repository_private": true,
+  "default_branch": "main",
+  "audit_type": "PRE_PUBLICATION_ASSESSMENT_ONLY",
+  "publication_authorized": false,
+  "current_tree": {
+    "tracked_file_count": 42,
+    "category_counts": {
+      "root": 5,
+      ".github": 1,
+      "contracts": 1,
+      "docs": 15,
+      "examples": 2,
+      "src": 5,
+      "tests": 12,
+      "tools": 1
+    },
+    "entries": [
+      {
+        "path": ".gitattributes",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "b58acd97287a9b0f5e0c4653876712dae9ce9450"
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "c9b0787bdb692b2b7ea78b7a901d12df2c8b57bc"
+      },
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "c7f7c45bf06a540c0b7a5e17fb63c4ecf568ae63"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "dbdebb31b66fd578b7b96de518b6bfaf3610aeb8"
+      },
+      {
+        "path": "README.zh-CN.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "d1af13522dbc155450f60929d15aacfb8e649c5f"
+      },
+      {
+        "path": "contracts/minimal-primitives-v1.json",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "498355cddb32be6b68a67aaebea424c5afc0aa88"
+      },
+      {
+        "path": "docs/ARCHITECTURE.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "9e25f76fec64c6560f820727ed37464db78a605b"
+      },
+      {
+        "path": "docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "a317012461e90f20af3e6540ec4c1da11ef3a0ba"
+      },
+      {
+        "path": "docs/ORIGIN_AND_AUTHORITY.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "17b6b87b3abe6ab0fb004efceae70927444e9302"
+      },
+      {
+        "path": "docs/PUBLIC_PRIVATE_BOUNDARY.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "ec9b827b4d8ec5f8379d3f1e17ae9d562bf26542"
+      },
+      {
+        "path": "docs/PUBLIC_RELEASE_AUDIT_CHECKLIST.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "ccc21f246187e725c6f97078df3b141a5366f61b"
+      },
+      {
+        "path": "docs/demos/minimal-asof-demo-v1.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "92027839b3c7f623f8f1ef479dc5113640d0297b"
+      },
+      {
+        "path": "docs/implementation/cross-platform-conformance-v1.json",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "d2fb3b53a745b2efa1fe70f4b79cdfc871ee78d7"
+      },
+      {
+        "path": "docs/implementation/cross-platform-conformance-v1.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "b8e538ce28e70fee8bcbf08583020f09ccfb8cc0"
+      },
+      {
+        "path": "docs/implementation/golden-runtime-coverage-v1.json",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "351839d6eb5d001b9078cdd4f163ef58055410ad"
+      },
+      {
+        "path": "docs/implementation/minimal-asof-demo-v1.json",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "e1cf68940f9b5ed04e70f6afe1a7ed2d240d886e"
+      },
+      {
+        "path": "docs/implementation/minimal-primitives-v1.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "5614f8eaaf17dd58dce60aff0e7cebbd87a11b36"
+      },
+      {
+        "path": "docs/specs/canonicalization-v1.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "94391deb502fb1c5179a330c0bc3202b74b22a1e"
+      },
+      {
+        "path": "docs/specs/compatibility-and-versioning-v1.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "4ba74d474a8effb9105a68c36415bc6794fb4ac8"
+      },
+      {
+        "path": "docs/specs/raw-integrity-v1.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "414fc2841afd1d28b1025a7e22c72948f0e55704"
+      },
+      {
+        "path": "docs/specs/temporal-semantics-v1.md",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "962e019f4afc28153c3800607ad05435a6bb8e5d"
+      },
+      {
+        "path": "examples/data/minimal_asof_demo.json",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "fbd2d92fc49599db1011e94502fd429be8f6204e"
+      },
+      {
+        "path": "examples/minimal_asof_demo.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "75452cd4a8d7d545b5641ab82ff8379a24259a62"
+      },
+      {
+        "path": "pyproject.toml",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "07a5c0a799b98edf35619b8d624dd67add27e5e0"
+      },
+      {
+        "path": "src/baquant_pit/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "8c756ce321fa125fcd6596307904a48701047d40"
+      },
+      {
+        "path": "src/baquant_pit/canonical.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "2c8a5b4cef78fcc9b5d3dabc4dd041d5a69cca82"
+      },
+      {
+        "path": "src/baquant_pit/errors.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "4a13d62fa6b42423a337cb4b8d56c45a80586acc"
+      },
+      {
+        "path": "src/baquant_pit/integrity.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "c60b9d3b19df1de2b1b0e847e8ce8ae27f94181b"
+      },
+      {
+        "path": "src/baquant_pit/temporal.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "437e4535a05412dc8032e78708941668064990d4"
+      },
+      {
+        "path": "tests/fixtures/golden/canonical-v1.json",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "66338ff5a34f552d645b4ee495a13a76b69066fb"
+      },
+      {
+        "path": "tests/fixtures/golden/raw-integrity-v1.json",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "f97e96dae470f884893bfcbb805209f359080163"
+      },
+      {
+        "path": "tests/fixtures/golden/temporal-v1.json",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "8069dd7b6cb221ca689cc7672ecbd44d7b296ad1"
+      },
+      {
+        "path": "tests/runtime_support.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "eef5cfa7b58c79d9f7f5b1bf7edcf6a27472dfd5"
+      },
+      {
+        "path": "tests/test_canonical_runtime.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "4a5ddebb7c2d8c6a368cdaf261ab1f27be13bde3"
+      },
+      {
+        "path": "tests/test_cross_platform_conformance.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "6920a1bccb54a1fcf874f6011f844f0665d761fa"
+      },
+      {
+        "path": "tests/test_golden_runtime_conformance.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "674655f8cc9bad581256e333bd85f9e7a9a577dc"
+      },
+      {
+        "path": "tests/test_integrity_runtime.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "0f3b193d7e05c5164e966594617324c9532fb5b6"
+      },
+      {
+        "path": "tests/test_minimal_asof_demo.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "6798f60c938dab7ac2c10dbe1ed840c9497cfb60"
+      },
+      {
+        "path": "tests/test_package_import.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "3db1fb21ebdc7ba3ab4cb3eebd6ae464164f7f04"
+      },
+      {
+        "path": "tests/test_semantics_contract_assets.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "f207aff0e8471c192f7f75a494aa31d7c4c2ec81"
+      },
+      {
+        "path": "tests/test_temporal_runtime.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "2b61420a42a571ba8935fb03164a89d7e4905617"
+      },
+      {
+        "path": "tools/summarize_cross_platform.py",
+        "mode": "100644",
+        "type": "blob",
+        "oid": "56be2e4b0b215d480f273997dc8880b76ffa42cc"
+      }
+    ],
+    "symlinks": [],
+    "executables": [],
+    "submodules": [],
+    "lfs_pointers": [],
+    "root_files": [
+      {
+        "name": "LICENSE",
+        "present": false,
+        "priority": "REQUIRED",
+        "note": "Alternative conventional license filenames; one Owner-approved grant is required for planned open-source release."
+      },
+      {
+        "name": "LICENSE.txt",
+        "present": false,
+        "priority": "REQUIRED",
+        "note": "Alternative conventional license filenames; one Owner-approved grant is required for planned open-source release."
+      },
+      {
+        "name": "COPYING",
+        "present": false,
+        "priority": "REQUIRED",
+        "note": "Alternative conventional license filenames; one Owner-approved grant is required for planned open-source release."
+      },
+      {
+        "name": "SECURITY.md",
+        "present": false,
+        "priority": "RECOMMENDED"
+      },
+      {
+        "name": "CONTRIBUTING.md",
+        "present": false,
+        "priority": "RECOMMENDED"
+      },
+      {
+        "name": "CODE_OF_CONDUCT.md",
+        "present": false,
+        "priority": "OPTIONAL"
+      },
+      {
+        "name": "CHANGELOG.md",
+        "present": false,
+        "priority": "RECOMMENDED"
+      },
+      {
+        "name": "CITATION.cff",
+        "present": false,
+        "priority": "OPTIONAL"
+      },
+      {
+        "name": "pyproject.toml",
+        "present": true,
+        "priority": "REQUIRED"
+      },
+      {
+        "name": "README.md",
+        "present": true,
+        "priority": "REQUIRED"
+      },
+      {
+        "name": "README.zh-CN.md",
+        "present": true,
+        "priority": "RECOMMENDED"
+      }
+    ],
+    "community_file_classification": [
+      {
+        "item": "LICENSE / LICENSE.txt / COPYING",
+        "present": false,
+        "classification": "REQUIRED",
+        "reason": "Owner must select and authorize a redistribution license before an open-source release; absence is not a privacy/security failure."
+      },
+      {
+        "item": "SECURITY.md",
+        "present": false,
+        "classification": "RECOMMENDED",
+        "reason": "A defined vulnerability reporting channel is useful for an infrastructure library; absence alone is not a blocker."
+      },
+      {
+        "item": "CONTRIBUTING.md",
+        "present": false,
+        "classification": "RECOMMENDED",
+        "reason": "Explain development gates and contribution expectations once external contributions are invited."
+      },
+      {
+        "item": "CODE_OF_CONDUCT.md",
+        "present": false,
+        "classification": "OPTIONAL",
+        "reason": "Useful for a growing contributor community; not mandatory for the initial small library."
+      },
+      {
+        "item": "CHANGELOG.md",
+        "present": false,
+        "classification": "RECOMMENDED",
+        "reason": "Publish an accurate initial scope/change record with the first chosen release version."
+      },
+      {
+        "item": "CITATION.cff",
+        "present": false,
+        "classification": "OPTIONAL",
+        "reason": "Useful only if the Owner wants scholarly attribution metadata."
+      },
+      {
+        "item": "pyproject.toml",
+        "present": true,
+        "classification": "REQUIRED",
+        "reason": "Defines the installable Python package."
+      },
+      {
+        "item": "README.md",
+        "present": true,
+        "classification": "REQUIRED",
+        "reason": "Primary user purpose, installation and limits guide."
+      },
+      {
+        "item": "README.zh-CN.md",
+        "present": true,
+        "classification": "REQUIRED",
+        "reason": "Retain the existing bilingual documentation commitment and accurate navigation."
+      }
+    ]
+  },
+  "history": {
+    "scope": "Every commit/blob reachable from all local normal refs after fetching all remote heads/tags; not reflogs, unreachable server objects or inaccessible deleted remote refs.",
+    "commits": 14,
+    "blobs": 54,
+    "historical_only_blob_versions": 12,
+    "all_bytes_scanned": true,
+    "regex_layers": [
+      "known key formats",
+      "generic credential assignments",
+      "bearer tokens",
+      "DSNs",
+      "webhook URLs",
+      "private key headers",
+      "private paths",
+      "identities",
+      "private-data indicators"
+    ],
+    "entropy_method": "Mixed-case alphanumeric/base64-like runs >=24 bytes with entropy >=4.3; hex digest-shaped runs excluded from entropy candidates and covered by assignment/context review.",
+    "entropy_suspicious_candidates": 0,
+    "false_positive_or_process_reference_count": 20,
+    "pattern_dispositions": [
+      {
+        "blob": "9e25f76fec64c6560f820727ed37464db78a605b",
+        "paths": [
+          "docs/ARCHITECTURE.md"
+        ],
+        "category": "PRIVATE_STAGE_EVIDENCE",
+        "line": 51,
+        "current_tree": true,
+        "classification": "INTERNAL_PROCESS_REFERENCE_RELEASE_REVIEW",
+        "reason": "High-level exclusion/evolving-policy/checklist wording only; no private evidence dataset, source, credentials or qualification output is present."
+      },
+      {
+        "blob": "a317012461e90f20af3e6540ec4c1da11ef3a0ba",
+        "paths": [
+          "docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md"
+        ],
+        "category": "PRIVATE_STAGE_EVIDENCE",
+        "line": 16,
+        "current_tree": true,
+        "classification": "INTERNAL_PROCESS_REFERENCE_RELEASE_REVIEW",
+        "reason": "High-level exclusion/evolving-policy/checklist wording only; no private evidence dataset, source, credentials or qualification output is present."
+      },
+      {
+        "blob": "17b6b87b3abe6ab0fb004efceae70927444e9302",
+        "paths": [
+          "docs/ORIGIN_AND_AUTHORITY.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 13,
+        "current_tree": true,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "17b6b87b3abe6ab0fb004efceae70927444e9302",
+        "paths": [
+          "docs/ORIGIN_AND_AUTHORITY.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 13,
+        "current_tree": true,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "17b6b87b3abe6ab0fb004efceae70927444e9302",
+        "paths": [
+          "docs/ORIGIN_AND_AUTHORITY.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 13,
+        "current_tree": true,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "ec9b827b4d8ec5f8379d3f1e17ae9d562bf26542",
+        "paths": [
+          "docs/PUBLIC_PRIVATE_BOUNDARY.md"
+        ],
+        "category": "PRIVATE_STAGE_EVIDENCE",
+        "line": 29,
+        "current_tree": true,
+        "classification": "INTERNAL_PROCESS_REFERENCE_RELEASE_REVIEW",
+        "reason": "High-level exclusion/evolving-policy/checklist wording only; no private evidence dataset, source, credentials or qualification output is present."
+      },
+      {
+        "blob": "ec9b827b4d8ec5f8379d3f1e17ae9d562bf26542",
+        "paths": [
+          "docs/PUBLIC_PRIVATE_BOUNDARY.md"
+        ],
+        "category": "PRIVATE_STAGE_EVIDENCE",
+        "line": 49,
+        "current_tree": true,
+        "classification": "INTERNAL_PROCESS_REFERENCE_RELEASE_REVIEW",
+        "reason": "High-level exclusion/evolving-policy/checklist wording only; no private evidence dataset, source, credentials or qualification output is present."
+      },
+      {
+        "blob": "ccc21f246187e725c6f97078df3b141a5366f61b",
+        "paths": [
+          "docs/PUBLIC_RELEASE_AUDIT_CHECKLIST.md"
+        ],
+        "category": "PRIVATE_STAGE_EVIDENCE",
+        "line": 21,
+        "current_tree": true,
+        "classification": "INTERNAL_PROCESS_REFERENCE_RELEASE_REVIEW",
+        "reason": "High-level exclusion/evolving-policy/checklist wording only; no private evidence dataset, source, credentials or qualification output is present."
+      },
+      {
+        "blob": "d6527d066587b53015ad0effe7f2b9db34480cbb",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 72,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "d6527d066587b53015ad0effe7f2b9db34480cbb",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 72,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "d6527d066587b53015ad0effe7f2b9db34480cbb",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 73,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "951b5277d073b0bed5cc74b47a622e4ad57fd78d",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 24,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "951b5277d073b0bed5cc74b47a622e4ad57fd78d",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 24,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "951b5277d073b0bed5cc74b47a622e4ad57fd78d",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 24,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "94d06af6da5c3fcc40f822b8e66c340e5e53b335",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 24,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "94d06af6da5c3fcc40f822b8e66c340e5e53b335",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 24,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "94d06af6da5c3fcc40f822b8e66c340e5e53b335",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 24,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "fa066f14b7cb9eb4ce1521503bb74280d2cab6e1",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 24,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "fa066f14b7cb9eb4ce1521503bb74280d2cab6e1",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 24,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      },
+      {
+        "blob": "fa066f14b7cb9eb4ce1521503bb74280d2cab6e1",
+        "paths": [
+          "README.md"
+        ],
+        "category": "MARKET_SUFFIX",
+        "line": 24,
+        "current_tree": false,
+        "classification": "FALSE_POSITIVE_GENERIC_SCOPE_LABEL",
+        "reason": "Generic originating-market labels in historical README/origin notes, without actual security identifiers, payloads or data."
+      }
+    ],
+    "history_scan_result": "NO_SECURITY_PRIVACY_CONTENT_BLOCKER_FOUND_WITHIN_AUDITED_REACHABLE_SCOPE"
+  },
+  "branches": {
+    "count": 6,
+    "items": [
+      {
+        "name": "demo/minimal-asof-v1",
+        "head": "1c4196ca5629de5c254ee11c2023b4e112182313",
+        "ahead_main": 0,
+        "behind_main": 2,
+        "unique_commits": [],
+        "reachable_blobs_not_reachable_from_main": [],
+        "head_blob_versions_not_in_main_tree": [
+          "92ac15f65f680546942c4db80e5c4ae4a77c42c2"
+        ],
+        "head_paths_not_in_main_tree": [],
+        "relationship": "ancestor_of_main",
+        "scan_result": "NO_UNSAFE_CONTENT_FOUND"
+      },
+      {
+        "name": "docs/chinese-readme",
+        "head": "869ebd3d6dcbf7a72d9d050a46f6ec72dc0f11f5",
+        "ahead_main": 3,
+        "behind_main": 1,
+        "unique_commits": [
+          "869ebd3d6dcbf7a72d9d050a46f6ec72dc0f11f5",
+          "711865fb65ee6ccb9ac5206f7b05df6c94ae62c8",
+          "2ec488d523d6a88e1587c2f6e7f5fefe1286af7f"
+        ],
+        "reachable_blobs_not_reachable_from_main": [
+          "d1af13522dbc155450f60929d15aacfb8e649c5f",
+          "dbdebb31b66fd578b7b96de518b6bfaf3610aeb8",
+          "e5208405c32e17aa094ed420b7a8d2070f3cea6e"
+        ],
+        "head_blob_versions_not_in_main_tree": [],
+        "head_paths_not_in_main_tree": [],
+        "relationship": "diverged_or_ahead",
+        "scan_result": "NO_UNSAFE_CONTENT_FOUND"
+      },
+      {
+        "name": "impl/minimal-primitives-v1",
+        "head": "2bd167b1cd510acdf9dd8fbdb0f9e4a200770987",
+        "ahead_main": 0,
+        "behind_main": 6,
+        "unique_commits": [],
+        "reachable_blobs_not_reachable_from_main": [],
+        "head_blob_versions_not_in_main_tree": [
+          "d2ac15cda2d7fd50c09d4b42f6df31daf51a6bb6",
+          "d6527d066587b53015ad0effe7f2b9db34480cbb",
+          "ff06b0418037c9c81183271df28137d0bec4aea8"
+        ],
+        "head_paths_not_in_main_tree": [],
+        "relationship": "ancestor_of_main",
+        "scan_result": "NO_UNSAFE_CONTENT_FOUND"
+      },
+      {
+        "name": "main",
+        "head": "203d9795e2b442ac8af90652eb95de58d3e6bdb5",
+        "ahead_main": 0,
+        "behind_main": 0,
+        "unique_commits": [],
+        "reachable_blobs_not_reachable_from_main": [],
+        "head_blob_versions_not_in_main_tree": [],
+        "head_paths_not_in_main_tree": [],
+        "relationship": "main",
+        "scan_result": "NO_UNSAFE_CONTENT_FOUND"
+      },
+      {
+        "name": "spec/minimal-primitive-semantics-v1",
+        "head": "fca3e26207cb7ab3920e685ab565a64363c24163",
+        "ahead_main": 2,
+        "behind_main": 8,
+        "unique_commits": [
+          "fca3e26207cb7ab3920e685ab565a64363c24163",
+          "48d2cd09c7b6061fc48659f890d621e395594e51"
+        ],
+        "reachable_blobs_not_reachable_from_main": [
+          "414fc2841afd1d28b1025a7e22c72948f0e55704",
+          "4ba74d474a8effb9105a68c36415bc6794fb4ac8",
+          "66338ff5a34f552d645b4ee495a13a76b69066fb",
+          "8069dd7b6cb221ca689cc7672ecbd44d7b296ad1",
+          "94391deb502fb1c5179a330c0bc3202b74b22a1e",
+          "94d06af6da5c3fcc40f822b8e66c340e5e53b335",
+          "951b5277d073b0bed5cc74b47a622e4ad57fd78d",
+          "962e019f4afc28153c3800607ad05435a6bb8e5d",
+          "cb87728a83101796a53ec813195a0788d7938582",
+          "e25ae615dbf247256972703f6aa0854420812b34",
+          "f97e96dae470f884893bfcbb805209f359080163"
+        ],
+        "head_blob_versions_not_in_main_tree": [
+          "951b5277d073b0bed5cc74b47a622e4ad57fd78d",
+          "cb87728a83101796a53ec813195a0788d7938582",
+          "cea333bf9ed12a0a0ce9211ce3358da2d9bd7ecf",
+          "d2ac15cda2d7fd50c09d4b42f6df31daf51a6bb6",
+          "e25ae615dbf247256972703f6aa0854420812b34",
+          "ff06b0418037c9c81183271df28137d0bec4aea8"
+        ],
+        "head_paths_not_in_main_tree": [],
+        "relationship": "diverged_or_ahead",
+        "scan_result": "NO_UNSAFE_CONTENT_FOUND"
+      },
+      {
+        "name": "test/cross-platform-conformance-v1",
+        "head": "7b55b91af0f779d40bfc0610b6f0300d165a4903",
+        "ahead_main": 0,
+        "behind_main": 4,
+        "unique_commits": [],
+        "reachable_blobs_not_reachable_from_main": [],
+        "head_blob_versions_not_in_main_tree": [
+          "36799c58ba5ebdfc0451adec2f7df518f4167bb9"
+        ],
+        "head_paths_not_in_main_tree": [],
+        "relationship": "ancestor_of_main",
+        "scan_result": "NO_UNSAFE_CONTENT_FOUND"
+      }
+    ],
+    "unsafe_refs": [],
+    "audit_branch_addition": "The later audit branch contains only the two sanitized report files; baseline remote inventory excludes that new branch."
+  },
+  "tags_releases": {
+    "local_tags": [],
+    "remote_tags": [],
+    "github_releases": []
+  },
+  "commit_identity": {
+    "identities": [
+      {
+        "id": "IDENTITY-1",
+        "email_classification": "OWNER_REVIEW_REQUIRED",
+        "display_name_classification": "OWNER_REVIEW_REQUIRED",
+        "roles": [
+          "author",
+          "committer"
+        ],
+        "reachable_commit_count": 7,
+        "retained_in_main_commit_count": 5
+      },
+      {
+        "id": "IDENTITY-2",
+        "email_classification": "GITHUB_NOREPLY",
+        "display_name_classification": "SAFE_PUBLIC_IDENTITY",
+        "roles": [
+          "committer"
+        ],
+        "reachable_commit_count": 5,
+        "retained_in_main_commit_count": 5
+      },
+      {
+        "id": "IDENTITY-3",
+        "email_classification": "GITHUB_NOREPLY",
+        "display_name_classification": "OWNER_REVIEW_REQUIRED",
+        "roles": [
+          "author",
+          "committer"
+        ],
+        "reachable_commit_count": 7,
+        "retained_in_main_commit_count": 4
+      }
+    ],
+    "raw_identity_values_recorded": false,
+    "owner_review_required": true,
+    "note": "Real-name/non-noreply identity metadata is reachable and needs explicit Owner acceptance before public visibility. Values are deliberately omitted; this is an identity publication decision, not a leaked credential. No history rewrite is performed or implicitly authorized.",
+    "safe_public_coauthor_metadata": "Known public tool attribution and GitHub noreply message trailers; no credential classification."
+  },
+  "github_collaboration_surface": {
+    "coverage": {
+      "pull_requests": 5,
+      "issues_excluding_pull_requests": 0,
+      "issue_api_records_including_pull_requests": 5,
+      "runs": 13,
+      "jobs": 20,
+      "artifacts": 0,
+      "issue_comments": 0,
+      "review_comments": 0,
+      "review_submissions": 0,
+      "job_logs_available_and_scanned": 20,
+      "job_log_utf8_bytes_scanned": 430784,
+      "job_log_lines_scanned": 4792
+    },
+    "items": [
+      {
+        "number": 5,
+        "kind": "pull_request",
+        "state": "closed",
+        "issue_comments": 0,
+        "reviews": 0,
+        "review_comments": 0,
+        "classification": "PUBLIC_SAFE",
+        "review": "Titles and full current bodies manually reviewed. Historical project status and bounded technical descriptions are public-safe development context; no private attachments, owner paths, credentials, source evidence, or proprietary data found.",
+        "secret_or_privacy_findings": 0,
+        "url_classification": "No links, or same-repository CI job links only."
+      },
+      {
+        "number": 4,
+        "kind": "pull_request",
+        "state": "closed",
+        "issue_comments": 0,
+        "reviews": 0,
+        "review_comments": 0,
+        "classification": "PUBLIC_SAFE",
+        "review": "Titles and full current bodies manually reviewed. Historical project status and bounded technical descriptions are public-safe development context; no private attachments, owner paths, credentials, source evidence, or proprietary data found.",
+        "secret_or_privacy_findings": 0,
+        "url_classification": "No links, or same-repository CI job links only."
+      },
+      {
+        "number": 3,
+        "kind": "pull_request",
+        "state": "closed",
+        "issue_comments": 0,
+        "reviews": 0,
+        "review_comments": 0,
+        "classification": "PUBLIC_SAFE",
+        "review": "Titles and full current bodies manually reviewed. Historical project status and bounded technical descriptions are public-safe development context; no private attachments, owner paths, credentials, source evidence, or proprietary data found.",
+        "secret_or_privacy_findings": 0,
+        "url_classification": "No links, or same-repository CI job links only."
+      },
+      {
+        "number": 2,
+        "kind": "pull_request",
+        "state": "closed",
+        "issue_comments": 0,
+        "reviews": 0,
+        "review_comments": 0,
+        "classification": "PUBLIC_SAFE",
+        "review": "Titles and full current bodies manually reviewed. Historical project status and bounded technical descriptions are public-safe development context; no private attachments, owner paths, credentials, source evidence, or proprietary data found.",
+        "secret_or_privacy_findings": 0,
+        "url_classification": "No links, or same-repository CI job links only."
+      },
+      {
+        "number": 1,
+        "kind": "pull_request",
+        "state": "closed",
+        "issue_comments": 0,
+        "reviews": 0,
+        "review_comments": 0,
+        "classification": "PUBLIC_SAFE",
+        "review": "Titles and full current bodies manually reviewed. Historical project status and bounded technical descriptions are public-safe development context; no private attachments, owner paths, credentials, source evidence, or proprietary data found.",
+        "secret_or_privacy_findings": 0,
+        "url_classification": "No links, or same-repository CI job links only."
+      }
+    ],
+    "classification": "PUBLIC_SAFE_WITH_EXPLICIT_CONFIGURATION_LIMITATIONS"
+  },
+  "workflow_surface": {
+    "path": ".github/workflows/ci.yml",
+    "classification": "PUBLIC_SAFE",
+    "permissions": {
+      "contents": "read"
+    },
+    "checkout_persist_credentials": false,
+    "hosted_runner_matrix": [
+      "ubuntu-latest",
+      "windows-latest"
+    ],
+    "python": "3.12",
+    "self_hosted_assumption": false,
+    "embedded_secrets_found": 0,
+    "unmasked_credentials_found": 0,
+    "private_owner_paths_found": 0,
+    "provider_or_database_steps": 0,
+    "artifact_upload_steps": 0,
+    "release_or_publish_steps": 0,
+    "reviewed_logs": [
+      {
+        "run_id": 37917026712,
+        "head_sha": "203d9795e2b442ac8af90652eb95de58d3e6bdb5",
+        "event": "push",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113775619746,
+            "name": "conformance (ubuntu-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "9c3775878642959ed5cf00fc4039e67d8bb61070ff640c79c6d0b290fcab13f6",
+            "classification": "PUBLIC_SAFE"
+          },
+          {
+            "id": 113775619995,
+            "name": "conformance (windows-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "6704415b8714a7a0695b0114dc58441dcc3a306d9854b47724def1d766996678",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37916383970,
+        "head_sha": "869ebd3d6dcbf7a72d9d050a46f6ec72dc0f11f5",
+        "event": "pull_request",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113773481832,
+            "name": "conformance (ubuntu-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "b416f2db8dd40000093f90e013906ff18e385e9349dd56c8a70584e57662d1b5",
+            "classification": "PUBLIC_SAFE"
+          },
+          {
+            "id": 113773482051,
+            "name": "conformance (windows-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "98acc56b30daa4a525f183b41d32ebe246f23aac94b73f9a39658589edbb0d77",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37914932064,
+        "head_sha": "711865fb65ee6ccb9ac5206f7b05df6c94ae62c8",
+        "event": "pull_request",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113768688092,
+            "name": "conformance (windows-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "b9b6bd72620b02b4a6c73d7f0922dbf85f2509daf59e005b90822481cacce408",
+            "classification": "PUBLIC_SAFE"
+          },
+          {
+            "id": 113768688355,
+            "name": "conformance (ubuntu-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "2598a9e51f00b69c3ea0622216f6fdc4642761cb2ee3f48c717e00006c2e47c7",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37914757153,
+        "head_sha": "8db94a25dda438d3b0f46c126c396188120fc079",
+        "event": "push",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113768132094,
+            "name": "conformance (windows-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "6fe0b34ff290d3e405d00fb0580ec05058b41f5fb92c33994420492873ba3f5a",
+            "classification": "PUBLIC_SAFE"
+          },
+          {
+            "id": 113768132467,
+            "name": "conformance (ubuntu-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "f9ff86c85778082c4c4993d5f4e32e89439b8731183f20b722988754d22dc5e4",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37913687991,
+        "head_sha": "1c4196ca5629de5c254ee11c2023b4e112182313",
+        "event": "pull_request",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113764636814,
+            "name": "conformance (windows-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "a05e88a09d0bb82fb6f52c6c04f3e991161973c55657ce9d21b5afd0403453cd",
+            "classification": "PUBLIC_SAFE"
+          },
+          {
+            "id": 113764637173,
+            "name": "conformance (ubuntu-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "b51fe003f35c3930cf711b74ca9ff3240fbb7e7a039da3acda7912294de6f794",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37911400293,
+        "head_sha": "c2e84d907a7df88c50274a02d421d5bcc86eacd9",
+        "event": "push",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113757158632,
+            "name": "conformance (ubuntu-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "575060948d1fcdcb4cc2c9f56e5ac317e426417eb95ba525120a7eddb22cf8c1",
+            "classification": "PUBLIC_SAFE"
+          },
+          {
+            "id": 113757158948,
+            "name": "conformance (windows-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "3408e8b259255e6b52b84add9d257f2c315bbbbb01b8238242ff9a105f1ac834",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37908418215,
+        "head_sha": "7b55b91af0f779d40bfc0610b6f0300d165a4903",
+        "event": "pull_request",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113747420240,
+            "name": "conformance (ubuntu-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "e493acd6a53ff40d50d95cc80ec176d41bc673d145ff9ed25ced45277d0e92c7",
+            "classification": "PUBLIC_SAFE"
+          },
+          {
+            "id": 113747420565,
+            "name": "conformance (windows-latest, Python 3.12)",
+            "conclusion": "success",
+            "log_sha256": "edc4be0b1decf606b3867663ba863efb3d90a9220edb56450a3688a56d02d62d",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37899222712,
+        "head_sha": "3088c2e1c2d4c9c7d4abc9bcc718523432ea4618",
+        "event": "push",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113717610826,
+            "name": "bootstrap",
+            "conclusion": "success",
+            "log_sha256": "58aa18f777dbae6370e3071a9b8281b5d8167cab2705b4bf1cd5ee7212bef191",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37898533066,
+        "head_sha": "2bd167b1cd510acdf9dd8fbdb0f9e4a200770987",
+        "event": "pull_request",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113715407868,
+            "name": "bootstrap",
+            "conclusion": "success",
+            "log_sha256": "5bae589a39d51ba337049d1d7ab44c4145e2a5e5fd69fbefcfd505aec01182a7",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37895766860,
+        "head_sha": "84b00c65cdf7f4412a08cf54cfea651beeaf6140",
+        "event": "push",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113706645652,
+            "name": "bootstrap",
+            "conclusion": "success",
+            "log_sha256": "08848ad83e47b8f28edb2f3283a12eaef5f36cda82c41bef5b07844f97d8dfc9",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37730706644,
+        "head_sha": "fca3e26207cb7ab3920e685ab565a64363c24163",
+        "event": "pull_request",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113158938190,
+            "name": "bootstrap",
+            "conclusion": "success",
+            "log_sha256": "4caf5dbad87b94e8e00070a13e6012ca82bae9de785497c8a968ebcff3ec0fc4",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37730446708,
+        "head_sha": "48d2cd09c7b6061fc48659f890d621e395594e51",
+        "event": "pull_request",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 113158119388,
+            "name": "bootstrap",
+            "conclusion": "success",
+            "log_sha256": "7d65322464518d75a827ab950e61cb332c1c0c97207aca91c5590d6437f29017",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      },
+      {
+        "run_id": 37622556358,
+        "head_sha": "79836f29fdac98668fff985b0ca910c9a39cdbc3",
+        "event": "push",
+        "conclusion": "success",
+        "run_attempt": 1,
+        "jobs": [
+          {
+            "id": 112796178794,
+            "name": "bootstrap",
+            "conclusion": "success",
+            "log_sha256": "0bc4c06a7ec6a657673c0fda73a278ae72aac5cfbd7df9782d04d71cb23ce402",
+            "classification": "PUBLIC_SAFE"
+          }
+        ]
+      }
+    ],
+    "candidate_resolution_counts": {
+      "GITHUB_HOSTED_RUNNER_PATH": 166,
+      "PUBLIC_GITHUB_CHANGELOG_URL": 20
+    },
+    "false_positive_review": "Profile/home matches belong to ephemeral GitHub-hosted runners, not Owner machines. One repeated non-allowlisted URL is a public GitHub changelog. Entropy candidates in PRs are links to this repository CI jobs. No secret/proprietary evidence found.",
+    "artifacts": [],
+    "raw_logs_persisted": false,
+    "scope_limit": "Covers all 13 accessible runs and all 20 jobs at audit collection time; cannot attest deleted or inaccessible historic logs/artifacts, or server-side edited discussion history."
+  },
+  "repository_configuration": {
+    "private": true,
+    "visibility": "private",
+    "default_branch": "main",
+    "allow_auto_merge": false,
+    "allow_merge_commit": true,
+    "allow_squash_merge": true,
+    "allow_rebase_merge": true,
+    "delete_branch_on_merge": false,
+    "archived": false,
+    "disabled": false,
+    "has_issues": true,
+    "has_projects": true,
+    "has_wiki": false,
+    "actions_permissions": {
+      "enabled": true,
+      "allowed_actions": "all",
+      "sha_pinning_required": false
+    },
+    "workflow_permissions": {
+      "default_workflow_permissions": "read",
+      "can_approve_pull_request_reviews": false
+    },
+    "branch_protection": null,
+    "rulesets": null,
+    "workflows": [
+      {
+        "id": 377417737,
+        "name": "Cross-platform conformance",
+        "path": ".github/workflows/ci.yml",
+        "state": "active"
+      }
+    ],
+    "releases": [],
+    "tags": []
+  },
+  "access_limitations": [
+    {
+      "endpoint": "/branches/main/protection",
+      "result": "GitHub HTTP 403; response suppressed"
+    },
+    {
+      "endpoint": "/rulesets",
+      "result": "GitHub HTTP 403; response suppressed"
+    }
+  ],
+  "privacy": {
+    "private_paths_in_tree_history": 0,
+    "personal_email_in_blobs": 0,
+    "private_source_or_dataset_exposure": 0,
+    "identity_metadata_requires_owner_review": true,
+    "historical_false_positive_dispositions": {
+      "process_reference_occurrences_reviewed": 5,
+      "process_reference_files": [
+        "docs/ARCHITECTURE.md",
+        "docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md",
+        "docs/PUBLIC_PRIVATE_BOUNDARY.md",
+        "docs/PUBLIC_RELEASE_AUDIT_CHECKLIST.md"
+      ],
+      "classification": "RELEASE_PREPARATION_REQUIRED",
+      "private_evidence_disclosure": false,
+      "reason": "The five references are high-level origin-process names used to mark evolving scope or prohibit extraction. They contain no underlying acceptance evidence, submission assets, strategy details, source implementation, dataset, private identifier or operational payload. They merit removal/generalization in current product documentation, not a security/privacy blocker or history rewrite.",
+      "market_suffix_occurrences_reviewed": 15,
+      "market_suffix_classification": "GENERIC_ORIGIN_SCOPE_DOCUMENTATION",
+      "market_suffix_reason": "Current origin documentation and historical README versions describe research boundaries using market suffixes; no specific securities, quotes, provider responses or proprietary dataset rows accompany them.",
+      "evidence_boundary": "Reviewed full current documents containing all five process references and the redacted historical hit contexts supplied by the separate whole-history scan. Whole-history reachability coverage remains that component's responsibility."
+    }
+  },
+  "secrets": {
+    "actual_credentials_found": 0,
+    "known_format_regex_generic_patterns_entropy_and_manual_review": true,
+    "revocations_performed": 0
+  },
+  "provenance": {
+    "result": "NO EVIDENCE OF PRIVATE SOURCE COPY IN AUDITED REPOSITORY",
+    "evidence_scope": "Current target-only source, test, example, fixture and documentation review; repository history/provenance chain is evaluated in the separate history component.",
+    "runtime_source_files_reviewed": 5,
+    "python_source_test_example_files_reviewed": 15,
+    "runtime_external_import_roots": [
+      "dataclasses",
+      "datetime",
+      "decimal",
+      "errno",
+      "hashlib",
+      "json",
+      "pathlib",
+      "stat"
+    ],
+    "license_or_copied_attribution_header_hits": [],
+    "comments_with_private_implementation_details_found": 0,
+    "generated_private_source_material_found": 0,
+    "limitations": "Target evidence and independence statements support a bounded finding, not legal proof or verification against inaccessible private origin implementation. Ownership and licensing remain Owner decisions.",
+    "root_commit_count": 1,
+    "clean_independent_repository_root_observed": true,
+    "complete_reachable_history_scanned": true
+  },
+  "synthetic_data": {
+    "result": "PUBLIC_SAFE_SYNTHETIC_CONTENT",
+    "fixture_files": [
+      {
+        "path": "tests/fixtures/golden/canonical-v1.json",
+        "synthetic": true,
+        "records": 70
+      },
+      {
+        "path": "tests/fixtures/golden/raw-integrity-v1.json",
+        "synthetic": true,
+        "records": 24
+      },
+      {
+        "path": "tests/fixtures/golden/temporal-v1.json",
+        "synthetic": true,
+        "records": 22
+      }
+    ],
+    "golden_vector_count": 116,
+    "runtime_coverage_classifications": {
+      "RUNTIME_EXECUTABLE": 113,
+      "CONCEPTUAL_NONEXECUTABLE": 2,
+      "PLATFORM_CONDITIONAL": 1
+    },
+    "demo_observations": 3,
+    "source_of_data": "Literal future-dated observations, simple numeric/text/Unicode/byte descriptors, generated boundary inputs and temporary test files.",
+    "real_security_identifiers_found": 0,
+    "real_provider_payloads_found": 0,
+    "financial_statements_or_market_datasets_found": 0,
+    "private_evidence_competition_or_strategy_content_found": 0,
+    "market_suffix_context": "Only high-level historical-origin scope in docs/ORIGIN_AND_AUTHORITY.md; test scans contain detection patterns, not securities records.",
+    "reviewed_false_positive_classes": [
+      "Generic prohibition/checklist words",
+      "Known SHA-256 expected values and hex-encoded synthetic canonical bytes",
+      "Privacy-test detection regex strings",
+      "Historical origin market-scope description"
+    ]
+  },
+  "license": {
+    "repository_license_present": false,
+    "pyproject_license_present": false,
+    "redistribution_grant": false,
+    "copied_license_header_evidence": [],
+    "classification": "OWNER_DECISION_REQUIRED",
+    "security_blocker": false,
+    "dependency_note": "Runtime dependencies are empty. Declared dev/build packages have locally available MIT metadata; transitive metadata is recorded. Tool dependencies are not bundled into the product wheel. Metadata review is not a comprehensive vendored-code license certification.",
+    "comparison": [
+      {
+        "license": "MIT",
+        "permissiveness": "Permissive reuse, modification and distribution, including commercial use.",
+        "attribution": "Retain the copyright and permission notice in copies or substantial portions.",
+        "patents": "The text does not contain an express patent grant.",
+        "suitability": "Short, simple terms for a reusable library when the Owner accepts that patent-language tradeoff.",
+        "source": "https://opensource.org/license/mit"
+      },
+      {
+        "license": "Apache-2.0",
+        "permissiveness": "Permissive reuse, modification and redistribution with additional notice duties.",
+        "attribution": "Include the license; identify modified files; retain relevant notices and any applicable NOTICE attribution.",
+        "patents": "Express contributor patent grant for covered contributions, with a patent-litigation termination condition.",
+        "suitability": "A reasonable Owner-review candidate for reusable infrastructure when explicit patent terms matter.",
+        "source": "https://www.apache.org/licenses/LICENSE-2.0"
+      }
+    ],
+    "recommendation": "RECOMMENDED_FOR_OWNER_REVIEW: Apache-2.0",
+    "decision_boundary": "Comparison only, not legal advice or a license selection. Final choice and authority to grant rights remain OWNER_DECISION_REQUIRED."
+  },
+  "dependencies": {
+    "runtime": [],
+    "declared_development": [
+      {
+        "name": "pytest",
+        "constraint": ">=8,<10",
+        "purpose": "Test runner"
+      },
+      {
+        "name": "ruff",
+        "constraint": ">=0.15,<1",
+        "purpose": "Lint and formatting"
+      }
+    ],
+    "declared_build": [
+      {
+        "name": "setuptools",
+        "constraint": ">=77",
+        "purpose": "PEP 517 build backend"
+      }
+    ],
+    "available_installed_metadata": [
+      {
+        "name": "pytest",
+        "version": "9.1.1",
+        "license_expression": "MIT",
+        "license": null,
+        "license_files": [
+          "LICENSE"
+        ],
+        "license_classifiers": [],
+        "requires": [
+          "colorama>=0.4; sys_platform == \"win32\"",
+          "exceptiongroup>=1; python_version < \"3.11\"",
+          "iniconfig>=1.0.1",
+          "packaging>=22",
+          "pluggy<2,>=1.5",
+          "pygments>=2.7.2",
+          "tomli>=1; python_version < \"3.11\"",
+          "argcomplete; extra == \"dev\"",
+          "attrs>=19.2; extra == \"dev\"",
+          "hypothesis>=3.56; extra == \"dev\"",
+          "mock; extra == \"dev\"",
+          "requests; extra == \"dev\"",
+          "setuptools; extra == \"dev\"",
+          "xmlschema; extra == \"dev\""
+        ]
+      },
+      {
+        "name": "ruff",
+        "version": "0.16.10",
+        "license_expression": "MIT",
+        "license": null,
+        "license_files": [
+          "LICENSE"
+        ],
+        "license_classifiers": [],
+        "requires": []
+      },
+      {
+        "name": "iniconfig",
+        "version": "2.3.1",
+        "license_expression": "MIT",
+        "license": null,
+        "license_files": [
+          "LICENSE"
+        ],
+        "license_classifiers": [],
+        "requires": []
+      },
+      {
+        "name": "packaging",
+        "version": "26.3",
+        "license_expression": "Apache-2.0 OR BSD-2-Clause",
+        "license": null,
+        "license_files": [
+          "LICENSE",
+          "LICENSE.APACHE",
+          "LICENSE.BSD"
+        ],
+        "license_classifiers": [],
+        "requires": []
+      },
+      {
+        "name": "pluggy",
+        "version": "1.6.0",
+        "license_expression": null,
+        "license": "MIT",
+        "license_files": [
+          "LICENSE"
+        ],
+        "license_classifiers": [
+          "License :: OSI Approved :: MIT License"
+        ],
+        "requires": [
+          "pre-commit; extra == \"dev\"",
+          "tox; extra == \"dev\"",
+          "pytest; extra == \"testing\"",
+          "pytest-benchmark; extra == \"testing\"",
+          "coverage; extra == \"testing\""
+        ]
+      },
+      {
+        "name": "Pygments",
+        "version": "2.21.0",
+        "license_expression": "BSD-2-Clause",
+        "license": null,
+        "license_files": [
+          "AUTHORS",
+          "LICENSE"
+        ],
+        "license_classifiers": [],
+        "requires": [
+          "colorama>=0.4.6; extra == 'windows-terminal'"
+        ]
+      },
+      {
+        "name": "colorama",
+        "version": "0.4.6",
+        "license_expression": null,
+        "license": null,
+        "license_files": [
+          "LICENSE.txt"
+        ],
+        "license_classifiers": [
+          "License :: OSI Approved :: BSD License"
+        ],
+        "requires": []
+      },
+      {
+        "name": "pip",
+        "version": "25.0.1",
+        "license_expression": null,
+        "license": "MIT",
+        "license_files": [
+          "LICENSE.txt",
+          "AUTHORS.txt"
+        ],
+        "license_classifiers": [
+          "License :: OSI Approved :: MIT License"
+        ],
+        "requires": []
+      }
+    ],
+    "available_build_metadata": {
+      "name": "setuptools",
+      "version": "84.0.0",
+      "license_expression": "MIT",
+      "license": null,
+      "license_files": [
+        "LICENSE"
+      ],
+      "license_classifiers": []
+    },
+    "license_assessment": {
+      "runtime": "No third-party runtime dependencies declared or bundled",
+      "declared_tools": "pytest MIT; Ruff MIT; setuptools MIT based on available local installed metadata",
+      "installed_transitives": "iniconfig MIT; packaging Apache-2.0 OR BSD-2-Clause; pluggy MIT; Pygments BSD-2-Clause; colorama BSD family in metadata and BSD-3-Clause structure confirmed in its local license file",
+      "installer": "pip MIT in local metadata; bootstrap/tooling only, not declared or redistributed by baquant-pit",
+      "classification": "No dependency-license incompatibility identified in this metadata-level review; final redistribution terms and ownership remain Owner decisions",
+      "scope_limit": "Not a legal compatibility opinion or exhaustive audit of vendored components inside development/build tools. Python-version-inapplicable optional dependency markers were not installed, and unselected upstream development extras were not audited. Tool packages are not included in these baquant-pit archives.",
+      "unverified_declared_license_metadata": []
+    }
+  },
+  "package_metadata": {
+    "build-system": {
+      "requires": [
+        "setuptools>=77"
+      ],
+      "build-backend": "setuptools.build_meta"
+    },
+    "project": {
+      "name": "baquant-pit",
+      "version": "0.0.0.dev0",
+      "description": "Point-in-Time and Temporal Grounding Infrastructure for AI Financial Research.",
+      "readme": "README.md",
+      "requires-python": ">=3.12",
+      "dependencies": [],
+      "classifiers": [
+        "Development Status :: 1 - Planning",
+        "Private :: Do Not Upload",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.12"
+      ],
+      "optional-dependencies": {
+        "dev": [
+          "pytest>=8,<10",
+          "ruff>=0.15,<1"
+        ]
+      }
+    },
+    "tool": {
+      "setuptools": {
+        "packages": {
+          "find": {
+            "where": [
+              "src"
+            ]
+          }
+        }
+      },
+      "pytest": {
+        "ini_options": {
+          "testpaths": [
+            "tests"
+          ],
+          "addopts": "-q"
+        }
+      },
+      "ruff": {
+        "target-version": "py312",
+        "line-length": 88,
+        "lint": {
+          "select": [
+            "E",
+            "F",
+            "I"
+          ]
+        }
+      }
+    },
+    "license_field": null,
+    "authors_maintainers": null,
+    "project_urls": null,
+    "private_dependency_or_file_url_found": false,
+    "public_API_compatibility": "NOT_ESTABLISHED",
+    "BAquant_compatibility": "NOT_CLAIMED",
+    "python_support_evidence": "Metadata/README minimum >=3.12; only Python3.12 actually tested here and in CI. No verified 3.13/3.14 claim."
+  },
+  "clean_clone": {
+    "sha": "203d9795e2b442ac8af90652eb95de58d3e6bdb5",
+    "fresh_clone": true,
+    "git_clone_no_local": true,
+    "fresh_venv": true,
+    "python": "3.12.10",
+    "platform": "Windows",
+    "system_site_packages": false,
+    "original_target_used_for_execution": false,
+    "environment_secret_dependencies": false,
+    "documented_editable_dev_install": "PASS",
+    "normal_install": "PASS",
+    "install_network_scope": "Declared Python package dependencies and build backend only; no application service calls",
+    "ruff_check": "PASS",
+    "ruff_format": "PASS",
+    "git_diff_check": "PASS",
+    "tracked_worktree_unchanged_after_validation": true,
+    "pytest": {
+      "total": 392,
+      "passed": 385,
+      "skipped": 7,
+      "failed": 0,
+      "skip_details": [
+        {
+          "test": "test_golden_runtime_conformance[T109]",
+          "reason": "Exact Python datetime cannot represent second 60; no runtime string parser exists."
+        },
+        {
+          "test": "test_golden_runtime_conformance[C117]",
+          "reason": "Exact dict has already discarded duplicate keys; abstract pre-construction entries are outside the Python input API."
+        },
+        {
+          "test": "test_golden_runtime_conformance[F104]",
+          "reason": "PLATFORM_CONDITIONAL: native FIFO creation unavailable"
+        },
+        {
+          "test": "test_symlink_policy_when_host_supports_it[file]",
+          "reason": "Native symlink creation unavailable for this host/user"
+        },
+        {
+          "test": "test_symlink_policy_when_host_supports_it[broken]",
+          "reason": "Native symlink creation unavailable for this host/user"
+        },
+        {
+          "test": "test_symlink_policy_when_host_supports_it[directory]",
+          "reason": "Native symlink creation unavailable for this host/user"
+        },
+        {
+          "test": "test_symlink_policy_when_host_supports_it[parent]",
+          "reason": "Native symlink creation unavailable for this host/user"
+        }
+      ]
+    },
+    "demo_human": "PASS",
+    "demo_json": "EXACT_TRACKED_RECEIPT_BYTE_MATCH",
+    "demo_json_repeated_bytes_equal": true,
+    "demo_json_byte_count": 374,
+    "demo_json_independent_cwd": "PASS",
+    "readme_python_example": "PASS",
+    "input_digest": "8b09f590f49b975f53a1ca630657664269553bcc8a44f8265cf4c140862ac926",
+    "result_digest": "06c1a9e28c235f375ad7f78f76a6fa769655ad9f06c10abdd9d1684dbd9438b2",
+    "validation_note": "The seven local skips are the two pre-existing conceptual Python-input exclusions, native FIFO unsupported on Windows, and four native-symlink capability exclusions; no new skip was introduced."
+  },
+  "normal_install": {
+    "exports": [
+      "BaquantPITError",
+      "CanonicalizationError",
+      "DateWindow",
+      "RawIntegrityError",
+      "TemporalError",
+      "canonical_bytes",
+      "canonical_sha256",
+      "canonical_text",
+      "format_utc_instant",
+      "normalize_utc_instant",
+      "sha256_bytes",
+      "sha256_file"
+    ],
+    "version": "0.0.0.dev0",
+    "python": "3.12.10",
+    "imported_from_environment_site_packages": true,
+    "execution_outside_clone": true
+  },
+  "build_artifacts": {
+    "offline": true,
+    "network_disabled_by_pip_no_index": true,
+    "new_build_dependency_added_for_build": false,
+    "backend_source": "Backend already acquired by the documented declared-tooling editable installation, preserved for offline reuse",
+    "backend_version": "84.0.0",
+    "wheel_exit_code": 0,
+    "sdist_exit_code": 0,
+    "artifacts": [
+      {
+        "name": "baquant_pit-0.0.0.dev0-py3-none-any.whl",
+        "sha256": "acb7addc34a2bd2d135302cb10e95cd5cafb2f9461d15bf7829f2b2ec43f3ebe",
+        "bytes": 9250,
+        "entries": [
+          "baquant_pit/__init__.py",
+          "baquant_pit/canonical.py",
+          "baquant_pit/errors.py",
+          "baquant_pit/integrity.py",
+          "baquant_pit/temporal.py",
+          "baquant_pit-0.0.0.dev0.dist-info/METADATA",
+          "baquant_pit-0.0.0.dev0.dist-info/WHEEL",
+          "baquant_pit-0.0.0.dev0.dist-info/top_level.txt",
+          "baquant_pit-0.0.0.dev0.dist-info/RECORD"
+        ],
+        "file_count": 9,
+        "absolute_path_pattern_hits": []
+      },
+      {
+        "name": "baquant_pit-0.0.0.dev0.tar.gz",
+        "sha256": "6dd331f065e5090af74bd865a191c7e00168511dfee42df36a2febb973daa34f",
+        "bytes": 24221,
+        "entries": [
+          "baquant_pit-0.0.0.dev0",
+          "baquant_pit-0.0.0.dev0/PKG-INFO",
+          "baquant_pit-0.0.0.dev0/README.md",
+          "baquant_pit-0.0.0.dev0/pyproject.toml",
+          "baquant_pit-0.0.0.dev0/setup.cfg",
+          "baquant_pit-0.0.0.dev0/src",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit/__init__.py",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit/canonical.py",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit/errors.py",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit/integrity.py",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit/temporal.py",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit.egg-info",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit.egg-info/PKG-INFO",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit.egg-info/SOURCES.txt",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit.egg-info/dependency_links.txt",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit.egg-info/requires.txt",
+          "baquant_pit-0.0.0.dev0/src/baquant_pit.egg-info/top_level.txt",
+          "baquant_pit-0.0.0.dev0/tests",
+          "baquant_pit-0.0.0.dev0/tests/test_canonical_runtime.py",
+          "baquant_pit-0.0.0.dev0/tests/test_cross_platform_conformance.py",
+          "baquant_pit-0.0.0.dev0/tests/test_golden_runtime_conformance.py",
+          "baquant_pit-0.0.0.dev0/tests/test_integrity_runtime.py",
+          "baquant_pit-0.0.0.dev0/tests/test_minimal_asof_demo.py",
+          "baquant_pit-0.0.0.dev0/tests/test_package_import.py",
+          "baquant_pit-0.0.0.dev0/tests/test_semantics_contract_assets.py",
+          "baquant_pit-0.0.0.dev0/tests/test_temporal_runtime.py"
+        ],
+        "file_count": 22,
+        "absolute_path_pattern_hits": []
+      }
+    ],
+    "wheel_install": {
+      "exports": [
+        "BaquantPITError",
+        "CanonicalizationError",
+        "DateWindow",
+        "RawIntegrityError",
+        "TemporalError",
+        "canonical_bytes",
+        "canonical_sha256",
+        "canonical_text",
+        "format_utc_instant",
+        "normalize_utc_instant",
+        "sha256_bytes",
+        "sha256_file"
+      ],
+      "version": "0.0.0.dev0",
+      "python": "3.12.10",
+      "imported_from_environment_site_packages": true,
+      "execution_outside_clone": true
+    },
+    "sdist_install": {
+      "exports": [
+        "BaquantPITError",
+        "CanonicalizationError",
+        "DateWindow",
+        "RawIntegrityError",
+        "TemporalError",
+        "canonical_bytes",
+        "canonical_sha256",
+        "canonical_text",
+        "format_utc_instant",
+        "normalize_utc_instant",
+        "sha256_bytes",
+        "sha256_file"
+      ],
+      "version": "0.0.0.dev0",
+      "python": "3.12.10",
+      "imported_from_environment_site_packages": true,
+      "execution_outside_clone": true
+    },
+    "sdist_diagnostic": {
+      "included_test_collection_exit": 2,
+      "included_test_collection_errors": 6,
+      "affected_test_modules": [
+        "tests/test_canonical_runtime.py",
+        "tests/test_cross_platform_conformance.py",
+        "tests/test_golden_runtime_conformance.py",
+        "tests/test_minimal_asof_demo.py",
+        "tests/test_semantics_contract_assets.py",
+        "tests/test_temporal_runtime.py"
+      ],
+      "reason": "Default sdist omits tests/runtime_support.py (four immediate collection errors), the demo script (one), and the contract (one); fixtures/receipts/docs are omitted as well",
+      "package_runtime_import_install_status": "PASS",
+      "classification": "RELEASE_PREPARATION_REQUIRED_FOR_SOURCE_DISTRIBUTION",
+      "tracked_source_file_byte_matches": [
+        "README.md",
+        "pyproject.toml",
+        "src/baquant_pit/__init__.py",
+        "src/baquant_pit/canonical.py",
+        "src/baquant_pit/errors.py",
+        "src/baquant_pit/integrity.py",
+        "src/baquant_pit/temporal.py",
+        "tests/test_canonical_runtime.py",
+        "tests/test_cross_platform_conformance.py",
+        "tests/test_golden_runtime_conformance.py",
+        "tests/test_integrity_runtime.py",
+        "tests/test_minimal_asof_demo.py",
+        "tests/test_package_import.py",
+        "tests/test_semantics_contract_assets.py",
+        "tests/test_temporal_runtime.py"
+      ],
+      "generated_metadata_files": [
+        "PKG-INFO",
+        "setup.cfg",
+        "src/baquant_pit.egg-info/PKG-INFO",
+        "src/baquant_pit.egg-info/SOURCES.txt",
+        "src/baquant_pit.egg-info/dependency_links.txt",
+        "src/baquant_pit.egg-info/requires.txt",
+        "src/baquant_pit.egg-info/top_level.txt"
+      ],
+      "scope": "Artifact diagnostic; the required complete clean Git clone gates pass",
+      "isolated_verification": {
+        "clone_paths_present": false,
+        "collected_items": 57,
+        "collection_errors": [
+          {
+            "module": "tests/test_canonical_runtime.py",
+            "reason": "MISSING_RUNTIME_SUPPORT_HELPER"
+          },
+          {
+            "module": "tests/test_cross_platform_conformance.py",
+            "reason": "MISSING_RUNTIME_SUPPORT_HELPER"
+          },
+          {
+            "module": "tests/test_golden_runtime_conformance.py",
+            "reason": "MISSING_RUNTIME_SUPPORT_HELPER"
+          },
+          {
+            "module": "tests/test_minimal_asof_demo.py",
+            "reason": "MISSING_DEMO_SCRIPT"
+          },
+          {
+            "module": "tests/test_semantics_contract_assets.py",
+            "reason": "MISSING_CONTRACT"
+          },
+          {
+            "module": "tests/test_temporal_runtime.py",
+            "reason": "MISSING_RUNTIME_SUPPORT_HELPER"
+          }
+        ],
+        "exit_code": 2,
+        "interpreter_environment": "Independent noneditable normal-install environment",
+        "pytest_tooling": "Existing declared pytest and dependencies loaded by direct site-packages path; editable .pth files not processed",
+        "runtime_imported_from": "Unpacked sdist src/baquant_pit",
+        "runtime_support_resolved": false,
+        "scope": "All eight test modules included by sdist; collect-only, no test execution"
+      },
+      "evidence_correction": "The first diagnostic selected all modules and also produced six errors, but its summary incorrectly counted only three preselected module names. Corrected using complete collect-report records and independently rerun without any clone path or editable .pth processing."
+    },
+    "distribution_policy": {
+      "wheel_runtime_module_count": 5,
+      "wheel_metadata_file_count": 4,
+      "wheel_does_not_vendor_dependencies": true,
+      "wheel_excludes_tests_docs_contracts_examples_and_task_logs": true,
+      "sdist_test_module_count": 8,
+      "sdist_excludes": [
+        "tests/runtime_support.py",
+        "tests/fixtures",
+        "contracts",
+        "docs",
+        "examples",
+        "README.zh-CN.md",
+        ".github"
+      ],
+      "sdist_test_asset_policy_explicitly_defined": false,
+      "readme_package_context": "README metadata contains repository-relative links and demo commands whose companion files are not in the wheel or sdist",
+      "artifact_byte_reproducibility": "NOT_CLAIMED; build checksums identify this audit's outputs only"
+    },
+    "manual_manifest_review": "All 9 wheel files and 22 sdist files reviewed; runtime/test/source content matches audited clone, remainder generated package metadata; no task logs, credentials, private paths, private docs, provider payloads or unrelated assets included",
+    "offline_note": "Both archive builds and direct wheel/sdist installs used --no-index and the declared setuptools backend preserved by the already-authorized editable installation. No separate build package or new build dependency was installed for artifact production."
+  },
+  "docs": {
+    "audited_main_sha": "203d9795e2b442ac8af90652eb95de58d3e6bdb5",
+    "scope": "Current tracked documentation, Python source/test/example content and synthetic data; complete-history and GitHub reviews are separate audit components.",
+    "tracked_document_count": 17,
+    "classification_counts": {
+      "PUBLIC_PRODUCT_DOC": 3,
+      "PUBLICATION_REVIEW_REQUIRED": 2,
+      "INTERNAL_PROCESS_DOC": 2,
+      "PUBLIC_PROVENANCE_DOC": 1,
+      "PUBLIC_ENGINEERING_DOC": 9
+    },
+    "document_dispositions": [
+      {
+        "path": "README.md",
+        "classification": "PUBLIC_PRODUCT_DOC",
+        "action": "rewrite",
+        "priority": "REQUIRED",
+        "reason": "Purpose, market neutrality, exclusions and commands agree with the implementation; synchronize PRIVATE/no-license/version text with separately authorized release decisions and replace links to obsolete planning material."
+      },
+      {
+        "path": "README.zh-CN.md",
+        "classification": "PUBLIC_PRODUCT_DOC",
+        "action": "rewrite",
+        "priority": "REQUIRED",
+        "reason": "Faithful bilingual counterpart; apply the same later release-status and navigation changes as English."
+      },
+      {
+        "path": "docs/ARCHITECTURE.md",
+        "classification": "PUBLICATION_REVIEW_REQUIRED",
+        "action": "rewrite",
+        "priority": "REQUIRED",
+        "reason": "Still states an empty package and design-only runtime. Describe implemented primitives separately from prospective architecture and remove origin-project process vocabulary from product guidance."
+      },
+      {
+        "path": "docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md",
+        "classification": "INTERNAL_PROCESS_DOC",
+        "action": "move",
+        "priority": "REQUIRED",
+        "reason": "Historical bootstrap/extraction task sequence is not current product documentation. Move to clearly labelled historical planning or external planning evidence and unlink from the product landing page. Moving cannot remove the existing Git-history exposure; no sensitive payload was found here."
+      },
+      {
+        "path": "docs/ORIGIN_AND_AUTHORITY.md",
+        "classification": "PUBLIC_PROVENANCE_DOC",
+        "action": "rewrite",
+        "priority": "REQUIRED",
+        "reason": "Retain bounded independent-origin and compatibility statements; update private-release authorization wording when decisions are made. Origin market suffixes are contextual scope documentation, not market data or a support claim."
+      },
+      {
+        "path": "docs/PUBLIC_PRIVATE_BOUNDARY.md",
+        "classification": "PUBLICATION_REVIEW_REQUIRED",
+        "action": "rewrite",
+        "priority": "REQUIRED",
+        "reason": "Preserve generic inclusion/exclusion and content-identity limits; replace obsolete empty-scaffold and private extraction-process statements with actual library scope."
+      },
+      {
+        "path": "docs/PUBLIC_RELEASE_AUDIT_CHECKLIST.md",
+        "classification": "INTERNAL_PROCESS_DOC",
+        "action": "rewrite",
+        "priority": "REQUIRED",
+        "reason": "Convert bootstrap-only, unexecuted future-gate wording into an explicitly historical or reusable engineering checklist with a link to the current scoped audit. A completed audit does not authorize publication."
+      },
+      {
+        "path": "docs/demos/minimal-asof-demo-v1.md",
+        "classification": "PUBLIC_PRODUCT_DOC",
+        "action": "rewrite",
+        "priority": "REQUIRED",
+        "reason": "Synthetic timeline, inclusive cutoff, tie failure, limitations and fixed output are accurate. Only release-state wording needs later synchronization."
+      },
+      {
+        "path": "docs/implementation/cross-platform-conformance-v1.json",
+        "classification": "PUBLIC_ENGINEERING_DOC",
+        "action": "remain",
+        "priority": "NO_ACTION",
+        "reason": "Non-normative, versioned conformance design records scope rather than ephemeral success. Preserve as historical technical evidence."
+      },
+      {
+        "path": "docs/implementation/cross-platform-conformance-v1.md",
+        "classification": "PUBLIC_ENGINEERING_DOC",
+        "action": "rewrite",
+        "priority": "REQUIRED",
+        "reason": "Accurately bounds Python 3.12 Windows/Linux validation and conditional filesystem cases; synchronize present-tense private/no-license status in a later release task."
+      },
+      {
+        "path": "docs/implementation/golden-runtime-coverage-v1.json",
+        "classification": "PUBLIC_ENGINEERING_DOC",
+        "action": "remain",
+        "priority": "NO_ACTION",
+        "reason": "All 116 coverage records are generic synthetic-vector accounting. Its candidate status belongs to a historical receipt, not an independent publication grant."
+      },
+      {
+        "path": "docs/implementation/minimal-asof-demo-v1.json",
+        "classification": "PUBLIC_ENGINEERING_DOC",
+        "action": "remain",
+        "priority": "NO_ACTION",
+        "reason": "Synthetic, non-normative reproducibility receipt with fixed five-cutoff expectations and digests; no host paths or live identifiers."
+      },
+      {
+        "path": "docs/implementation/minimal-primitives-v1.md",
+        "classification": "PUBLIC_ENGINEERING_DOC",
+        "action": "rewrite",
+        "priority": "REQUIRED",
+        "reason": "Keep API/error/resource and historical conformance information; label original 336-test/329-pass counts as historical and synchronize current release-state wording."
+      },
+      {
+        "path": "docs/specs/canonicalization-v1.md",
+        "classification": "PUBLIC_ENGINEERING_DOC",
+        "action": "remain",
+        "priority": "REQUIRED",
+        "reason": "Preserve frozen normative v1 text/semantics. Add a separate current-status guide explaining design-time private/pre-implementation statements before public presentation."
+      },
+      {
+        "path": "docs/specs/compatibility-and-versioning-v1.md",
+        "classification": "PUBLIC_ENGINEERING_DOC",
+        "action": "remain",
+        "priority": "REQUIRED",
+        "reason": "Preserve frozen format/version and compatibility rules. Explain design-time deferred-runtime statements through separate current-status context rather than silently editing v1."
+      },
+      {
+        "path": "docs/specs/raw-integrity-v1.md",
+        "classification": "PUBLIC_ENGINEERING_DOC",
+        "action": "remain",
+        "priority": "REQUIRED",
+        "reason": "Preserve frozen raw/file semantics. Separate current-status context must explain its historical no-runtime-API wording."
+      },
+      {
+        "path": "docs/specs/temporal-semantics-v1.md",
+        "classification": "PUBLIC_ENGINEERING_DOC",
+        "action": "remain",
+        "priority": "REQUIRED",
+        "reason": "Preserve frozen temporal semantics. Separate current-status context must explain its historical no-runtime-primitive wording."
+      }
+    ],
+    "readmes": {
+      "bilingual_navigation": "PASS",
+      "semantic_parity": "PASS",
+      "purpose_market_neutrality_exclusions": "PASS",
+      "private_prerelease_status_currently_accurate": true,
+      "unsupported_production_claims_found": 0,
+      "python_and_command_blocks_equal_ignoring_translated_comments": true,
+      "relative_link_occurrences": 26,
+      "unique_relative_targets": 13,
+      "broken_relative_links": [],
+      "link_checks": [
+        {
+          "source": "README.md",
+          "target": "README.zh-CN.md",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "docs/demos/minimal-asof-demo-v1.md",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "docs/implementation/golden-runtime-coverage-v1.json",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "docs/implementation/minimal-primitives-v1.md",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "contracts/minimal-primitives-v1.json",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "docs/specs/compatibility-and-versioning-v1.md",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "docs/ORIGIN_AND_AUTHORITY.md",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "docs/implementation/cross-platform-conformance-v1.md",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "docs/PUBLIC_PRIVATE_BOUNDARY.md",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "docs/ARCHITECTURE.md",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "docs/ORIGIN_AND_AUTHORITY.md",
+          "exists": true
+        },
+        {
+          "source": "README.md",
+          "target": "docs/PUBLIC_RELEASE_AUDIT_CHECKLIST.md",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "README.md",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "docs/demos/minimal-asof-demo-v1.md",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "docs/implementation/golden-runtime-coverage-v1.json",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "docs/implementation/minimal-primitives-v1.md",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "contracts/minimal-primitives-v1.json",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "docs/specs/compatibility-and-versioning-v1.md",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "docs/ORIGIN_AND_AUTHORITY.md",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "docs/implementation/cross-platform-conformance-v1.md",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "docs/PUBLIC_PRIVATE_BOUNDARY.md",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "docs/ARCHITECTURE.md",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "docs/ORIGIN_AND_AUTHORITY.md",
+          "exists": true
+        },
+        {
+          "source": "README.zh-CN.md",
+          "target": "docs/PUBLIC_RELEASE_AUDIT_CHECKLIST.md",
+          "exists": true
+        }
+      ]
+    },
+    "all_markdown_links": {
+      "relative_link_occurrences": 30,
+      "broken_relative_links": []
+    },
+    "community_files": [
+      {
+        "item": "LICENSE / LICENSE.txt / COPYING",
+        "present": false,
+        "classification": "REQUIRED",
+        "reason": "Owner must select and authorize a redistribution license before an open-source release; absence is not a privacy/security failure."
+      },
+      {
+        "item": "SECURITY.md",
+        "present": false,
+        "classification": "RECOMMENDED",
+        "reason": "A defined vulnerability reporting channel is useful for an infrastructure library; absence alone is not a blocker."
+      },
+      {
+        "item": "CONTRIBUTING.md",
+        "present": false,
+        "classification": "RECOMMENDED",
+        "reason": "Explain development gates and contribution expectations once external contributions are invited."
+      },
+      {
+        "item": "CODE_OF_CONDUCT.md",
+        "present": false,
+        "classification": "OPTIONAL",
+        "reason": "Useful for a growing contributor community; not mandatory for the initial small library."
+      },
+      {
+        "item": "CHANGELOG.md",
+        "present": false,
+        "classification": "RECOMMENDED",
+        "reason": "Publish an accurate initial scope/change record with the first chosen release version."
+      },
+      {
+        "item": "CITATION.cff",
+        "present": false,
+        "classification": "OPTIONAL",
+        "reason": "Useful only if the Owner wants scholarly attribution metadata."
+      },
+      {
+        "item": "pyproject.toml",
+        "present": true,
+        "classification": "REQUIRED",
+        "reason": "Defines the installable Python package."
+      },
+      {
+        "item": "README.md",
+        "present": true,
+        "classification": "REQUIRED",
+        "reason": "Primary user purpose, installation and limits guide."
+      },
+      {
+        "item": "README.zh-CN.md",
+        "present": true,
+        "classification": "REQUIRED",
+        "reason": "Retain the existing bilingual documentation commitment and accurate navigation."
+      }
+    ],
+    "source_provenance": {
+      "result": "NO EVIDENCE OF PRIVATE SOURCE COPY IN AUDITED REPOSITORY",
+      "evidence_scope": "Current target-only source, test, example, fixture and documentation review; repository history/provenance chain is evaluated in the separate history component.",
+      "runtime_source_files_reviewed": 5,
+      "python_source_test_example_files_reviewed": 15,
+      "runtime_external_import_roots": [
+        "dataclasses",
+        "datetime",
+        "decimal",
+        "errno",
+        "hashlib",
+        "json",
+        "pathlib",
+        "stat"
+      ],
+      "license_or_copied_attribution_header_hits": [],
+      "comments_with_private_implementation_details_found": 0,
+      "generated_private_source_material_found": 0,
+      "limitations": "Target evidence and independence statements support a bounded finding, not legal proof or verification against inaccessible private origin implementation. Ownership and licensing remain Owner decisions."
+    },
+    "synthetic_data": {
+      "result": "PUBLIC_SAFE_SYNTHETIC_CONTENT",
+      "fixture_files": [
+        {
+          "path": "tests/fixtures/golden/canonical-v1.json",
+          "synthetic": true,
+          "records": 70
+        },
+        {
+          "path": "tests/fixtures/golden/raw-integrity-v1.json",
+          "synthetic": true,
+          "records": 24
+        },
+        {
+          "path": "tests/fixtures/golden/temporal-v1.json",
+          "synthetic": true,
+          "records": 22
+        }
+      ],
+      "golden_vector_count": 116,
+      "runtime_coverage_classifications": {
+        "RUNTIME_EXECUTABLE": 113,
+        "CONCEPTUAL_NONEXECUTABLE": 2,
+        "PLATFORM_CONDITIONAL": 1
+      },
+      "demo_observations": 3,
+      "source_of_data": "Literal future-dated observations, simple numeric/text/Unicode/byte descriptors, generated boundary inputs and temporary test files.",
+      "real_security_identifiers_found": 0,
+      "real_provider_payloads_found": 0,
+      "financial_statements_or_market_datasets_found": 0,
+      "private_evidence_competition_or_strategy_content_found": 0,
+      "market_suffix_context": "Only high-level historical-origin scope in docs/ORIGIN_AND_AUTHORITY.md; test scans contain detection patterns, not securities records.",
+      "reviewed_false_positive_classes": [
+        "Generic prohibition/checklist words",
+        "Known SHA-256 expected values and hex-encoded synthetic canonical bytes",
+        "Privacy-test detection regex strings",
+        "Historical origin market-scope description"
+      ]
+    },
+    "historical_pattern_manual_disposition": {
+      "process_reference_occurrences_reviewed": 5,
+      "process_reference_files": [
+        "docs/ARCHITECTURE.md",
+        "docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md",
+        "docs/PUBLIC_PRIVATE_BOUNDARY.md",
+        "docs/PUBLIC_RELEASE_AUDIT_CHECKLIST.md"
+      ],
+      "classification": "RELEASE_PREPARATION_REQUIRED",
+      "private_evidence_disclosure": false,
+      "reason": "The five references are high-level origin-process names used to mark evolving scope or prohibit extraction. They contain no underlying acceptance evidence, submission assets, strategy details, source implementation, dataset, private identifier or operational payload. They merit removal/generalization in current product documentation, not a security/privacy blocker or history rewrite.",
+      "market_suffix_occurrences_reviewed": 15,
+      "market_suffix_classification": "GENERIC_ORIGIN_SCOPE_DOCUMENTATION",
+      "market_suffix_reason": "Current origin documentation and historical README versions describe research boundaries using market suffixes; no specific securities, quotes, provider responses or proprietary dataset rows accompany them.",
+      "evidence_boundary": "Reviewed full current documents containing all five process references and the redacted historical hit contexts supplied by the separate whole-history scan. Whole-history reachability coverage remains that component's responsibility."
+    },
+    "findings": [
+      {
+        "id": "DOC-01",
+        "category": "RELEASE_PREPARATION_REQUIRED",
+        "classification": "RELEASE_REQUIRED",
+        "severity": "medium",
+        "surfaces": [
+          "README.md",
+          "README.zh-CN.md",
+          "docs/ORIGIN_AND_AUTHORITY.md",
+          "docs/demos/minimal-asof-demo-v1.md",
+          "docs/implementation/cross-platform-conformance-v1.md",
+          "docs/implementation/minimal-primitives-v1.md"
+        ],
+        "summary": "Current private/no-license/development status is accurate now but must be synchronized with separately authorized public-state, license and version decisions.",
+        "remediation": "Later documentation-only release-state update after Owner decisions; no change in this audit."
+      },
+      {
+        "id": "DOC-02",
+        "category": "RELEASE_PREPARATION_REQUIRED",
+        "classification": "RELEASE_REQUIRED",
+        "severity": "medium",
+        "surfaces": [
+          "docs/ARCHITECTURE.md",
+          "docs/PUBLIC_PRIVATE_BOUNDARY.md"
+        ],
+        "summary": "Empty scaffold/design-only descriptions contradict the implemented 12-name runtime.",
+        "remediation": "Rewrite current product scope while retaining clearly labelled future ideas and exclusions."
+      },
+      {
+        "id": "DOC-03",
+        "category": "RELEASE_PREPARATION_REQUIRED",
+        "classification": "RELEASE_REQUIRED",
+        "severity": "low",
+        "surfaces": [
+          "docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md",
+          "docs/PUBLIC_RELEASE_AUDIT_CHECKLIST.md",
+          "README.md",
+          "README.zh-CN.md"
+        ],
+        "summary": "Historical bootstrap/private task process is linked as current introductory product guidance.",
+        "remediation": "Move or label historical planning, rewrite the reusable checklist, and update product navigation. Existing history remains visible; no sensitive payload was found in this material."
+      },
+      {
+        "id": "DOC-04",
+        "category": "RELEASE_PREPARATION_REQUIRED",
+        "classification": "RELEASE_REQUIRED",
+        "severity": "medium",
+        "surfaces": [
+          "docs/specs/",
+          "contracts/minimal-primitives-v1.json",
+          "tests/fixtures/golden/"
+        ],
+        "summary": "Frozen design-time status and deferred-runtime statements need explicit current-publication context.",
+        "remediation": "Preserve frozen v1 semantics/bytes and add a reviewed status/authority guide; decide separately how public release metadata relates to historical private design assets."
+      },
+      {
+        "id": "DOC-05",
+        "category": "OPTIONAL_POST_RELEASE_IMPROVEMENT",
+        "classification": "RECOMMENDED",
+        "severity": "low",
+        "surfaces": [
+          "README.md",
+          "README.zh-CN.md"
+        ],
+        "summary": "Python 3.12+ is the installation constraint; current CI demonstrates only Python 3.12.",
+        "remediation": "Keep minimum-version wording distinct from validated-version coverage; do not infer tested 3.13/3.14 support."
+      },
+      {
+        "id": "DOC-06",
+        "category": "OPTIONAL_POST_RELEASE_IMPROVEMENT",
+        "classification": "RECOMMENDED",
+        "severity": "low",
+        "surfaces": [
+          "docs/implementation/minimal-primitives-v1.md"
+        ],
+        "summary": "Original test totals describe an earlier implementation milestone rather than the current expanded suite.",
+        "remediation": "Label these as historical results and link a current scoped validation summary instead of overwriting historical evidence."
+      },
+      {
+        "id": "DOC-07",
+        "category": "OPTIONAL_POST_RELEASE_IMPROVEMENT",
+        "classification": "RECOMMENDED",
+        "severity": "low",
+        "surfaces": [
+          "README.md",
+          "README.zh-CN.md"
+        ],
+        "summary": "The demo command appears before the installation block; the dedicated demo document states the installation prerequisite.",
+        "remediation": "Add a short installed-checkout prerequisite or reorder the quickstart in a later documentation task."
+      }
+    ],
+    "security_privacy_blockers": [],
+    "provenance_blockers": [],
+    "no_private_origin_access": {
+      "implementation_source_reads": 0,
+      "git_operations": 0,
+      "mutations": 0
+    },
+    "target_files_modified": 0
+  },
+  "blockers": [],
+  "blocker_groups": {
+    "security_privacy": [],
+    "provenance": [],
+    "packaging_runtime_install": []
+  },
+  "owner_decisions": [
+    {
+      "id": "OWNER-LICENSE",
+      "category": "LEGAL_LICENSE_OWNER_DECISION",
+      "decision": "Select and authorize a redistribution license and confirm rights to license the independently authored work; no license is granted by this audit."
+    },
+    {
+      "id": "OWNER-IDENTITY",
+      "category": "OWNER_PUBLICATION_DECISION",
+      "decision": "Explicitly accept or separately plan remediation for real-name/non-noreply commit identity exposure across reachable history; values are omitted. No automatic history rewrite or identity approval."
+    },
+    {
+      "id": "OWNER-VERSION",
+      "category": "RELEASE_STRATEGY_OWNER_DECISION",
+      "decision": "Choose first public version strategy, such as 0.1.0rc1 for a candidate or 0.1.0 after the chosen acceptance gates; define API compatibility commitments separately."
+    },
+    {
+      "id": "OWNER-DISTRIBUTION",
+      "category": "RELEASE_STRATEGY_OWNER_DECISION",
+      "decision": "Decide repository-only versus wheel/sdist distribution and intentional source/test/example contents. PyPI is a separate optional publication decision."
+    },
+    {
+      "id": "OWNER-GOVERNANCE",
+      "category": "CONFIGURATION_OWNER_REVIEW",
+      "decision": "Verify branch protection/rulesets using authorized settings access; API inspection returned HTTP 403, so their presence/absence is unverified."
+    }
+  ],
+  "release_required_changes": [
+    {
+      "id": "DOC-01",
+      "category": "RELEASE_PREPARATION_REQUIRED",
+      "classification": "RELEASE_REQUIRED",
+      "severity": "medium",
+      "surfaces": [
+        "README.md",
+        "README.zh-CN.md",
+        "docs/ORIGIN_AND_AUTHORITY.md",
+        "docs/demos/minimal-asof-demo-v1.md",
+        "docs/implementation/cross-platform-conformance-v1.md",
+        "docs/implementation/minimal-primitives-v1.md"
+      ],
+      "summary": "Current private/no-license/development status is accurate now but must be synchronized with separately authorized public-state, license and version decisions.",
+      "remediation": "Later documentation-only release-state update after Owner decisions; no change in this audit."
+    },
+    {
+      "id": "DOC-02",
+      "category": "RELEASE_PREPARATION_REQUIRED",
+      "classification": "RELEASE_REQUIRED",
+      "severity": "medium",
+      "surfaces": [
+        "docs/ARCHITECTURE.md",
+        "docs/PUBLIC_PRIVATE_BOUNDARY.md"
+      ],
+      "summary": "Empty scaffold/design-only descriptions contradict the implemented 12-name runtime.",
+      "remediation": "Rewrite current product scope while retaining clearly labelled future ideas and exclusions."
+    },
+    {
+      "id": "DOC-03",
+      "category": "RELEASE_PREPARATION_REQUIRED",
+      "classification": "RELEASE_REQUIRED",
+      "severity": "low",
+      "surfaces": [
+        "docs/BAQUANT-PIT-PUBLIC-EXTRACTION-PLAN-V1.md",
+        "docs/PUBLIC_RELEASE_AUDIT_CHECKLIST.md",
+        "README.md",
+        "README.zh-CN.md"
+      ],
+      "summary": "Historical bootstrap/private task process is linked as current introductory product guidance.",
+      "remediation": "Move or label historical planning, rewrite the reusable checklist, and update product navigation. Existing history remains visible; no sensitive payload was found in this material."
+    },
+    {
+      "id": "DOC-04",
+      "category": "RELEASE_PREPARATION_REQUIRED",
+      "classification": "RELEASE_REQUIRED",
+      "severity": "medium",
+      "surfaces": [
+        "docs/specs/",
+        "contracts/minimal-primitives-v1.json",
+        "tests/fixtures/golden/"
+      ],
+      "summary": "Frozen design-time status and deferred-runtime statements need explicit current-publication context.",
+      "remediation": "Preserve frozen v1 semantics/bytes and add a reviewed status/authority guide; decide separately how public release metadata relates to historical private design assets."
+    },
+    {
+      "id": "RELEASE-METADATA",
+      "category": "RELEASE_PREPARATION_REQUIRED",
+      "summary": "After Owner decisions, align development version, absent license metadata, PRIVATE classifier/status and release metadata. The private classifier must be reconsidered before package publication, not removed by this audit."
+    },
+    {
+      "id": "RELEASE-MANIFEST",
+      "category": "RELEASE_PREPARATION_REQUIRED",
+      "summary": "Choose an explicit sdist manifest policy: the current 22-file sdist includes eight tests but omits their support/assets, examples and Chinese README. Include a coherent source/test distribution, or intentionally omit tests and document repository-only validation/demo usage. Runtime installation succeeds."
+    },
+    {
+      "id": "RELEASE-PACKAGE-LINKS",
+      "category": "RELEASE_PREPARATION_REQUIRED",
+      "summary": "Package long-description README uses repository-relative doc/demo/language links; wheel has no docs/examples and sdist omits the Chinese README. Establish distribution-appropriate links and installation context before publishing artifacts."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "DOC-05",
+      "category": "OPTIONAL_POST_RELEASE_IMPROVEMENT",
+      "classification": "RECOMMENDED",
+      "severity": "low",
+      "surfaces": [
+        "README.md",
+        "README.zh-CN.md"
+      ],
+      "summary": "Python 3.12+ is the installation constraint; current CI demonstrates only Python 3.12.",
+      "remediation": "Keep minimum-version wording distinct from validated-version coverage; do not infer tested 3.13/3.14 support."
+    },
+    {
+      "id": "DOC-06",
+      "category": "OPTIONAL_POST_RELEASE_IMPROVEMENT",
+      "classification": "RECOMMENDED",
+      "severity": "low",
+      "surfaces": [
+        "docs/implementation/minimal-primitives-v1.md"
+      ],
+      "summary": "Original test totals describe an earlier implementation milestone rather than the current expanded suite.",
+      "remediation": "Label these as historical results and link a current scoped validation summary instead of overwriting historical evidence."
+    },
+    {
+      "id": "DOC-07",
+      "category": "OPTIONAL_POST_RELEASE_IMPROVEMENT",
+      "classification": "RECOMMENDED",
+      "severity": "low",
+      "surfaces": [
+        "README.md",
+        "README.zh-CN.md"
+      ],
+      "summary": "The demo command appears before the installation block; the dedicated demo document states the installation prerequisite.",
+      "remediation": "Add a short installed-checkout prerequisite or reorder the quickstart in a later documentation task."
+    },
+    {
+      "id": "ACTIONS-UPGRADE",
+      "severity": "RECOMMENDED",
+      "category": "OPTIONAL_POST_RELEASE_IMPROVEMENT",
+      "surface": ".github/workflows/ci.yml",
+      "result": "Existing action major-version references run successfully; current logs carry platform Node runtime deprecation notices.",
+      "remediation_class": "Review maintained action versions and consider immutable commit pinning in a separately authorized change."
+    },
+    {
+      "id": "ACTIONS-POLICY",
+      "severity": "RECOMMENDED",
+      "category": "OPTIONAL_POST_RELEASE_IMPROVEMENT",
+      "surface": "repository Actions permissions",
+      "result": "All actions allowed; SHA pinning not required. Workflow contents token is already read-only and cannot approve PR reviews.",
+      "remediation_class": "Consider an action allowlist and immutable pin policy during repository governance review."
+    },
+    {
+      "id": "COMMUNITY-FILES",
+      "category": "OPTIONAL_POST_RELEASE_IMPROVEMENT",
+      "summary": "Consider SECURITY, CONTRIBUTING, initial CHANGELOG, issue templates, and optionally CODE_OF_CONDUCT/CITATION. Their absence is not a security blocker."
+    },
+    {
+      "id": "REPRODUCIBLE-TOOLS",
+      "category": "OPTIONAL_POST_RELEASE_IMPROVEMENT",
+      "summary": "Consider a tested tool-version lock/constraints policy and a packaging manifest test. This audit proves functional reproducibility for resolved tooling, not bit-reproducible wheel/sdist archives."
+    }
+  ],
+  "publication_safety_matrix": [
+    {
+      "surface": "Current main tree",
+      "audited": true,
+      "result": "42 tracked files; all scanned",
+      "public_safe_assessment": "CONTENT_SAFE_WITH_RELEASE_PREP"
+    },
+    {
+      "surface": "Git history",
+      "audited": true,
+      "result": "14 reachable commits, 54 blobs, 12 historical-only versions",
+      "public_safe_assessment": "NO_UNSAFE_CONTENT_FOUND"
+    },
+    {
+      "surface": "Remote branches",
+      "audited": true,
+      "result": "6 heads; all reachable branch-only versions scanned",
+      "public_safe_assessment": "NO_UNSAFE_CONTENT_FOUND"
+    },
+    {
+      "surface": "Tags/releases",
+      "audited": true,
+      "result": "0 local tags, 0 remote tags, 0 GitHub Releases",
+      "public_safe_assessment": "NO_EXPOSURE_PRESENT"
+    },
+    {
+      "surface": "Commit identities",
+      "audited": true,
+      "result": "3 author/committer identity groups; real-name/non-noreply exposure retained",
+      "public_safe_assessment": "OWNER_REVIEW_REQUIRED"
+    },
+    {
+      "surface": "PR/issues/comments",
+      "audited": true,
+      "result": "5 PRs; no standalone issues, comments or reviews",
+      "public_safe_assessment": "PUBLIC_SAFE"
+    },
+    {
+      "surface": "Workflow config",
+      "audited": true,
+      "result": "contents:read, hosted runners, credential persistence off",
+      "public_safe_assessment": "PUBLIC_SAFE"
+    },
+    {
+      "surface": "Workflow outputs",
+      "audited": true,
+      "result": "13 accessible runs / 20 logs; 0 artifacts",
+      "public_safe_assessment": "PUBLIC_SAFE_WITH_RECORDED_LIMITS"
+    },
+    {
+      "surface": "Repository configuration",
+      "audited": true,
+      "result": "read defaults verified; protection/rulesets HTTP403",
+      "public_safe_assessment": "OWNER_CONFIGURATION_REVIEW_REQUIRED"
+    },
+    {
+      "surface": "Dependencies",
+      "audited": true,
+      "result": "stdlib runtime; local dev/build metadata inspected",
+      "public_safe_assessment": "NO_KNOWN_METADATA_CONCERN_WITH_LIMITS"
+    },
+    {
+      "surface": "License status",
+      "audited": true,
+      "result": "no LICENSE or license metadata/grant",
+      "public_safe_assessment": "OWNER_DECISION_REQUIRED"
+    },
+    {
+      "surface": "Package metadata",
+      "audited": true,
+      "result": "internally consistent private dev package, 0.0.0.dev0",
+      "public_safe_assessment": "RELEASE_PREPARATION_REQUIRED"
+    },
+    {
+      "surface": "Wheel/sdist",
+      "audited": true,
+      "result": "9-file wheel / 22-file sdist; normal artifact install passes; sdist test assets incomplete",
+      "public_safe_assessment": "RELEASE_PREPARATION_REQUIRED"
+    },
+    {
+      "surface": "Examples/fixtures",
+      "audited": true,
+      "result": "116 synthetic goldens and 3 synthetic observations",
+      "public_safe_assessment": "PUBLIC_SAFE"
+    },
+    {
+      "surface": "English README",
+      "audited": true,
+      "result": "navigation, instructions, limitations valid; private state accurate now",
+      "public_safe_assessment": "RELEASE_STATE_UPDATE_REQUIRED"
+    },
+    {
+      "surface": "Chinese README",
+      "audited": true,
+      "result": "faithful navigation/claims, no unsupported promises",
+      "public_safe_assessment": "RELEASE_STATE_UPDATE_REQUIRED"
+    },
+    {
+      "surface": "Docs",
+      "audited": true,
+      "result": "17 classified documents; historical scaffold/process contradictions recorded",
+      "public_safe_assessment": "RELEASE_PREPARATION_REQUIRED"
+    },
+    {
+      "surface": "Fresh clone",
+      "audited": true,
+      "result": "exact main; fresh Python3.12.10 environment",
+      "public_safe_assessment": "PASS"
+    },
+    {
+      "surface": "Install",
+      "audited": true,
+      "result": "editable dev, noneditable, wheel and sdist outside-source imports",
+      "public_safe_assessment": "PASS"
+    },
+    {
+      "surface": "Tests",
+      "audited": true,
+      "result": "392 collected, 385 passed, 7 explicit Windows capability/concept skips",
+      "public_safe_assessment": "PASS"
+    },
+    {
+      "surface": "Demo",
+      "audited": true,
+      "result": "human output and repeated 374-byte JSON match tracked receipt",
+      "public_safe_assessment": "PASS"
+    }
+  ],
+  "evidence_limits": [
+    "Complete normal-ref reachable Git objects at the audited snapshot; inaccessible deleted refs, unreachable server objects and reflogs are not attestable publication surfaces here.",
+    "All accessible current PR/issue text and 13 runs/20 logs scanned; inaccessible/deleted discussions, editing history or removed logs cannot be certified.",
+    "Branch protection and rulesets endpoints returned HTTP403; not interpreted as absent.",
+    "Pattern/entropy/manual inspection is bounded detection, not proof that no possible secret exists; provenance conclusion does not assert legal certainty.",
+    "Local license metadata and original package manifests were inspected; no general third-party ownership or vendored-license certification.",
+    "Clean clone and full suite pass; the sdist is installable but cannot reproduce repository test/demo workflow without omitted files. Resolve source-distribution policy before artifact release."
+  ],
+  "final_audit_PR_CI": "Required on final audit PR head after this snapshot report is committed; result recorded in PR/task evidence, not fabricated in this pre-commit report.",
+  "non_actions": [
+    "No visibility change",
+    "No merge",
+    "No LICENSE selection/addition",
+    "No version bump",
+    "No tag/release/PyPI",
+    "No history rewrite/force push/ref deletion",
+    "No product cleanup or semantic changes"
+  ],
+  "BAquant_access": {
+    "implementation_source_reads": 0,
+    "git_operations": 0,
+    "mutations": 0
+  },
+  "final_classification": "PUBLIC_RELEASE_AUDIT_READY_FOR_RELEASE_PREP",
+  "classification_meaning": "Ready to plan separately authorized release preparation, not ready or authorized to switch visibility now. Owner identity/license/version decisions and release-required document/distribution work remain."
+}
