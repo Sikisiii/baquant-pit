@@ -1,5 +1,7 @@
 # baquant-pit
 
+**English** | [简体中文](README.zh-CN.md)
+
 Point-in-Time and Temporal Grounding Infrastructure for AI Financial Research.
 
 **Current status: PRIVATE IMPLEMENTATION CANDIDATE / PRE-RELEASE.**
