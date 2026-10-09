@@ -1,4 +1,4 @@
-"""Private implementation candidate for market-neutral temporal primitives."""
+"""Market-neutral temporal primitives for point-in-time research."""
 
 from .canonical import canonical_bytes, canonical_sha256, canonical_text
 from .errors import (

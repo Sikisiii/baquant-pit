@@ -1,13 +1,12 @@
 # Current release state
 
-**0.1.0 RELEASE READY / PRIVATE UNTIL OWNER-APPROVED PUBLICATION**
+**PUBLICATION AUTHORIZED / OPEN SOURCE / 0.1.0**
 
 This is the current user-facing implementation/status guide. It is non-normative
-and defines no new primitive semantics or publication authorization. The package
-version is `0.1.0` (Alpha); the repository is still **PRIVATE**. Source is licensed
-under Apache-2.0, with [LICENSE](../../LICENSE) authoritative for redistribution
-terms. Licensing and GitHub visibility are separate: applying the license has not
-made the repository public.
+and defines no new primitive semantics. The package version is `0.1.0` (Alpha)
+and the source is licensed under Apache-2.0, with [LICENSE](../../LICENSE)
+authoritative for redistribution terms. The Owner has explicitly authorized the
+first public release and the GitHub visibility change to PUBLIC.
 
 ## What is implemented
 
@@ -24,10 +23,11 @@ made the repository public.
 
 Public API compatibility is **NOT_ESTABLISHED**. BAquant compatibility is
 **NOT_CLAIMED**. Version 0.x describes an early project lifecycle and creates no
-API guarantee or semantic-version compatibility promise. There is no production PIT reader, vintage engine, PIT grade,
-TrustSnapshot, applicability classification, database/provider adapter, manifest
-registry, broker or trading functionality. Passing tests does not establish
-production readiness, scientific acceptance or source authenticity.
+API guarantee or semantic-version compatibility promise. There is no production
+PIT reader, vintage engine, PIT grade, TrustSnapshot, applicability classification,
+database/provider adapter, manifest registry, broker or trading functionality.
+Passing tests does not establish production readiness, scientific acceptance or
+source authenticity.
 
 ## Frozen semantics and historical wording
 
@@ -45,12 +45,11 @@ Historical receipt statuses and test totals describe their recorded scope.
 
 The completed [public-release readiness audit](public-release-audit-v1.md) and
 [audit JSON](public-release-audit-v1.json) describe their stated historical SHA.
-They remain unchanged assessments, not today's publication state or a release
-authorization. The [preparation receipt](release-preparation-v1.json) records
-its earlier task state, including then-pending Owner decisions and development
-version. Those historical records are unchanged. Current finalization decisions
-and acceptance belong to the non-normative
-[finalization receipt](release-finalization-v1.json).
+They remain unchanged assessments, not today's publication state. The
+[preparation receipt](release-preparation-v1.json) records its earlier task state,
+including then-pending Owner decisions and development version. Those historical
+records are unchanged. Finalization decisions and acceptance belong to the
+non-normative [finalization receipt](release-finalization-v1.json).
 
 ## Source and package workflows
 
@@ -61,16 +60,16 @@ documentation. From either source root, use the
 distribution must run its shipped tests and both demo commands without reaching
 back to another checkout.
 
-The wheel contains runtime modules, package metadata and the Apache-2.0 license. It supports ordinary
-library import from outside the source tree and does not bundle tests, docs,
-examples or contracts as runtime assets. The current version is identical for
-editable, ordinary, wheel and source-distribution installation.
+The wheel contains runtime modules, package metadata and the Apache-2.0 license.
+It supports ordinary library import from outside the source tree and does not
+bundle tests, docs, examples or contracts as runtime assets. The current version
+is identical for editable, ordinary, wheel and source-distribution installation.
 
 README links intentionally resolve in the GitHub repository and complete source
 bundle. **PYPI_DOCUMENT_RENDERING_NOT_YET_ACCEPTED**: the embedded README retains
 repository-relative links, whose rendering on a package index has not been
-accepted. PyPI publication is optional, separately scoped and is not part of the
-first public-repository release acceptance. No PyPI publication is authorized.
+accepted. PyPI publication is optional, separately scoped and is not part of this
+GitHub public-repository release. No PyPI publication is implied by this release.
 
 ## Owner decisions and publication gates
 
@@ -79,33 +78,24 @@ first public-repository release acceptance. No PyPI publication is authorized.
 | OWNER_LICENSE_DECISION | RESOLVED_APACHE_2_0 |
 | OWNER_VERSION_DECISION | RESOLVED_0_1_0 |
 | OWNER_IDENTITY_ACCEPTANCE | ACCEPTED_NO_HISTORY_REWRITE |
-| FINAL_RELEASE_AUTHORIZATION | PENDING |
-| PUBLIC_VISIBILITY_ACTION | PENDING; repository remains PRIVATE |
+| FINAL_RELEASE_AUTHORIZATION | APPROVED |
+| PUBLIC_VISIBILITY_ACTION | OWNER_AUTHORIZED; final GitHub repository setting must be PUBLIC |
 
-The Owner has selected Apache-2.0 and version 0.1.0 and accepted historical Git
-identity exposure without history rewrite. No historical names or email values
-are reproduced here. These three decisions are resolved; final publication
-authorization and the public-visibility action remain separate pending gates.
+The Owner selected Apache-2.0 and version 0.1.0, accepted historical Git identity
+exposure without history rewrite, and explicitly approved publication. No
+historical names or email values are reproduced here. Tags, GitHub Releases and
+PyPI remain separate optional actions and are not implied by repository
+publication.
 
-## Required future README transition
+## Public README state
 
-**README_PUBLIC_STATUS_SWITCH_REQUIRED_AT_PUBLICATION = true**
-
-The final publication task must update both README current-status lines before
-or atomically with the repository visibility change:
+Both README current-status lines are now the public target state:
 
 - English: `Current status: PUBLIC / OPEN SOURCE / 0.1.0`
 - Chinese: `当前状态：PUBLIC / OPEN SOURCE / 0.1.0`
 
-These are future target lines, not the current state. Both READMEs currently
-retain the truthful private release-ready status. The entire Chinese README must
-continue to contain zero U+3002 and zero U+FF61 characters at publication.
-
-Remaining required steps are Owner review/approval and merge of the finalization
-PR, separate explicit final-publication authorization, the README status switch
-and the PRIVATE-to-PUBLIC visibility action. None of those final actions is
-performed by this finalization task. Tags or a GitHub Release require separate
-authorization; PyPI remains optional and out of scope.
+The entire Chinese README continues to require zero U+3002 and zero U+FF61
+characters.
 
 ## Documentation map
 

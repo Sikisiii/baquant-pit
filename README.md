@@ -4,7 +4,7 @@
 
 Point-in-Time and Temporal Grounding Infrastructure for AI Financial Research.
 
-**Current status: 0.1.0 RELEASE READY / PRIVATE UNTIL OWNER-APPROVED PUBLICATION.**
+**Current status: PUBLIC / OPEN SOURCE / 0.1.0.**
 
 The minimal primitives v1 runtime is implemented. It provides explicit aware
 datetime normalization and fixed UTC text, immutable inclusive date windows with
@@ -14,8 +14,8 @@ standard library only. Python 3.12 or newer is required; validation currently
 covers Python 3.12 on Windows and Ubuntu/Linux. Current version: `0.1.0` (Alpha).
 
 The [current release state](docs/release/RELEASE_STATE.md) explains implemented
-scope, frozen design-time specifications and final publication gates. Public
-API compatibility is NOT_ESTABLISHED and BAquant compatibility is NOT_CLAIMED.
+scope, frozen design-time specifications and publication state. Public API
+compatibility is NOT_ESTABLISHED and BAquant compatibility is NOT_CLAIMED.
 The runtime was independently written from the baquant-pit contract,
 specifications and synthetic golden vectors; the private BAquant implementation
 was neither consulted nor copied.
@@ -110,13 +110,7 @@ Start with [release state](docs/release/RELEASE_STATE.md), then explore the
 [content boundary](docs/PUBLIC_PRIVATE_BOUNDARY.md) and
 [origin and authority](docs/ORIGIN_AND_AUTHORITY.md).
 
-Licensed under [Apache License 2.0](LICENSE). The Owner has selected Apache-2.0
-and version `0.1.0`, and accepted historical commit identity exposure without
-history rewrite. These decisions are resolved. The repository remains PRIVATE
-until the separately authorized final publication action; the license does not
-change repository visibility.
-
-At that future publication, both README current-status lines must change to
-`PUBLIC / OPEN SOURCE / 0.1.0` before or together with the visibility change.
-That status transition has not been performed. The Chinese README must continue
-to contain no ideographic or halfwidth ideographic full stops.
+Licensed under [Apache License 2.0](LICENSE). Version `0.1.0` is the first public
+open-source release. Historical commit identity exposure was accepted without
+rewriting Git history. The project remains an early Alpha and does not establish
+public API stability, production readiness or BAquant compatibility.
