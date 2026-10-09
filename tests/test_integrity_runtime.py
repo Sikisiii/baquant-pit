@@ -218,4 +218,4 @@ def test_error_binding_and_public_exports():
             error.error_id = "different"
     for name in baquant_pit.__all__:
         assert getattr(baquant_pit, name) is not None
-    assert baquant_pit.__version__ == "0.0.0.dev0"
+    assert baquant_pit.__version__ == "0.1.0"

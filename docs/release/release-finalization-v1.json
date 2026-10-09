@@ -1,0 +1,58 @@
+{
+  "task_id": "BAQUANT-PIT-RELEASE-FINALIZATION-V1",
+  "record_type": "NON_NORMATIVE_RELEASE_FINALIZATION",
+  "base_main_sha": "bce57c40d7f70cad235507115627ddd70dab1623",
+  "repository_visibility": "PRIVATE",
+  "current_status": "0.1.0 RELEASE READY / PRIVATE UNTIL OWNER-APPROVED PUBLICATION",
+  "license": {
+    "decision": "RESOLVED",
+    "spdx": "Apache-2.0",
+    "canonical_source": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "canonical_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "custom_clauses": false
+  },
+  "version": {
+    "decision": "RESOLVED",
+    "value": "0.1.0"
+  },
+  "historical_identity": {
+    "decision": "ACCEPTED_NO_HISTORY_REWRITE"
+  },
+  "public_api_compatibility": "NOT_ESTABLISHED",
+  "baquant_compatibility": "NOT_CLAIMED",
+  "runtime_semantics_changed": false,
+  "runtime_diff_classification": "VERSION_METADATA_ONLY",
+  "public_api_changed": false,
+  "public_export_count": 12,
+  "goldens_changed": false,
+  "demo_semantics_changed": false,
+  "historical_receipts_changed": false,
+  "chinese_readme_u3002_count": 0,
+  "chinese_readme_uff61_count": 0,
+  "readme_public_status_switch_required_at_publication": true,
+  "publication_transition": {
+    "timing": "BEFORE_OR_ATOMICALLY_WITH_VISIBILITY_CHANGE",
+    "english_current_status": "PUBLIC / OPEN SOURCE / 0.1.0",
+    "chinese_current_status": "PUBLIC / OPEN SOURCE / 0.1.0",
+    "preserve_chinese_punctuation_gate": true,
+    "performed": false
+  },
+  "final_release_authorization": "PENDING",
+  "public_visibility_action": "PENDING",
+  "tag_created": false,
+  "github_release_created": false,
+  "pypi_published": false,
+  "pypi_document_rendering": "PYPI_DOCUMENT_RENDERING_NOT_YET_ACCEPTED",
+  "validation_evidence": "Final artifact/ordinary-install acceptance, exact committed-candidate clean-clone and final Windows/Ubuntu CI results are recorded in PR and external task evidence; this receipt records decisions and guarded invariants, not a self-referential archive identity.",
+  "remaining_actions": [
+    "OWNER_REVIEW_AND_APPROVAL_OF_FINALIZATION_PR",
+    "MERGE_FINALIZATION_PR",
+    "SEPARATE_EXPLICIT_FINAL_PUBLICATION_AUTHORIZATION",
+    "README_PUBLIC_STATUS_SWITCH",
+    "PUBLIC_VISIBILITY_ACTION"
+  ],
+  "optional_future_actions": [
+    "SEPARATELY_AUTHORIZED_TAG_OR_GITHUB_RELEASE",
+    "OPTIONAL_SEPARATELY_SCOPED_PYPI_PUBLICATION"
+  ]
+}

@@ -251,7 +251,7 @@ def test_no_wall_clock_defaults_or_package_api_expansion():
         "sha256_file",
     }
     assert len(baquant_pit.__all__) == 12
-    assert baquant_pit.__version__ == "0.0.0.dev0"
+    assert baquant_pit.__version__ == "0.1.0"
     assert not hasattr(baquant_pit, "DemoObservation")
     assert not hasattr(baquant_pit, "DemoAmbiguousObservationError")
 

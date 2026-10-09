@@ -1,9 +1,9 @@
 # Current content boundary
 
-This non-normative guide describes the content prepared for a future release.
-The repository remains PRIVATE during release candidate preparation; inclusion
-here does not itself grant redistribution rights. See
-[release state and pending decisions](release/RELEASE_STATE.md).
+This non-normative guide describes the finalized 0.1.0 content scope.
+Source is licensed under [Apache-2.0](../LICENSE); the repository remains PRIVATE
+until the separately authorized final publication action. See
+[current release state and publication gates](release/RELEASE_STATE.md).
 
 ## Included in the release candidate source
 

@@ -1,10 +1,11 @@
 # Minimal primitives v1 implementation
 
-Status: PRIVATE RELEASE CANDIDATE PREPARATION / PRE-RELEASE.
-Version: `0.0.0.dev0`. See [current release state](../release/RELEASE_STATE.md).
+Status: 0.1.0 RELEASE READY / PRIVATE UNTIL OWNER-APPROVED PUBLICATION.
+Version: `0.1.0` (Alpha). See [current release state](../release/RELEASE_STATE.md).
 Semantic authority: frozen baquant-pit v1 contract, specifications and synthetic goldens.
 This is an independent implementation; private BAquant implementation source was
-not consulted or copied. Compatibility is not claimed and no license is added.
+not consulted or copied. BAquant compatibility is not claimed. Source is
+licensed under [Apache-2.0](../../LICENSE).
 
 ## Python binding
 
@@ -66,9 +67,10 @@ when link creation is unavailable. Runtime golden results are 113 passed / 3
 accounted skips; generic runtime tests are distinct from asset consistency.
 POSIX CI also executes the conditional FIFO and native symlink tests when
 supported. These totals describe the original implementation milestone, not
-the current expanded suite. Current preparation results are recorded in the
-[preparation receipt](../release/release-preparation-v1.json). Ruff check, Ruff
-format check, full pytest and diff check remain required.
+the current expanded suite. Earlier preparation results remain in the
+[preparation receipt](../release/release-preparation-v1.json); current release
+finalization is recorded in the [finalization receipt](../release/release-finalization-v1.json).
+Ruff check, Ruff format check, full pytest and diff check remain required.
 
 ### Resource and semantic boundaries
 
@@ -86,6 +88,7 @@ Design-time wording in frozen artifacts remains historical context.
 
 Excluded: PIT grade, vintage selection, applicability/classification, TrustSnapshot,
 DB, providers, product LLM calls, manifests, safe-root/atomic publication and
-trading. No release, PyPI publication, public visibility or API stability is
-established. License, first public version and historical identity acceptance
-remain Owner decisions; see [release state](../release/RELEASE_STATE.md).
+trading. Public visibility, package publication and API stability are not
+established. Apache-2.0, version 0.1.0 and historical identity acceptance without
+history rewrite are resolved; final publication remains pending. See
+[release state](../release/RELEASE_STATE.md).
