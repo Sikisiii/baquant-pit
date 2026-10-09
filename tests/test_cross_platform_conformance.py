@@ -64,7 +64,7 @@ def test_exact_public_surface_after_install():
     }
     assert set(pit.__all__) == expected and len(pit.__all__) == 12
     assert all(callable(getattr(pit, name)) for name in expected)
-    assert pit.__version__ == "0.0.0.dev0"
+    assert pit.__version__ == "0.1.0"
 
 
 @pytest.mark.parametrize("configuration", ["C", ""], ids=["C", "host-default"])

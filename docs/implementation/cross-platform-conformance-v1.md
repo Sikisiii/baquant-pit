@@ -2,9 +2,10 @@
 
 This conformance design covers Windows and Ubuntu/Linux on Python 3.12
 against the same frozen baquant-pit minimal-primitives contract/version 1.
-The runtime is implemented; the repository is in private release candidate
-preparation. See [current release state](../release/RELEASE_STATE.md).
-Conformance adds no runtime capability, public API, semantic rule or version change.
+The runtime is implemented and version 0.1.0 is finalized; the repository remains
+PRIVATE until separately authorized publication. See
+[current release state](../release/RELEASE_STATE.md). Conformance preserves
+existing runtime capabilities, public API and semantic rules.
 The [machine-readable coverage design](cross-platform-conformance-v1.json)
 describes scope; actual success is demonstrated by the final GitHub Actions
 matrix, not asserted by this document or an ephemeral run ID.
@@ -14,7 +15,8 @@ matrix, not asserted by this document or an ephemeral run ID.
 Both clean CI environments install `python -m pip install -e ".[dev]"`, then run
 Ruff, format checks and the entire pytest suite. Checkout credentials are not
 persisted and workflow permissions are contents-read only. Tests check all 12
-existing package exports and the unchanged `0.0.0.dev0` version after installation.
+existing package exports and the current `0.1.0` package version after installation.
+The machine-readable design receipt retains its historical development version.
 No service containers, secrets, provider/database calls or external data are used.
 
 The entire golden runtime suite executes on both platforms. Each platform must
@@ -78,6 +80,7 @@ bytes, file digest identity or repository artifacts.
 No safe-root, locking, TOCTOU, snapshot or authenticity guarantee is made. The
 market-neutral core implies no exchange, asset-class or provider support.
 Historical origin scope is retained in [origin and authority](../ORIGIN_AND_AUTHORITY.md).
-The repository remains PRIVATE during release candidate preparation.
-License selection and publication remain pending; current scope and decisions
-are recorded in [release state](../release/RELEASE_STATE.md).
+Source is licensed under [Apache-2.0](../../LICENSE). The repository remains
+PRIVATE until separately authorized final publication; current resolved decisions
+and pending publication gates are recorded in
+[release state](../release/RELEASE_STATE.md).

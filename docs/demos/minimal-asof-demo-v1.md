@@ -91,7 +91,8 @@ reconstructed vintage classification, acceptance authority, revision causality,
 consumer-specific version policy, full PIT database access or backtest correctness.
 It is not a production PIT reader, vintage acceptance engine, source authority
 framework, database, adapter or trading system. There are no automatic decisions,
-new runtime modules/public exports/dependencies, semantic changes or version bump.
-The repository remains PRIVATE during release candidate preparation.
-License selection and final publication remain pending; see
+new runtime modules/public exports/dependencies or primitive semantic changes
+introduced by the example. Package release metadata does not alter its payload.
+Source is licensed under [Apache-2.0](../../LICENSE); version 0.1.0 remains PRIVATE
+until separately authorized final publication. See
 [current release state](../release/RELEASE_STATE.md).

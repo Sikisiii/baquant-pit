@@ -1,10 +1,13 @@
 # Current release state
 
-**PRIVATE RELEASE CANDIDATE PREPARATION / PRE-RELEASE**
+**0.1.0 RELEASE READY / PRIVATE UNTIL OWNER-APPROVED PUBLICATION**
 
-This is the current user-facing implementation/status guide. It is non-normative:
-it does not define new semantics, grant a license or authorize publication.
-The repository remains PRIVATE and the package version remains `0.0.0.dev0`.
+This is the current user-facing implementation/status guide. It is non-normative
+and defines no new primitive semantics or publication authorization. The package
+version is `0.1.0` (Alpha); the repository is still **PRIVATE**. Source is licensed
+under Apache-2.0, with [LICENSE](../../LICENSE) authoritative for redistribution
+terms. Licensing and GitHub visibility are separate: applying the license has not
+made the repository public.
 
 ## What is implemented
 
@@ -20,7 +23,8 @@ The repository remains PRIVATE and the package version remains `0.0.0.dev0`.
   deterministic output. It adds no production reader API.
 
 Public API compatibility is **NOT_ESTABLISHED**. BAquant compatibility is
-**NOT_CLAIMED**. There is no production PIT reader, vintage engine, PIT grade,
+**NOT_CLAIMED**. Version 0.x describes an early project lifecycle and creates no
+API guarantee or semantic-version compatibility promise. There is no production PIT reader, vintage engine, PIT grade,
 TrustSnapshot, applicability classification, database/provider adapter, manifest
 registry, broker or trading functionality. Passing tests does not establish
 production readiness, scientific acceptance or source authenticity.
@@ -42,8 +46,11 @@ Historical receipt statuses and test totals describe their recorded scope.
 The completed [public-release readiness audit](public-release-audit-v1.md) and
 [audit JSON](public-release-audit-v1.json) describe their stated historical SHA.
 They remain unchanged assessments, not today's publication state or a release
-authorization. The non-normative [preparation receipt](release-preparation-v1.json)
-records the scope and observed acceptance of this preparation work.
+authorization. The [preparation receipt](release-preparation-v1.json) records
+its earlier task state, including then-pending Owner decisions and development
+version. Those historical records are unchanged. Current finalization decisions
+and acceptance belong to the non-normative
+[finalization receipt](release-finalization-v1.json).
 
 ## Source and package workflows
 
@@ -54,7 +61,7 @@ documentation. From either source root, use the
 distribution must run its shipped tests and both demo commands without reaching
 back to another checkout.
 
-The wheel contains runtime modules and package metadata. It supports ordinary
+The wheel contains runtime modules, package metadata and the Apache-2.0 license. It supports ordinary
 library import from outside the source tree and does not bundle tests, docs,
 examples or contracts as runtime assets. The current version is identical for
 editable, ordinary, wheel and source-distribution installation.
@@ -63,24 +70,42 @@ README links intentionally resolve in the GitHub repository and complete source
 bundle. **PYPI_DOCUMENT_RENDERING_NOT_YET_ACCEPTED**: the embedded README retains
 repository-relative links, whose rendering on a package index has not been
 accepted. PyPI publication is optional, separately scoped and is not part of the
-first public-repository preparation acceptance. No package-index publication is
-authorized by removing the private-upload classifier.
+first public-repository release acceptance. No PyPI publication is authorized.
 
-## Decisions and final actions still pending
+## Owner decisions and publication gates
 
 | Gate | Current state |
 | --- | --- |
-| OWNER_LICENSE_DECISION | OWNER_DECISION_PENDING: no open-source redistribution license selected. |
-| OWNER_VERSION_DECISION | OWNER_DECISION_PENDING: the actual version stays `0.0.0.dev0`. |
-| OWNER_IDENTITY_ACCEPTANCE | OWNER_REVIEW_REQUIRED / OWNER_IDENTITY_ACCEPTANCE_PENDING: historical commit identity exposure requires acceptance; no values are reproduced here. |
-| FINAL_RELEASE_AUTHORIZATION | Separate explicit Owner authorization required. |
-| PUBLIC_VISIBILITY_ACTION | Repository remains PRIVATE; a separately authorized final action is required. |
+| OWNER_LICENSE_DECISION | RESOLVED_APACHE_2_0 |
+| OWNER_VERSION_DECISION | RESOLVED_0_1_0 |
+| OWNER_IDENTITY_ACCEPTANCE | ACCEPTED_NO_HISTORY_REWRITE |
+| FINAL_RELEASE_AUTHORIZATION | PENDING |
+| PUBLIC_VISIBILITY_ACTION | PENDING; repository remains PRIVATE |
 
-Private repository access does not itself grant redistribution rights. Once the
-Owner makes the exact license/version decisions, a separately authorized final
-release step must apply them consistently to the license file, package metadata,
-version and user-facing status. No license, final version or identity decision is
-selected by this preparation. Historical commit metadata is not rewritten.
+The Owner has selected Apache-2.0 and version 0.1.0 and accepted historical Git
+identity exposure without history rewrite. No historical names or email values
+are reproduced here. These three decisions are resolved; final publication
+authorization and the public-visibility action remain separate pending gates.
+
+## Required future README transition
+
+**README_PUBLIC_STATUS_SWITCH_REQUIRED_AT_PUBLICATION = true**
+
+The final publication task must update both README current-status lines before
+or atomically with the repository visibility change:
+
+- English: `Current status: PUBLIC / OPEN SOURCE / 0.1.0`
+- Chinese: `当前状态：PUBLIC / OPEN SOURCE / 0.1.0`
+
+These are future target lines, not the current state. Both READMEs currently
+retain the truthful private release-ready status. The entire Chinese README must
+continue to contain zero U+3002 and zero U+FF61 characters at publication.
+
+Remaining required steps are Owner review/approval and merge of the finalization
+PR, separate explicit final-publication authorization, the README status switch
+and the PRIVATE-to-PUBLIC visibility action. None of those final actions is
+performed by this finalization task. Tags or a GitHub Release require separate
+authorization; PyPI remains optional and out of scope.
 
 ## Documentation map
 

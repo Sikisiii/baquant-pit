@@ -4,17 +4,17 @@
 
 Point-in-Time and Temporal Grounding Infrastructure for AI Financial Research.
 
-**Current status: PRIVATE RELEASE CANDIDATE PREPARATION / PRE-RELEASE.**
+**Current status: 0.1.0 RELEASE READY / PRIVATE UNTIL OWNER-APPROVED PUBLICATION.**
 
 The minimal primitives v1 runtime is implemented. It provides explicit aware
 datetime normalization and fixed UTC text, immutable inclusive date windows with
 mandatory cutoffs, bounded typed canonical bytes/text and SHA-256, exact bytes
 SHA-256, and streamed regular-file content SHA-256. Runtime code uses Python's
 standard library only. Python 3.12 or newer is required; validation currently
-covers Python 3.12 on Windows and Ubuntu/Linux. Version remains `0.0.0.dev0`.
+covers Python 3.12 on Windows and Ubuntu/Linux. Current version: `0.1.0` (Alpha).
 
 The [current release state](docs/release/RELEASE_STATE.md) explains implemented
-scope, frozen design-time specifications and remaining Owner decisions. Public
+scope, frozen design-time specifications and final publication gates. Public
 API compatibility is NOT_ESTABLISHED and BAquant compatibility is NOT_CLAIMED.
 The runtime was independently written from the baquant-pit contract,
 specifications and synthetic golden vectors; the private BAquant implementation
@@ -88,7 +88,7 @@ applicability classification, database, provider adapter, manifest registry,
 safe-root policy, atomic publication, brokerage or trading functionality. File
 hashing follows links to regular files and hashes only content; it provides no
 locking, immutable snapshot, TOCTOU protection or authenticity guarantee. This
-pre-release establishes no production readiness, scientific acceptance or public
+early Alpha version establishes no production readiness, scientific acceptance or public
 API stability.
 
 Tests execute real APIs against the frozen synthetic goldens. Every golden
@@ -110,8 +110,13 @@ Start with [release state](docs/release/RELEASE_STATE.md), then explore the
 [content boundary](docs/PUBLIC_PRIVATE_BOUNDARY.md) and
 [origin and authority](docs/ORIGIN_AND_AUTHORITY.md).
 
-No open-source redistribution license has yet been selected. Final public
-release requires explicit Owner license selection; access to this private
-repository does not itself grant redistribution rights. The repository remains
-PRIVATE while license, first public version and historical identity acceptance
-are pending. Publication requires separate final authorization.
+Licensed under [Apache License 2.0](LICENSE). The Owner has selected Apache-2.0
+and version `0.1.0`, and accepted historical commit identity exposure without
+history rewrite. These decisions are resolved. The repository remains PRIVATE
+until the separately authorized final publication action; the license does not
+change repository visibility.
+
+At that future publication, both README current-status lines must change to
+`PUBLIC / OPEN SOURCE / 0.1.0` before or together with the visibility change.
+That status transition has not been performed. The Chinese README must continue
+to contain no ideographic or halfwidth ideographic full stops.

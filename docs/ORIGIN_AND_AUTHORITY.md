@@ -35,10 +35,9 @@ policies remain outside the implemented scope.
 
 ## Publication boundary
 
-The repository is PRIVATE during release candidate preparation and remains
-pre-release at `0.0.0.dev0`. No open-source redistribution license has yet been
-selected; private access alone grants no redistribution rights. License selection,
-first public version and historical identity acceptance remain Owner decisions.
-Any publication requires separate final authorization. The completed
+The package is finalized at `0.1.0` (Alpha) under [Apache-2.0](../LICENSE).
+The Owner accepted historical identity exposure without history rewrite.
+The repository remains PRIVATE until separately authorized final publication;
+the license does not itself change repository visibility. The completed
 [readiness audit](release/public-release-audit-v1.md) records evidence at its
 stated historical commit, not a legal guarantee or publication authorization.

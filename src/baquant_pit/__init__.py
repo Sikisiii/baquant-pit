@@ -10,7 +10,7 @@ from .errors import (
 from .integrity import sha256_bytes, sha256_file
 from .temporal import DateWindow, format_utc_instant, normalize_utc_instant
 
-__version__ = "0.0.0.dev0"
+__version__ = "0.1.0"
 
 __all__ = [
     "BaquantPITError",
