@@ -2,115 +2,168 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-Point-in-Time and Temporal Grounding Infrastructure for AI Financial Research.
+**Historical research should only use information available at the time.**
 
-**Current status: PUBLIC / OPEN SOURCE / 0.1.0.**
+Python building blocks for Point-in-Time financial research.
 
-The minimal primitives v1 runtime is implemented. It provides explicit aware
-datetime normalization and fixed UTC text, immutable inclusive date windows with
-mandatory cutoffs, bounded typed canonical bytes/text and SHA-256, exact bytes
-SHA-256, and streamed regular-file content SHA-256. Runtime code uses Python's
-standard library only. Python 3.12 or newer is required; validation currently
-covers Python 3.12 on Windows and Ubuntu/Linux. Current version: `0.1.0` (Alpha).
+**Current status: PUBLIC / OPEN SOURCE / 0.1.0** — early Alpha
 
-The [current release state](docs/release/RELEASE_STATE.md) explains implemented
-scope, frozen design-time specifications and publication state. Public API
-compatibility is NOT_ESTABLISHED and BAquant compatibility is NOT_CLAIMED.
-The runtime was independently written from the baquant-pit contract,
-specifications and synthetic golden vectors; the private BAquant implementation
-was neither consulted nor copied.
+## Why this exists
 
-## Install and validate a source checkout
+A historical strategy can look convincing when it accidentally uses tomorrow's
+information. baquant-pit offers time and hashing utilities, plus an offline
+example that exposes this mistake.
 
-From the repository root or a complete extracted source distribution, create
-and activate a Python 3.12 virtual environment, then install the development tools:
+## A simple example
 
-```sh
-python -m venv .venv
-# Activate the virtual environment using your platform's standard command.
-python -m pip install -e ".[dev]"
-python -m ruff check .
-python -m ruff format --check .
-python -m pytest
-```
+Consider these **synthetic** company figures:
 
-For library use, `python -m pip install .` installs normally without editable mode.
-A wheel contains the runtime library and metadata; the examples and validation
-commands below require the complete source checkout or source distribution.
+| Information becomes available | Reported profit |
+| --- | --- |
+| June 20 | 100 million |
+| August 10 | Revised to 70 million |
 
-## Minimal primitives
+For a June 30 decision, today's latest value is 70 million; only 100 million
+was known then. Using the later revision is *look-ahead bias*, or *future-data
+leakage*. This conceptual example is not a supplied financial dataset.
 
-```python
-from datetime import UTC, date, datetime
+## What Point-in-Time means
 
-from baquant_pit import DateWindow, canonical_bytes, canonical_sha256
+Point-in-Time (PIT) asks: **what was available by a historical cutoff?** This is
+an *as-of* view. A report about June published in August was unavailable in June.
+Callers supply availability times; the library cannot infer them from values.
 
-window = DateWindow(
-    date(2032, 4, 4), date(2032, 4, 6), datetime(2032, 4, 5, tzinfo=UTC)
-)
-payload = {"cutoff": window.cutoff, "label": "synthetic"}
-encoded = canonical_bytes(payload)
-digest = canonical_sha256(payload)
-```
+## Why AI financial research needs this
 
-`DateWindow` stores inclusive dates and a normalized UTC cutoff. It is not itself
-a canonical input. No calendar, exchange-session or coverage authority follows
-from these fields. Canonical inputs are exact supported Python types; there are
-no implicit conversions or string/repr fallbacks. `BaquantPITError` exposes a
-stable `.error_id` with fixed safe text; small temporal, canonical and raw
-integrity subclasses share that binding.
+A research agent can combine documents and latest database values into a plausible
+historical answer containing information nobody had then. Explicit availability
+times matter even when the answer sounds correct.
 
-## Minimal as-of demo
+This is motivation, not implemented agent, LLM, retrieval or RAG functionality.
 
-Suppose an observation is revised tomorrow. A historical decision made today
-must not see tomorrow's observation. After installing from the complete source
-bundle above, run:
+## What baquant-pit provides today
+
+- Express timezone-aware timestamps consistently: UTC normalization and fixed text.
+- Store inclusive dates with an explicit cutoff: immutable `DateWindow`, without
+  record filtering.
+- Identify supported inputs reproducibly: typed bytes/text (*canonicalization*)
+  and SHA-256, plus raw bytes and file-content hashes.
+
+These primitives are not a production PIT reader or revision database.
+
+## 30-second demo
+
+After [setup](#installation-and-development), compare naive latest across all
+observations with selection available by the cutoff, including equality:
 
 ```sh
 python examples/minimal_asof_demo.py
 python examples/minimal_asof_demo.py --json
 ```
 
-With an explicit synthetic cutoff, naive latest chooses obs-003 while as-of sees
-obs-001 and excludes the future obs-002/obs-003. See the
-[synthetic timeline, inclusive cutoff and demo boundaries](docs/demos/minimal-asof-demo-v1.md).
-The selection rule lives in the example; it adds no package reader API.
+Key output:
 
-## Scope and conformance
+```text
+as_of: 2032-04-05T10:30:00.000000Z
+naive latest: obs-003
+point-in-time visible: obs-001
+future observations excluded: obs-002, obs-003
+```
 
-baquant-pit is market-neutral infrastructure. Its primitives do not authorize or
-imply support for any specific exchange, security market, asset class or provider.
-Market-specific rules belong in downstream consumers. Private market data,
-proprietary strategies and competition assets are excluded.
+Selection is example-local, not a package API. See the
+[synthetic timeline and ambiguity rules](docs/demos/minimal-asof-demo-v1.md).
 
-There is no production PIT reader, vintage engine, PIT grade, TrustSnapshot,
-applicability classification, database, provider adapter, manifest registry,
-safe-root policy, atomic publication, brokerage or trading functionality. File
-hashing follows links to regular files and hashes only content; it provides no
-locking, immutable snapshot, TOCTOU protection or authenticity guarantee. This
-early Alpha version establishes no production readiness, scientific acceptance or public
-API stability.
+## Minimal Python example
 
-Tests execute real APIs against the frozen synthetic goldens. Every golden
-vector is accounted for in the [runtime coverage table](docs/implementation/golden-runtime-coverage-v1.json).
-Conceptual leap seconds and pre-construction duplicate keys are not fabricated
-as Python inputs. Native FIFO and symlink tests run only where supported;
-controlled permission and read failures exercise the actual file API. Only
-synthetic values and temporary files are used.
+Record a cutoff and identify the input, without querying data:
 
-The same frozen v1 suite runs on Windows and Ubuntu/Linux with Python 3.12. See
-[conformance scope and host boundaries](docs/implementation/cross-platform-conformance-v1.md).
-Core temporal, canonical and hash semantics must pass on both platforms; native
-filesystem capability skips are explicitly accounted for.
+```python
+from datetime import UTC, date, datetime
 
-Start with [release state](docs/release/RELEASE_STATE.md), then explore the
-[architecture](docs/ARCHITECTURE.md), [minimal contract](contracts/minimal-primitives-v1.json),
-[specifications](docs/specs/compatibility-and-versioning-v1.md),
-[implementation](docs/implementation/minimal-primitives-v1.md),
-[content boundary](docs/PUBLIC_PRIVATE_BOUNDARY.md) and
-[origin and authority](docs/ORIGIN_AND_AUTHORITY.md).
+from baquant_pit import DateWindow, canonical_sha256
 
-Licensed under [Apache License 2.0](LICENSE). Version `0.1.0` is the first public
-open-source release. Historical commit identity exposure was accepted without
-rewriting Git history. The project remains an early Alpha and does not establish
-public API stability, production readiness or BAquant compatibility.
+window = DateWindow(
+    date(2032, 4, 4), date(2032, 4, 6), datetime(2032, 4, 5, tzinfo=UTC)
+)
+payload = {"cutoff": window.cutoff, "label": "synthetic"}
+print(canonical_sha256(payload))
+```
+
+`DateWindow` is not itself a canonical input. Hashes identify content, not truth,
+authenticity or historical availability.
+
+## What this project is not
+
+- No production PIT database, full revision-history (vintage) engine or data provider.
+- No backtesting framework, market calendar, portfolio engine, trading system
+  or brokerage integration.
+- No complete research or AI-agent platform, production readiness or backtest
+  correctness guarantee.
+
+Market-neutral primitives confer no exchange, asset-class or provider support.
+Private data, strategies and competition assets are excluded.
+
+## Technical guarantees and boundaries
+
+- Standard-library runtime; Python **>=3.12**, tested on **3.12, Windows and
+  Ubuntu/Linux**. Later versions are unverified.
+- Explicit cutoffs; no implicit current time, calendar or coverage authority.
+- Exact supported canonical types, resource limits and stable safe error IDs;
+  no implicit conversions or `str()` / `repr()` fallback.
+- Raw file hashing follows links to regular files and hashes content only;
+  no locking, immutable snapshot, path-safety or TOCTOU protection.
+- Real API tests use frozen synthetic expectations (*golden vectors*) and temporary
+  files. [Coverage](docs/implementation/golden-runtime-coverage-v1.json) and
+  [conformance](docs/implementation/cross-platform-conformance-v1.md) document skips.
+
+## Documentation
+
+- **Start here:** [demo timeline](docs/demos/minimal-asof-demo-v1.md) and
+  [current release state](docs/release/RELEASE_STATE.md).
+- **Implement:** [architecture](docs/ARCHITECTURE.md),
+  [contract](contracts/minimal-primitives-v1.json),
+  [specifications](docs/specs/compatibility-and-versioning-v1.md) and
+  [implementation details](docs/implementation/minimal-primitives-v1.md).
+- **Understand provenance:** [public/private boundary](docs/PUBLIC_PRIVATE_BOUNDARY.md)
+  and [origin and authority](docs/ORIGIN_AND_AUTHORITY.md).
+
+Linked guides retain some pre-publication wording; use current release state for
+status and frozen specifications for semantics.
+
+## Installation and development
+
+With Python 3.12 or newer:
+
+```sh
+git clone https://github.com/Sikisiii/baquant-pit.git
+cd baquant-pit
+python -m venv .venv
+```
+
+Activate with `. .venv/bin/activate` on POSIX or
+`.venv\Scripts\Activate.ps1` in Windows PowerShell, then:
+
+```sh
+python -m pip install .
+```
+
+Examples require the checkout or source distribution; wheels contain runtime and
+metadata only. For development, from the source root:
+
+```sh
+python -m pip install -e ".[dev]"
+python -m ruff check .
+python -m ruff format --check .
+python -m pytest
+```
+
+## Status and compatibility
+
+`0.1.0` is early Alpha. Public API compatibility is **NOT_ESTABLISHED**;
+BAquant compatibility is **NOT_CLAIMED**. Implementation follows this project's
+contract, specifications and synthetic vectors independently, without consulting
+or copying private BAquant implementation.
+
+## License
+
+[Apache License 2.0](LICENSE).
